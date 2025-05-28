@@ -3,8 +3,8 @@
 	<S100FC:name>Feature Catalogue for S-127</S100FC:name>
 	<S100FC:scope>Global coverage of maritime areas</S100FC:scope>
 	<S100FC:fieldOfApplication>Marine Traffic Management</S100FC:fieldOfApplication>
-	<S100FC:versionNumber>1.0.0-20181129</S100FC:versionNumber>
-	<S100FC:versionDate>2018-11-29</S100FC:versionDate>
+	<S100FC:versionNumber>1.0.1-20190628</S100FC:versionNumber>
+	<S100FC:versionDate>2019-06-28</S100FC:versionDate>
 	<S100FC:producer>
 		<S100CI:role>publisher</S100CI:role>
 		<S100CI:party>
@@ -664,7 +664,7 @@
 		</S100FC:S100_FC_SimpleAttribute>
 		<S100FC:S100_FC_SimpleAttribute>
 			<S100FC:name>Category of pilot boarding place</S100FC:name>
-			<S100FC:definition></S100FC:definition>
+			<S100FC:definition>Classification of pilot boarding method.</S100FC:definition>
 			<S100FC:code>categoryOfPilotBoardingPlace</S100FC:code>
 			<S100FC:alias>CATPIL</S100FC:alias>
 			<S100FC:valueType>enumeration</S100FC:valueType>
@@ -953,9 +953,8 @@
 				</S100FC:listedValue>
 				<S100FC:listedValue>
 					<S100FC:label>port security area</S100FC:label>
-					<S100FC:definition></S100FC:definition>
+					<S100FC:definition>An area in which defence, law and treaty enforcement, and counter-terrorism activities that fall within the port and maritime domain apply.</S100FC:definition>
 					<S100FC:code>30</S100FC:code>
-					<S100FC:remarks>Capitalization in registry is inconsistent and definition is N/A</S100FC:remarks>
 				</S100FC:listedValue>
 				<S100FC:listedValue>
 					<S100FC:label>coral sanctuary</S100FC:label>
@@ -1727,7 +1726,7 @@
 		</S100FC:listedValue>
 		</S100FC:listedValues>
 		</S100FC:S100_FC_SimpleAttribute>
-		<S100FC:S100_FC_SimpleAttribute>
+		<!--<S100FC:S100_FC_SimpleAttribute>
 			<S100FC:name>Jurisdiction</S100FC:name>
 			<S100FC:definition>The jurisdiction applicable to an administrative area.</S100FC:definition>
 			<S100FC:code>jurisdiction</S100FC:code>
@@ -1750,7 +1749,7 @@
 					<S100FC:code>3</S100FC:code>
 				</S100FC:listedValue>
 			</S100FC:listedValues>
-		</S100FC:S100_FC_SimpleAttribute>
+		</S100FC:S100_FC_SimpleAttribute>-->
 		<S100FC:S100_FC_SimpleAttribute>
 			<S100FC:name>Language</S100FC:name>
 			<S100FC:definition>The method of human communication, either spoken or written, consisting of the use of words in a structured and conventional way.</S100FC:definition>
@@ -2235,11 +2234,11 @@
 					<S100FC:definition>an area within which the fairway width is restricted.</S100FC:definition>
 					<S100FC:code>37</S100FC:code>
 				</S100FC:listedValue>
-				<S100FC:listedValue>
+				<!--<S100FC:listedValue>
 					<S100FC:label>use of spuds prohibited</S100FC:label>
 					<S100FC:definition>The use of anchoring spuds (telescopic piles) is prohibited</S100FC:definition>
 					<S100FC:code>38</S100FC:code>
-				</S100FC:listedValue>
+				</S100FC:listedValue>-->
 				<S100FC:listedValue>
 					<S100FC:label>swimming prohibited</S100FC:label>
 					<S100FC:definition>An area in which swimming is prohibited</S100FC:definition>
@@ -2407,21 +2406,21 @@
 					<S100FC:definition>compulsory enforced.</S100FC:definition>
 					<S100FC:code>9</S100FC:code>
 				</S100FC:listedValue>
-				<S100FC:listedValue>
+				<!--<S100FC:listedValue>
 					<S100FC:label>extinguished</S100FC:label>
 					<S100FC:definition>no longer lit</S100FC:definition>
 					<S100FC:code>11</S100FC:code>
-				</S100FC:listedValue>
+				</S100FC:listedValue>-->
 				<S100FC:listedValue>
 					<S100FC:label>illuminated</S100FC:label>
 					<S100FC:definition>lit by floodlights, strip lights, etc.</S100FC:definition>
 					<S100FC:code>12</S100FC:code>
 				</S100FC:listedValue>
-				<S100FC:listedValue>
+				<!--<S100FC:listedValue>
 					<S100FC:label>historic</S100FC:label>
 					<S100FC:definition>famous in history of historical interest.</S100FC:definition>
 					<S100FC:code>13</S100FC:code>
-				</S100FC:listedValue>
+				</S100FC:listedValue>-->
 				<S100FC:listedValue>
 					<S100FC:label>public</S100FC:label>
 					<S100FC:definition>belonging to, available to, used or shared by, the community as a whole and not restricted to private use.</S100FC:definition>
@@ -5175,6 +5174,13 @@ Tonnage measurements are now governed by an IMO Convention (International Conven
 				</S100FC:multiplicity>
 				<S100FC:attribute ref="telecommunications"/>
 			</S100FC:attributeBinding>
+			<S100FC:attributeBinding sequential="false">
+				<S100FC:multiplicity>
+					<S100Base:lower>0</S100Base:lower>
+					<S100Base:upper xsi:nil="true" infinite="true"/>
+				</S100FC:multiplicity>
+				<S100FC:attribute ref="radiocommunications"/>
+			</S100FC:attributeBinding>
 			<S100FC:informationBinding roleType="association">
 				<S100FC:multiplicity>
 					<S100Base:lower>0</S100Base:lower>
@@ -6399,7 +6405,13 @@ Tonnage measurements are now governed by an IMO Convention (International Conven
 					<S100FC:value>25</S100FC:value>
 					<S100FC:value>26</S100FC:value>
 					<S100FC:value>27</S100FC:value>
-				</S100FC:permittedValues>
+					<S100FC:value>28</S100FC:value>
+					<S100FC:value>29</S100FC:value>
+					<S100FC:value>30</S100FC:value>
+					<S100FC:value>35</S100FC:value>
+					<S100FC:value>36</S100FC:value>
+					<S100FC:value>37</S100FC:value>
+					</S100FC:permittedValues>
 				<S100FC:attribute ref="restriction"/>
 			</S100FC:attributeBinding>
 			<S100FC:attributeBinding sequential="false">
@@ -6653,6 +6665,9 @@ Tonnage measurements are now governed by an IMO Convention (International Conven
 					<S100FC:value>13</S100FC:value>
 					<S100FC:value>14</S100FC:value>
 					<S100FC:value>15</S100FC:value>
+					<S100FC:value>16</S100FC:value>
+					<S100FC:value>17</S100FC:value>
+					<S100FC:value>18</S100FC:value>
 				</S100FC:permittedValues>
 				<S100FC:attribute ref="categoryOfSignalStationWarning"/>
 			</S100FC:attributeBinding>

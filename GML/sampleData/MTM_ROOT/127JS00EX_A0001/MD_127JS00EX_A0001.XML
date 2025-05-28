@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="file:../../../schemas/S100/4.0.0/S100Catalog/20181015/S100_DSMD.sch" type="application/xml"
+<?xml-model href="file:../../../schemas/ephemera/iso/19115/-3/mdb/2.0/s100mdb.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="file:../../../schemas/ephemera/iso/19115/-3/cit/2.0/s100cit.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="file:../../../schemas/S100/4.0.0/S100Catalog/20190422/S100_DSMD.sch" type="application/xml"
 schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <mdb:MD_Metadata
@@ -15,9 +17,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
     xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
     xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
     xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0"
-    xmlns:gmi="http://standards.iso.org/iso/19115/-2/gmi/1.0"
+
     xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/2.0"
-    xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0"
+
     xmlns:gml="http://www.opengis.net/gml/3.2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://standards.iso.org/iso/19115/-3/mda/2.0 ../../../schemas/standards.iso.org/19115/-3/mda/2.0/mda.xsd">
@@ -64,6 +66,15 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
         <cit:CI_Date>
             <cit:date><gco:DateTime>2018-11-29T00:00:00</gco:DateTime></cit:date>
             <cit:dateType>
+                <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_DateTypeCode" codeListValue="creation"/>
+            </cit:dateType>
+        </cit:CI_Date>
+    </mdb:dateInfo>
+
+    <mdb:dateInfo>
+        <cit:CI_Date>
+            <cit:date><gco:DateTime>2019-06-28T00:00:00</gco:DateTime></cit:date>
+            <cit:dateType>
                 <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_DateTypeCode" codeListValue="publication"/>
             </cit:dateType>
         </cit:CI_Date>
@@ -89,7 +100,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
             <mri:citation>
                 <cit:CI_Citation>
                     <cit:title><gco:CharacterString>Jussland Marine Traffic Management</gco:CharacterString></cit:title>
-                    <cit:editionDate><gco:DateTime>2018-11-29T00:00:00</gco:DateTime></cit:editionDate>
+                    <cit:editionDate><gco:DateTime>2019-06-28T00:00:00</gco:DateTime></cit:editionDate>
                 </cit:CI_Citation>
             </mri:citation>
             <mri:abstract>
@@ -103,6 +114,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </cit:role>
                     <cit:party>
                         <cit:CI_Organisation>
+                            <cit:name><gco:CharacterString>Jussland HO</gco:CharacterString></cit:name>
                             <cit:contactInfo>
                                 <cit:CI_Contact>
                                     <cit:onlineResource>
@@ -174,14 +186,14 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
                     </cit:title>
                     <cit:date>
                         <cit:CI_Date>
-                            <cit:date> <gco:DateTime>2018-11-29T00:00:00</gco:DateTime> </cit:date>
+                            <cit:date> <gco:DateTime>2019-06-28T00:00:00</gco:DateTime> </cit:date>
                             <cit:dateType>
                                 <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_DateTypeCode" codeListValue="revision"/>
                             </cit:dateType>
                         </cit:CI_Date>
                     </cit:date>
-                    <cit:edition><gco:CharacterString>1.0.0</gco:CharacterString></cit:edition>
-                    <cit:editionDate><gco:DateTime>2018-11-29T00:00:00</gco:DateTime></cit:editionDate>
+                    <cit:edition><gco:CharacterString>1.0.1</gco:CharacterString></cit:edition>
+                    <cit:editionDate><gco:DateTime>2019-06-28T00:00:00</gco:DateTime></cit:editionDate>
                 </cit:CI_Citation>
             </mas:name>
             <mas:schemaLanguage>

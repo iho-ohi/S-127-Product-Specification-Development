@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
+		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_F9470925_6F90_468c_8AFB_65AD80D091D5" name="Shared Packages" visibility="public">
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPK_C7C0B394_6434_41ae_8D70_BA3A1CC73DBB" name="Types missing from base models" visibility="public">
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_C224D458_196A_45ff_B653_449DE2A48457" name="S100Extras" visibility="public">
+					<packagedElement xmi:type="uml:DataType" xmi:id="EAID_02AC1149_1A83_4312_9137_6190E98DB36C" name="text" visibility="public"/>
+					<packagedElement xmi:type="uml:Realization" xmi:id="EAID_DE28A735_1FB9_4d61_B134_284F8F8DEA34" visibility="public" supplier="EAID_AF7C81A6_B1C1_4469_A09F_B97989024A14" client="EAID_02AC1149_1A83_4312_9137_6190E98DB36C"/>
+					<packagedElement xmi:type="uml:DataType" xmi:id="EAID_38683A9E_C4B2_442e_A6A0_CE520BB022FE" name="Time" visibility="public"/>
+					<packagedElement xmi:type="uml:Realization" xmi:id="EAID_1443FF40_7867_4578_9576_EC671C3B482F" visibility="public" supplier="EAID_47C07903_9CF4_47d3_AB12_B656977FC995" client="EAID_38683A9E_C4B2_442e_A6A0_CE520BB022FE"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_13FAE85D_551C_4293_BBFB_2936C307CEC6" name="ISOExtras" visibility="public">
+					<packagedElement xmi:type="uml:DataType" xmi:id="EAID_98EBDD4E_C433_4d9c_960C_09D5F7A8F989" name="ISO3166-alpha2" visibility="public"/>
+					<packagedElement xmi:type="uml:DataType" xmi:id="EAID_B048B440_A714_47a6_BAA5_32FCA8704EC8" name="ISO3166-alpha3" visibility="public"/>
+					<packagedElement xmi:type="uml:DataType" xmi:id="EAID_C5FF271C_7DC4_4f94_A93B_69C2D199777B" name="ISO3166-numeric" visibility="public"/>
+					<packagedElement xmi:type="uml:DataType" xmi:id="EAID_42821726_FB76_43a8_A249_9C926B608CEE" name="ISO3166-2" visibility="public"/>
+					<packagedElement xmi:type="uml:DataType" xmi:id="EAID_4BFAAB8B_3A9D_4248_8ACB_F568B023E2A0" name="ISO639-3" visibility="public"/>
+				</packagedElement>
+			</packagedElement>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPK_EEC0AB50_A5FB_4f53_BA66_5916E2A9AB3D" name="Extras" visibility="public">
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_21B1D55E_0EE2_41f3_A586_B9649431ABBD" name="S100Extras" visibility="public">
+					<packagedElement xmi:type="uml:DataType" xmi:id="EAID_8D1D6B97_19A2_4f87_8F0B_AA184CC804CA" name="text" visibility="public"/>
+					<packagedElement xmi:type="uml:DataType" xmi:id="EAID_75F040A3_94A4_43c7_8EF9_D168443E9312" name="URI" visibility="public"/>
+					<packagedElement xmi:type="uml:DataType" xmi:id="EAID_47E73F2F_2F09_41f4_AA36_650DF6ED3539" name="URL" visibility="public"/>
+					<packagedElement xmi:type="uml:DataType" xmi:id="EAID_FCF83CC4_E09A_46b2_8C3A_C8B5034B2D82" name="URN" visibility="public"/>
+				</packagedElement>
+			</packagedElement>
+		</packagedElement>
+	</uml:Model>
+	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+		<elements>
+			<element xmi:idref="EAPK_F9470925_6F90_468c_8AFB_65AD80D091D5" xmi:type="uml:Package" name="Shared Packages" scope="public">
+				<model package2="EAID_F9470925_6F90_468c_8AFB_65AD80D091D5" package="EAPK_9F4F451E_DB26_4fd7_843A_7F32B264B05D" tpos="2" ea_localid="6818" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="raphael.malyankar" version="1.0" phase="1.0" created="2015-11-02 16:41:01" modified="2015-11-02 16:47:15" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="IHO Application Schemas"/>
+				<packageproperties version="1.0" tpos="2"/>
+				<paths/>
+				<times created="2015-11-02 00:00:00" modified="2018-08-20 03:19:27" lastloaddate="2018-08-20 03:19:27" lastsavedate="2018-08-20 03:19:27"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE" packageFlags="isModel=1;VICON=3;"/>
+			</element>
+			<element xmi:idref="EAPK_C7C0B394_6434_41ae_8D70_BA3A1CC73DBB" xmi:type="uml:Package" name="Types missing from base models" scope="public">
+				<model package2="EAID_C7C0B394_6434_41ae_8D70_BA3A1CC73DBB" package="EAPK_F9470925_6F90_468c_8AFB_65AD80D091D5" tpos="0" ea_localid="6819" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="raphael.malyankar" version="1.0" phase="1.0" created="2015-11-03 22:08:03" modified="2015-11-04 20:20:04" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Shared Packages"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2015-11-03 22:08:03" modified="2018-08-20 03:19:27" lastloaddate="2015-11-13 15:07:09" lastsavedate="2015-11-13 15:07:09"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_C224D458_196A_45ff_B653_449DE2A48457" xmi:type="uml:Package" name="S100Extras" scope="public">
+				<model package2="EAID_C224D458_196A_45ff_B653_449DE2A48457" package="EAPK_C7C0B394_6434_41ae_8D70_BA3A1CC73DBB" tpos="0" ea_localid="6820" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="raphael.malyankar" version="1.0" phase="1.0" created="2015-11-04 20:20:40" modified="2015-11-04 20:20:40" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Types missing from base models"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2015-11-04 20:20:40" modified="2018-08-20 03:19:27" lastloaddate="2015-11-13 15:07:09" lastsavedate="2015-11-13 15:07:09"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAID_02AC1149_1A83_4312_9137_6190E98DB36C" xmi:type="uml:DataType" name="text" scope="public">
+				<model package="EAPK_C224D458_196A_45ff_B653_449DE2A48457" tpos="0" ea_localid="58867" ea_eleType="element"/>
+				<properties documentation="A type for the &quot;text&quot; type listed in S-100 2.0.0 2a-4.2.10 among the value types for simple attributes." isSpecification="false" sType="DataType" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="raphael.malyankar" version="1.0" phase="1.0" created="2015-11-03 22:08:36" modified="2018-08-20 03:19:27" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="S100Extras"/>
+				<links>
+					<Realisation xmi:id="EAID_DE28A735_1FB9_4d61_B134_284F8F8DEA34" start="EAID_02AC1149_1A83_4312_9137_6190E98DB36C" end="EAID_AF7C81A6_B1C1_4469_A09F_B97989024A14"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_38683A9E_C4B2_442e_A6A0_CE520BB022FE" xmi:type="uml:DataType" name="Time" scope="public">
+				<model package="EAPK_C224D458_196A_45ff_B653_449DE2A48457" tpos="0" ea_localid="58866" ea_eleType="element"/>
+				<properties documentation="Placeholder for Time. ISO 19103 model defines ClockTime but the published ISO 19103 standard lacked it. S-100 Edition 2.0.0 uses &quot;Time&quot; (1-4.5.2 and Figure 3-2) or &quot;time&quot; (in S100_CD_AttributeDataType)." isSpecification="false" sType="DataType" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="raphael.malyankar" version="1.0" phase="1.0" created="2015-11-06 11:17:33" modified="2018-08-20 03:19:27" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="S100Extras"/>
+				<links>
+					<Realisation xmi:id="EAID_1443FF40_7867_4578_9576_EC671C3B482F" start="EAID_38683A9E_C4B2_442e_A6A0_CE520BB022FE" end="EAID_47C07903_9CF4_47d3_AB12_B656977FC995"/>
+				</links>
+			</element>
+			<element xmi:idref="EAPK_13FAE85D_551C_4293_BBFB_2936C307CEC6" xmi:type="uml:Package" name="ISOExtras" scope="public">
+				<model package2="EAID_13FAE85D_551C_4293_BBFB_2936C307CEC6" package="EAPK_C7C0B394_6434_41ae_8D70_BA3A1CC73DBB" tpos="2" ea_localid="6821" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="raphaelm" version="1.0" phase="1.0" created="2014-09-08 17:04:21" modified="2015-11-04 20:19:44" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Types missing from base models"/>
+				<packageproperties version="1.0" tpos="2"/>
+				<paths/>
+				<times created="2014-09-08 17:04:21" modified="2018-08-20 03:19:27" lastloaddate="2014-09-08 17:41:22" lastsavedate="2014-09-08 17:41:22"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAID_98EBDD4E_C433_4d9c_960C_09D5F7A8F989" xmi:type="uml:DataType" name="ISO3166-alpha2" scope="public">
+				<model package="EAPK_13FAE85D_551C_4293_BBFB_2936C307CEC6" tpos="1" ea_localid="58869" ea_eleType="element"/>
+				<properties documentation="Placeholder for ISO 3166-1 2-letter country codes.&#xA;Remark:&#xA;&lt;ul&gt;&#xA;	&lt;li&gt;ISO 3166-1 defines alpha-2, alpha-3 and numeric codes, which are obviously related to one another. These types are &lt;i&gt;not &lt;/i&gt;interchangeable and product specifications must use the correct data type corresponding to those codes.&lt;/li&gt;&#xA;	&lt;li&gt;In the future all three types (alpha-2, alpha-3, and numeric codes) may be provided in a dictionary.&lt;/li&gt;&#xA;&lt;/ul&gt;" isSpecification="false" sType="DataType" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="raphaelm" version="1.0" phase="1.0" created="2014-09-08 17:06:39" modified="2018-08-20 03:19:27" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="ISOExtras"/>
+			</element>
+			<element xmi:idref="EAID_B048B440_A714_47a6_BAA5_32FCA8704EC8" xmi:type="uml:DataType" name="ISO3166-alpha3" scope="public">
+				<model package="EAPK_13FAE85D_551C_4293_BBFB_2936C307CEC6" tpos="1" ea_localid="58870" ea_eleType="element"/>
+				<properties documentation="Placeholder for ISO 3166-1 3-letter country codes.&#xA;Remark:&#xA;&lt;ul&gt;&#xA;	&lt;li&gt;ISO 3166-1 defines alpha-2, alpha-3 and numeric codes, which are obviously related to one another. These types are &lt;i&gt;not &lt;/i&gt;interchangeable and product specifications must use the correct data type corresponding to those codes.&lt;/li&gt;&#xA;	&lt;li&gt;In the future all three types (alpha-2, alpha-3, and numeric codes) may be provided in a dictionary.&lt;/li&gt;&#xA;&lt;/ul&gt;" isSpecification="false" sType="DataType" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="raphaelm" version="1.0" phase="1.0" created="2014-09-08 17:06:39" modified="2018-08-20 03:19:27" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="ISOExtras"/>
+			</element>
+			<element xmi:idref="EAID_C5FF271C_7DC4_4f94_A93B_69C2D199777B" xmi:type="uml:DataType" name="ISO3166-numeric" scope="public">
+				<model package="EAPK_13FAE85D_551C_4293_BBFB_2936C307CEC6" tpos="1" ea_localid="58871" ea_eleType="element"/>
+				<properties documentation="Placeholder for ISO 3166-1 numeric country codes.&#xA;Remark:&#xA;&lt;ul&gt;&#xA;	&lt;li&gt;ISO 3166-1 defines alpha-2, alpha-3 and numeric codes, which are obviously related to one another. These types are &lt;i&gt;not &lt;/i&gt;interchangeable and product specifications must use the correct data type corresponding to those codes.&lt;/li&gt;&#xA;	&lt;li&gt;In the future all three types (alpha-2, alpha-3, and numeric codes) may be provided in a dictionary.&lt;/li&gt;&#xA;&lt;/ul&gt;" isSpecification="false" sType="DataType" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="raphaelm" version="1.0" phase="1.0" created="2014-09-08 17:06:39" modified="2018-08-20 03:19:27" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="ISOExtras"/>
+			</element>
+			<element xmi:idref="EAID_42821726_FB76_43a8_A249_9C926B608CEE" xmi:type="uml:DataType" name="ISO3166-2" scope="public">
+				<model package="EAPK_13FAE85D_551C_4293_BBFB_2936C307CEC6" tpos="2" ea_localid="58872" ea_eleType="element"/>
+				<properties documentation="Placeholder for ISO 3166-2 codes. ISO 3166-2 is the part of the ISO 3166 standard that defines the ISO codes for administrative divisions and dependent territories of the countries listed in ISO 3166-1. Codes consist of the 2-letter ISO 3166-1 alpha code for the country followed by a hyphen and an alphanumeric code for the subdivision." isSpecification="false" sType="DataType" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="raphaelm" version="1.0" phase="1.0" created="2014-09-08 17:12:45" modified="2018-08-20 03:19:27" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="ISOExtras"/>
+			</element>
+			<element xmi:idref="EAID_4BFAAB8B_3A9D_4248_8ACB_F568B023E2A0" xmi:type="uml:DataType" name="ISO639-3" scope="public">
+				<model package="EAPK_13FAE85D_551C_4293_BBFB_2936C307CEC6" tpos="3" ea_localid="58873" ea_eleType="element"/>
+				<properties documentation="Placeholder for ISO 639-3 language codes (alpha 3 codes)" isSpecification="false" sType="DataType" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="raphaelm" version="1.0" phase="1.0" created="2014-09-08 17:05:05" modified="2018-08-20 03:19:27" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="ISOExtras"/>
+			</element>
+			<element xmi:idref="EAPK_EEC0AB50_A5FB_4f53_BA66_5916E2A9AB3D" xmi:type="uml:Package" name="Extras" scope="public">
+				<model package2="EAID_EEC0AB50_A5FB_4f53_BA66_5916E2A9AB3D" package="EAPK_F9470925_6F90_468c_8AFB_65AD80D091D5" tpos="9" ea_localid="6822" ea_eleType="package"/>
+				<properties documentation="This package contains elements which are not themselves part of the model but are used for clarity or explanations." isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="raphaelm" version="1.0" phase="0.9" created="2013-07-09 15:01:48" modified="2015-11-02 16:43:35" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Shared Packages"/>
+				<packageproperties version="1.0" tpos="9"/>
+				<paths/>
+				<times created="2013-07-09 15:01:48" modified="2018-08-20 03:19:27" lastloaddate="2014-05-14 17:16:01" lastsavedate="2014-05-14 17:16:01"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_21B1D55E_0EE2_41f3_A586_B9649431ABBD" xmi:type="uml:Package" name="S100Extras" scope="public">
+				<model package2="EAID_21B1D55E_0EE2_41f3_A586_B9649431ABBD" package="EAPK_EEC0AB50_A5FB_4f53_BA66_5916E2A9AB3D" tpos="1" ea_localid="6823" ea_eleType="package"/>
+				<properties documentation="things that should be in the S-100 UML model but aren't" isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="raphaelm" version="1.0" phase="1.0" created="2014-05-15 19:20:40" modified="2015-11-04 20:20:22" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Extras"/>
+				<packageproperties version="1.0" tpos="1"/>
+				<paths/>
+				<times created="2014-05-15 19:20:40" modified="2018-08-20 03:19:27" lastloaddate="2015-11-02 16:38:35" lastsavedate="2015-11-02 16:38:35"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAID_8D1D6B97_19A2_4f87_8F0B_AA184CC804CA" xmi:type="uml:DataType" name="text" scope="public">
+				<model package="EAPK_21B1D55E_0EE2_41f3_A586_B9649431ABBD" tpos="0" ea_localid="58879" ea_eleType="element"/>
+				<properties documentation="Text data type for application schemas. Needed only because S-100 names its string type for application schemas &quot;text&quot; instead of &quot;CharacterString&quot;" isSpecification="false" sType="DataType" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="raphaelm" version="1.0" phase="1.0" created="2014-05-15 19:21:29" modified="2018-08-20 03:19:27" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="S100Extras"/>
+			</element>
+			<element xmi:idref="EAID_75F040A3_94A4_43c7_8EF9_D168443E9312" xmi:type="uml:DataType" name="URI" scope="public">
+				<model package="EAPK_21B1D55E_0EE2_41f3_A586_B9649431ABBD" tpos="0" ea_localid="58876" ea_eleType="element"/>
+				<properties documentation="Placeholder for S-100 derived value type URN" isSpecification="false" sType="DataType" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="raphaelm" version="1.0" phase="1.0" created="2014-12-31 21:54:41" modified="2018-08-20 03:19:27" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="S100Extras"/>
+			</element>
+			<element xmi:idref="EAID_47E73F2F_2F09_41f4_AA36_650DF6ED3539" xmi:type="uml:DataType" name="URL" scope="public">
+				<model package="EAPK_21B1D55E_0EE2_41f3_A586_B9649431ABBD" tpos="0" ea_localid="58877" ea_eleType="element"/>
+				<properties documentation="Placeholder for S-100 derived value type URL" isSpecification="false" sType="DataType" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="raphaelm" version="1.0" phase="1.0" created="2014-12-31 21:54:41" modified="2018-08-20 03:19:27" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="S100Extras"/>
+			</element>
+			<element xmi:idref="EAID_FCF83CC4_E09A_46b2_8C3A_C8B5034B2D82" xmi:type="uml:DataType" name="URN" scope="public">
+				<model package="EAPK_21B1D55E_0EE2_41f3_A586_B9649431ABBD" tpos="0" ea_localid="58878" ea_eleType="element"/>
+				<properties documentation="Placeholder for S-100 derived value type URN" isSpecification="false" sType="DataType" nType="0" scope="public" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="raphaelm" version="1.0" phase="1.0" created="2014-12-31 21:55:19" modified="2018-08-20 03:19:27" complexity="1" status="Proposed"/>
+				<code gentype="&lt;none&gt;"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="S100Extras"/>
+			</element>
+		</elements>
+		<connectors>
+			<connector xmi:idref="EAID_DE28A735_1FB9_4d61_B134_284F8F8DEA34">
+				<source xmi:idref="EAID_02AC1149_1A83_4312_9137_6190E98DB36C">
+					<model ea_localid="58867" type="DataType" name="text"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_AF7C81A6_B1C1_4469_A09F_B97989024A14">
+					<model ea_localid="50596" type="Class" name="CharacterString"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="91111"/>
+				<properties ea_type="Realisation" direction="Source -&gt; Destination"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="1" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+			<connector xmi:idref="EAID_1443FF40_7867_4578_9576_EC671C3B482F">
+				<source xmi:idref="EAID_38683A9E_C4B2_442e_A6A0_CE520BB022FE">
+					<model ea_localid="58866" type="DataType" name="Time"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_47C07903_9CF4_47d3_AB12_B656977FC995">
+					<model ea_localid="50578" type="Class" name="ClockTime"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="91112"/>
+				<properties ea_type="Realisation" direction="Source -&gt; Destination"/>
+				<parameterSubstitutions/>
+				<documentation/>
+				<appearance linemode="1" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels/>
+				<extendedProperties virtualInheritance="0"/>
+				<style/>
+				<xrefs/>
+				<tags/>
+			</connector>
+		</connectors>
+		<primitivetypes>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package" visibility="public"/>
+		</primitivetypes>
+		<profiles/>
+		<diagrams>
+			<diagram xmi:id="EAID_3A3F5550_3FF3_4192_9366_D59356240573">
+				<model package="EAPK_F9470925_6F90_468c_8AFB_65AD80D091D5" localID="26944" owner="EAPK_F9470925_6F90_468c_8AFB_65AD80D091D5"/>
+				<properties name="Shared Packages" type="Package"/>
+				<project author="raphael.malyankar" version="1.0" created="2015-11-03 22:34:57" modified="2015-11-03 22:45:30"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=791;DocSize.cy=1043;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<style2 value="SaveTag=08C729D4;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;SwimlaneFont=lfh:-13,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<extendedProperties/>
+			</diagram>
+			<diagram xmi:id="EAID_6FF4DEF8_C042_4fa9_9851_502ECDE9F421">
+				<model package="EAPK_C224D458_196A_45ff_B653_449DE2A48457" localID="26945" owner="EAPK_C224D458_196A_45ff_B653_449DE2A48457"/>
+				<properties name="S100Extras" type="Logical"/>
+				<project author="raphael.malyankar" version="1.0" created="2015-11-06 11:16:52" modified="2015-11-06 11:27:35"/>
+				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=791;DocSize.cy=1043;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;ShowFQN=1;"/>
+				<style2 value="SaveTag=049E6DCF;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;ShowFQN=1;SuppressedCompartments=;Theme=:119;"/>
+				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;SwimlaneFont=lfh:-13,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<extendedProperties/>
+				<elements>
+					<element geometry="Left=25;Top=230;Right=286;Bottom=482;" subject="EAID_AF7C81A6_B1C1_4469_A09F_B97989024A14" seqno="1" style="DUID=679AF55F;NSL=0;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;BCol=14803425;"/>
+					<element geometry="Left=355;Top=320;Right=450;Bottom=385;" subject="EAID_02AC1149_1A83_4312_9137_6190E98DB36C" seqno="2" style="DUID=23236D84;"/>
+					<element geometry="Left=50;Top=35;Right=228;Bottom=146;" subject="EAID_47C07903_9CF4_47d3_AB12_B656977FC995" seqno="3" style="DUID=C74020CD;NSL=0;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;BCol=14803425;"/>
+					<element geometry="Left=350;Top=60;Right=445;Bottom=120;" subject="EAID_38683A9E_C4B2_442e_A6A0_CE520BB022FE" seqno="4" style="DUID=B45EED5E;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_1443FF40_7867_4578_9576_EC671C3B482F" style="Mode=3;EOID=C74020CD;SOID=B45EED5E;Color=-1;LWidth=0;TREE=LH;Hidden=0;"/>
+					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_DE28A735_1FB9_4d61_B134_284F8F8DEA34" style="Mode=3;EOID=679AF55F;SOID=23236D84;Color=-1;LWidth=0;Hidden=0;"/>
+				</elements>
+			</diagram>
+		</diagrams>
+	</xmi:Extension>
+</xmi:XMI>
