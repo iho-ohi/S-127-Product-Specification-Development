@@ -1,6 +1,11 @@
 # S-127-Product-Specification-Development
 Collaboration space for IHO Nautical Information Provision Working Group for the development of S-127 Product Specification with its artifacts.
 
+## 09/2025
+* Inserted metanorma sources from IHO conversion. Hourly builds instigated and PDF located on front page
+* Older version PDFs relocated to ARCHIVE folder
+
+
 ## 08/2025
 * Uploaded new versions of Feature Catalogue (FC) and GML-schema (XSD) as received from TG
 * Moved 1.0.1 versions to subfoders
