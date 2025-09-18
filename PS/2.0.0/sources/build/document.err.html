@@ -1,0 +1,612 @@
+<html><head><title>build/document.err.html errors</title>
+<meta charset="UTF-8"/>
+<style> pre { white-space: pre-wrap; }
+thead th { font-weight: bold; background-color: aqua; }
+.severity0 { font-weight: bold; background-color: lightpink }
+.severity1 { font-weight: bold; }
+.severity2 { }
+.severity3 { font-style: italic; color: grey; }
+</style>
+</head><body><h1>build/document.err.html errors</h1>
+<ul><li><p><b><a href="#AsciiDoc_Input">AsciiDoc Input</a></b>: Severity 2: <b>1</b> errors</p></li>
+
+<li><p><b><a href="#Style">Style</a></b>: Severity 2: <b>16</b> errors</p></li>
+
+<li><p><b><a href="#Metanorma_XML_Syntax">Metanorma XML Syntax</a></b>: Severity 2: <b>158</b> errors</p></li>
+</ul>
+<h2 id="AsciiDoc_Input">AsciiDoc Input</h2>
+<table border="1">
+<thead><th width="5%">Line</th><th width="20%">ID</th>
+<th width="30%">Message</th><th width="40%">Context</th><th width="5%">Severity</th></thead>
+<tbody>
+<tr class="severity2">
+<td></td><th><code><a href='build/document.html#sec_2'>sec_2</a></code></th>
+<td>Section not marked up as [bibliography]!</td><td><pre>#&lt;Asciidoctor::Section@1376 {level: 1, title: &quot;References&quot;, blocks: 2}&gt;</pre></td><td>2</td></tr>
+</tbody></table>
+<h2 id="Style">Style</h2>
+<table border="1">
+<thead><th width="5%">Line</th><th width="20%">ID</th>
+<th width="30%">Message</th><th width="40%">Context</th><th width="5%">Severity</th></thead>
+<tbody>
+<tr class="severity2">
+<td>000173</td><th><code><a href='build/document.html#sec_3'>sec_3</a></code></th>
+<td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_e01abbdd-52e3-11e0-92b7-aa922f589d98&quot; anchor=&quot;sec_3&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_9a08a8df-9ff1-c10e-3e53-266a4082587a&quot;&gt;Terms, definitions, and abbreviations&lt;/title&gt;
+&lt;terms id=&quot;_74d0a097-f876-1725-6632-7e217c025b18&quot; anchor=&quot;sec_3.1&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_e0d415dd-ab5d-77a3-3b7b-4734a8205eb4&quot;&gt;Terms and definitions&lt;/title&gt; &lt;p id=&quot;_5a9a6775-65e8-ad27-8cda-611b4c7c2799&quot;&gt;For the purposes of this document, the following terms and definitions apply.&lt;/p&gt;
+</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>000636</td><th><code><a href='build/document.html#sec_6.2'>sec_6.2</a></code></th>
+<td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_f2522f6e-73c4-d81e-5099-4fbb7a9e18d8&quot; anchor=&quot;sec_6.2&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_1cea94ee-f786-a42d-0adc-8b2d05e3236d&quot;&gt;Application schema&lt;/title&gt;
+&lt;p id=&quot;_4809762b-639e-c4f8-5a1c-f107c573672b&quot;&gt;The UML models in this clause are segments of the overall S-127 application schema, and include overviews of the feature classes, information classes, meta features, spatial types, and the relationships between them.&lt;/p&gt;
+
+&lt;p id=&quot;_0c018f2c-97fb-c0d3-8363-33e0374ccb9f&quot;&gt;This clause contains a general overview of the classes and relationships in the S-127 application schema. Detailed information about how to use the feature types and information types to encode Marine Traffic Management information is provided in the S-127 Data Classification and Encoding Guide (DCEG).&lt;/p&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>000671</td><th><code><a href='build/document.html#sec_6.2.1'>sec_6.2.1</a></code></th>
+<td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_db056425-9aae-1ac8-2938-bf359e8464a3&quot; anchor=&quot;sec_6.2.1&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_1d74cb7e-0846-6549-0dff-db9bd9bf160b&quot;&gt;Domain model&lt;/title&gt;
+&lt;p id=&quot;_1155459f-71ac-7d0d-8982-0b2b2a2f5ca8&quot;&gt;The S-127 domain model has two base classes (’root classes’) from which all the domain-specific geographic features and information type classes are derived. The base classes are shown in  &lt;xref target=&quot;fig_3&quot;/&gt; below. The base class for geographic features is  &lt;strong&gt;FeatureType&lt;/strong&gt; and the base class for information types is  &lt;strong&gt;InformationType&lt;/strong&gt;. Each of the two base classes has a set of attributes which are therefore inherited by all domain-specific features. The approximate area features in S-127 are also derived from the geographic feature root class. Both base classes are abstract classes and do not have direct instances in S-127 data — instead, S-127 feature and information type data objects are instantiations of a non-abstract class derived from one of these base classes.&lt;/p&gt;
+
+&lt;p id=&quot;_86b94dbc-e34d-d5bc-2424-5f2ee2f22ae0&quot;&gt;S-127 meta- and cartographic features are not derived from these base classes — S-127 instead incorporates meta- and cartographic feature definitions originally prepared for S-101 in the interests of harmonization and interoperability with other S-100-based data products, especially S-101 ENCs.&lt;/p&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>001075</td><th><code><a href='build/document.html#sec_7.2'>sec_7.2</a></code></th>
+<td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_84e58a67-a983-6185-7457-ff15ef314f9f&quot; anchor=&quot;sec_7.2&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_ed8bc160-b527-28a2-dab6-7775ffacb808&quot;&gt;Feature Types&lt;/title&gt;
+&lt;p id=&quot;_9c23e97e-a102-3996-7a32-a5aff586421e&quot;&gt;Feature types contain descriptive attributes that characterize real-world entities. The word ‘feature’ may be used in one of two senses — feature type and feature instance. A feature type is a class and is defined in a Feature Catalogue. A feature instance is a single occurrence of the feature type and represented as an object in a dataset. A feature instance is located by a relationship to one or more spatial instances. A feature instance may exist without referencing a spatial instance.&lt;/p&gt;
+
+&lt;clause id=&quot;_9a9a68aa-5d12-4f2e-d0d2-8d84535dc82c&quot; anchor=&quot;sec_7.2.1&quot; obligation=&quot;normative&quot;&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>001099</td><th><code><a href='build/document.html#sec_7.2.5'>sec_7.2.5</a></code></th>
+<td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_3ae1323c-3c02-da0e-5e60-ff83ea627e30&quot; anchor=&quot;sec_7.2.5&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_e1a22c1a-30b8-dae5-e33e-a4ac8bb59599&quot;&gt;Information Types&lt;/title&gt;
+&lt;p id=&quot;_b33ce44b-3cd9-c1aa-9af7-7d985d2ac1df&quot;&gt;Information types are identifiable pieces of information in a dataset that can be shared between other features. They have attributes but have no relationship to any geometry; information types may reference other information types.&lt;/p&gt;
+
+&lt;clause id=&quot;_b41d2c5f-2227-5908-12b2-ebfdfe876a8a&quot; anchor=&quot;sec_7.2.5.1&quot; obligation=&quot;normative&quot;&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>001109</td><th><code><a href='build/document.html#sec_7.2.6'>sec_7.2.6</a></code></th>
+<td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_73a6ff23-a830-99e7-d21f-a0ccdb498bda&quot; anchor=&quot;sec_7.2.6&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_7a746234-f0fa-7e48-5268-cb629dbd31b6&quot;&gt;Attributes&lt;/title&gt;
+&lt;p id=&quot;_b801de0b-3d4e-c366-bbe5-2c2728da87e2&quot;&gt;S-127 defines attributes as either simple or complex.&lt;/p&gt;
+
+&lt;clause id=&quot;_709d68d3-730a-b41a-8f87-07e52adb8ac7&quot; anchor=&quot;sec_7.2.6.1&quot; obligation=&quot;normative&quot;&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>001137</td><th><code><a href='build/document.html#_305aae17-57b0-15c1-4e47-b11921203469'>_305aae17-57b0-15c1-4e47-b11921203469</a></code></th>
+<td>There is an instance of example nested within table</td><td><pre>&lt;example id=&quot;_305aae17-57b0-15c1-4e47-b11921203469&quot;&gt; &lt;p id=&quot;_d1064784-c1d7-3484-b98f-de7c81b860ac&quot;&gt;19980918 (YYYY-MM-DD)&lt;/p&gt;
+&lt;/example&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>001143</td><th><code><a href='build/document.html#_11c7fb04-a0fd-908a-a3d4-223cacc886b1'>_11c7fb04-a0fd-908a-a3d4-223cacc886b1</a></code></th>
+<td>There is an instance of example nested within table</td><td><pre>&lt;example id=&quot;_11c7fb04-a0fd-908a-a3d4-223cacc886b1&quot;&gt; &lt;p id=&quot;_72f106fe-2aa8-bb47-a56d-b1e85834f541&quot;&gt;183059 or 183059+0100 or 183059Z&lt;/p&gt;
+&lt;/example&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>001154</td><th><code><a href='build/document.html#_c942bf06-ee3a-bb4c-0e40-cee9dfbd7cfe'>_c942bf06-ee3a-bb4c-0e40-cee9dfbd7cfe</a></code></th>
+<td>There is an instance of example nested within table</td><td><pre>&lt;example id=&quot;_c942bf06-ee3a-bb4c-0e40-cee9dfbd7cfe&quot;&gt; &lt;p id=&quot;_bbe78fce-8107-b0d2-2168-a0932b35e965&quot;&gt; &lt;link target=&quot;http://registry.iho.int&quot;/&gt; &lt;/p&gt;
+&lt;/example&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>001160</td><th><code><a href='build/document.html#_88c0226e-effe-716a-21cd-250b7a45abc3'>_88c0226e-effe-716a-21cd-250b7a45abc3</a></code></th>
+<td>There is an instance of example nested within table</td><td><pre>&lt;example id=&quot;_88c0226e-effe-716a-21cd-250b7a45abc3&quot;&gt; &lt;p id=&quot;_8be43681-b4dd-78cc-837d-fb19eda235ed&quot;&gt; &lt;link target=&quot;http://registry.iho.int&quot;/&gt; &lt;/p&gt;
+&lt;/example&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>001445</td><th><code><a href='build/document.html#sec_9.3'>sec_9.3</a></code></th>
+<td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_22872452-0ece-1a51-76e6-bc4b2ec26805&quot; anchor=&quot;sec_9.3&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_bfe1178a-a16b-bf7a-077a-eaf5a82c14fe&quot;&gt;Test methods&lt;/title&gt;
+&lt;p id=&quot;_1f64d9ea-adff-fcd2-cf16-9ac4c6ca527a&quot;&gt;Test methods consist of executing the relevant tests from Annex E (Validation Checks) for each quality element in  &lt;xref target=&quot;table_9.1&quot;/&gt; and counting the number of instances in the dataset which fail the checks for that quality element.&lt;/p&gt;
+
+&lt;p id=&quot;_f0070d73-9849-5181-ae43-e9a68dbebb07&quot;&gt;Note that in some cases “executing the relevant test” may involve comparing the encoded S-127 dataset to the source material by visual means (e.g., for measures 17 and 18). For tests requiring visual comparison of encoded data to source material, sampling methods may be used if the volume of data precludes checking all the relevant data objects.&lt;/p&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>001496</td><th><code><a href='build/document.html#sec_10'>sec_10</a></code></th>
+<td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_49c54a76-1a7c-796e-936b-b54009044c65&quot; anchor=&quot;sec_10&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_9b709e36-a7dc-63d1-c1eb-55057ca668a3&quot;&gt;Data capture and classification&lt;/title&gt;
+&lt;p id=&quot;_ae18cf64-db4f-3243-4d38-26f9a745cb65&quot;&gt;Data source: S-127 products must be based on data sources released by an appropriate MTM defining authority. Data source must be described in each data product.&lt;/p&gt;
+
+&lt;p id=&quot;_4c56e796-9d23-1946-0def-1793578b85c8&quot;&gt;The production process used to generate MTM products may be described in the comment attribute of the dataset metadata.&lt;/p&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>001542</td><th><code><a href='build/document.html#sec_10.2'>sec_10.2</a></code></th>
+<td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_0b4163f2-a212-7363-5c0e-89f000d82cf6&quot; anchor=&quot;sec_10.2&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_b1214b84-67d0-d410-b949-30fbbd5e0e4f&quot;&gt;Encoding of latitude and longitude&lt;/title&gt;
+&lt;p id=&quot;_549d5837-1bc8-df44-e335-5d95b79bac71&quot;&gt;Values of latitude and longitude must be accurate to 7 decimal places. Coordinates must be encoded as decimals in the format described in &lt;xref target=&quot;sec_10.2.1&quot;/&gt;. The encoding is indicated by multiplication factor fields defined in the dataset identification record.&lt;/p&gt;
+
+&lt;clause id=&quot;_6151d2dd-ceb7-f66e-a7fa-30d67edcb306&quot; anchor=&quot;sec_10.2.1&quot; obligation=&quot;normative&quot;&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>001709</td><th><code><a href='build/document.html#sec_11.1'>sec_11.1</a></code></th>
+<td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_19ecd52e-17dc-12c4-8bca-793dbbaa0929&quot; anchor=&quot;sec_11.1&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_d580cf40-4f67-e3ef-a177-a8f1411fedd5&quot;&gt;Data product delivery information&lt;/title&gt;
+&lt;p id=&quot;_d911cdf0-ec9d-3b0e-704f-86d6c867fba2&quot;&gt;This data product specification defines GML as the primary format in which MTM data products are delivered. The delivery format is described in  &lt;xref target=&quot;table_11.1&quot;/&gt; by the following items (from &lt;eref type=&quot;inline&quot; bibitemid=&quot;ISO_19131_2007&quot; citeas=&quot;ISO 19131:2007&quot;/&gt;): format name, version, specification, language, character set.&lt;/p&gt;
+
+&lt;table id=&quot;_63504cea-70c7-dc5e-de93-a86a56fc206f&quot; anchor=&quot;table_11.1&quot;&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>001948</td><th><code><a href='build/document.html#sec_14.2'>sec_14.2</a></code></th>
+<td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_1d3a6839-1be0-c169-9e2a-08bb1d0ec9c7&quot; anchor=&quot;sec_14.2&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_24d33101-58ce-9351-b3ce-b7553bdb01a1&quot;&gt;Dataset metadata&lt;/title&gt;
+&lt;p id=&quot;_92ad9e36-2204-4b6d-9560-19362e33f47e&quot;&gt;Dataset metadata is intended to describe information about a dataset. It facilitates the management and exploitation of data and is an important requirement for understanding the characteristics of a dataset. Whereas dataset metadata is usually fairly comprehensive, there is also a requirement for a constrained subset of metadata elements that are usually required for discovery purposes. Discovery metadata are often used for building web catalogues, and can help users determine whether a product or service is fit for purpose and where they can be obtained.&lt;/p&gt;
+
+&lt;clause id=&quot;_77150f82-899f-68ac-086e-3e990edbaea7&quot; anchor=&quot;sec_14.2.1&quot; obligation=&quot;normative&quot;&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>002342</td><th><code><a href='build/document.html#sec_14.4'>sec_14.4</a></code></th>
+<td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_c13e156e-812e-65de-2db5-6c2001272f65&quot; anchor=&quot;sec_14.4&quot; obligation=&quot;normative&quot;&gt;
+&lt;title id=&quot;_200928e1-d6da-258e-72f4-51e55df08c84&quot;&gt;Exchange set catalogue and metadata&lt;/title&gt;
+&lt;p id=&quot;_aadbc6ab-9fde-bc1b-2832-293b125c8ee4&quot;&gt;Frequently datasets are packaged and distributed as composite exchange sets by third party vendors. An exchange set could contain datasets sourced from different data producers. For example, an exchange set may contain numerous dataset files, ancillary data files, discovery metadata files and others. Exchange set metadata contains metadata about the contents of the exchange set and metadata about the data distributor.&lt;/p&gt;
+
+&lt;clause id=&quot;_672b3500-d3cb-e4a2-c5d8-f6abdd532fa1&quot; anchor=&quot;sec_14.4.1&quot; obligation=&quot;normative&quot;&gt;</pre></td><td>2</td></tr>
+</tbody></table>
+<h2 id="Metanorma_XML_Syntax">Metanorma XML Syntax</h2>
+<table border="1">
+<thead><th width="5%">Line</th><th width="20%">ID</th>
+<th width="30%">Message</th><th width="40%">Context</th><th width="5%">Severity</th></thead>
+<tbody>
+<tr class="severity2">
+<td></td><th><code>XML Line 000187:114</code></th>
+<td>IDREF "ISO_​19101" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000196:114</code></th>
+<td>IDREF "ISO_​19101" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000205:114</code></th>
+<td>IDREF "ISO_​19101" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000214:114</code></th>
+<td>IDREF "ISO_​19101" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000226:127</code></th>
+<td>IDREF "ISO_​19123" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000255:134</code></th>
+<td>IDREF "ISO_​19115_2006" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000264:124</code></th>
+<td>IDREF "ISO_​19115_2006" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000276:140</code></th>
+<td>IDREF "ISO_TS_​19103_​2005" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000288:124</code></th>
+<td>IDREF "ISO_​19101" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000303:124</code></th>
+<td>IDREF "ISO_​19110" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000318:124</code></th>
+<td>IDREF "ISO_​19101" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000330:134</code></th>
+<td>IDREF "ISO_​19109_2005" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000339:124</code></th>
+<td>IDREF "ISO_​19115_2006" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000348:124</code></th>
+<td>IDREF "ISO_​19109_2005" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000357:114</code></th>
+<td>IDREF "ISO_​19117" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000366:114</code></th>
+<td>IDREF "ISO_​19101" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000375:114</code></th>
+<td>IDREF "ISO_​19101" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000570:430</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000570:646</code></th>
+<td>IDREF "ISO_​19115_1" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000594:217</code></th>
+<td>IDREF "ISO_639_​2" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000605:232</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000609:254</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000609:450</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000609:652</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000633:623</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000644:288</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000789:346</code></th>
+<td>IDREF "ISO_​8601_2004" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 000899:72</code></th>
+<td>attribute "start" not allowed here; expected attribute "anchor",​ "columns", "keep-lines-together", "keep-with-next", "multilingual-rendering", "source" or "tag"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001135:421</code></th>
+<td>IDREF "ISO_​8601_2004" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001137:53</code></th>
+<td>element "example" not allowed here; expected the element end-tag or element "dl", "figure",​ "ol", "p" or "ul"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001141:365</code></th>
+<td>IDREF "ISO_​8601_2004" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001143:53</code></th>
+<td>element "example" not allowed here; expected the element end-tag or element "dl", "figure",​ "ol", "p" or "ul"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001154:53</code></th>
+<td>element "example" not allowed here; expected the element end-tag or element "dl", "figure",​ "ol", "p" or "ul"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001160:53</code></th>
+<td>element "example" not allowed here; expected the element end-tag or element "dl", "figure",​ "ol", "p" or "ul"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001197:236</code></th>
+<td>IDREF "ISO_​19107_2003" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001238:103</code></th>
+<td>IDREF "ISO_​19115_1" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001261:201</code></th>
+<td>IDREF "ISO_​19108_2002" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001310:143</code></th>
+<td>IDREF "IHO_S_​97" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001426:322</code></th>
+<td>IDREF "ISO_​19157" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001474:162</code></th>
+<td>IDREF "IHO_S_​97" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001613:187</code></th>
+<td>IDREF "ISO_​10646_1" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001630:202</code></th>
+<td>IDREF "S127AnnexA" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001711:321</code></th>
+<td>IDREF "ISO_​19131_2007" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001793:269</code></th>
+<td>IDREF "S127AnnexA" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001923:184</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001923:382</code></th>
+<td>IDREF "ISO_​19115_1" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001925:444</code></th>
+<td>IDREF "ISO_​19115_1" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001937:138610</code></th>
+<td>IDREF "ISO_​19115_1" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001986:163</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001990:232</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001994:261</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001997:274</code></th>
+<td>IDREF "ISO_​19115_1" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002002:204</code></th>
+<td>IDREF "ISO_​19115_1" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002056:187</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002056:382</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002082:163</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002095:163</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002099:163</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002103:168</code></th>
+<td>IDREF "ISO_​19115_3" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002107:135</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002107:330</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002166:231</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002170:261</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002173:274</code></th>
+<td>IDREF "ISO_​19115_1" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002184:145</code></th>
+<td>attribute "start" not allowed here; expected attribute "anchor",​ "columns", "keep-lines-together", "keep-with-next", "multilingual-rendering", "source" or "tag"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002217:187</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002217:382</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002246:199</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002250:199</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002254:157</code></th>
+<td>IDREF "ISO_​19115_3" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002258:135</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002258:330</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002311:163</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002325:232</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002329:261</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002333:163</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002337:163</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002392:233</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002413:298</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002414:303</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002425:390</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002437:158</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002457:399</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002470:364</code></th>
+<td>IDREF "ISO_​8211" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002470:434</code></th>
+<td>IDREF "IHO_S_​100" without matching ID</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002555:119</code></th>
+<td>text not allowed here; expected the element end-tag or element "abbreviation", "addition", "completename", "forename", "formatted-initials", "note", "prefix",​ "surname" or "variant"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002555:172</code></th>
+<td>attribute "language" not allowed here; expected attribute "type"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002555:172</code></th>
+<td>attribute "script" not allowed here; expected attribute "type"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002555:172</code></th>
+<td>element "variant" missing required attribute "type"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002555:172</code></th>
+<td>element "variant" not allowed here; expected the element end-tag, text or element "br", "em", "passthrough", "smallcap", "stem", "strike",​ "strong",​ "sub", "sup", "tt" or "underline"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002555:198</code></th>
+<td>text not allowed here; expected the element end-tag or element "abbreviation", "addition", "completename", "forename", "formatted-initials", "note", "prefix",​ "surname" or "variant"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002555:89</code></th>
+<td>attribute "language" not allowed here; expected attribute "type"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002555:89</code></th>
+<td>attribute "script" not allowed here; expected attribute "type"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002555:89</code></th>
+<td>element "variant" missing required attribute "type"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002555:89</code></th>
+<td>element "variant" not allowed here; expected the element end-tag, text or element "br", "em", "passthrough", "smallcap", "stem", "strike",​ "strong",​ "sub", "sup", "tt" or "underline"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002557:20</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002561:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002563:54</code></th>
+<td>character content of element "validityBegins" invalid; must be a string matching the regular expression "([\+\-]?​\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]​\d|0[1-9]|3[01]​))?|W([0-4]\d|5[0-2])(-?[1-7])?​|(00[1-9]|0[1-9]\d|[12]​\d{2}|3([0­-5]\d|6[1-6]))))?"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002681:22</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002685:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002777:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002845:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002907:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 002959:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003020:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003095:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003157:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003353:22</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003357:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003485:22</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003489:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003560:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003630:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003695:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003851:22</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003855:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003901:119</code></th>
+<td>text not allowed here; expected the element end-tag or element "abbreviation", "addition", "completename", "forename", "formatted-initials", "note", "prefix",​ "surname" or "variant"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003901:172</code></th>
+<td>attribute "language" not allowed here; expected attribute "type"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003901:172</code></th>
+<td>attribute "script" not allowed here; expected attribute "type"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003901:172</code></th>
+<td>element "variant" missing required attribute "type"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003901:172</code></th>
+<td>element "variant" not allowed here; expected the element end-tag, text or element "br", "em", "passthrough", "smallcap", "stem", "strike",​ "strong",​ "sub", "sup", "tt" or "underline"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003901:198</code></th>
+<td>text not allowed here; expected the element end-tag or element "abbreviation", "addition", "completename", "forename", "formatted-initials", "note", "prefix",​ "surname" or "variant"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003901:89</code></th>
+<td>attribute "language" not allowed here; expected attribute "type"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003901:89</code></th>
+<td>attribute "script" not allowed here; expected attribute "type"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003901:89</code></th>
+<td>element "variant" missing required attribute "type"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003901:89</code></th>
+<td>element "variant" not allowed here; expected the element end-tag, text or element "br", "em", "passthrough", "smallcap", "stem", "strike",​ "strong",​ "sub", "sup", "tt" or "underline"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003903:20</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003907:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003909:54</code></th>
+<td>character content of element "validityBegins" invalid; must be a string matching the regular expression "([\+\-]?​\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]​\d|0[1-9]|3[01]​))?|W([0-4]\d|5[0-2])(-?[1-7])?​|(00[1-9]|0[1-9]\d|[12]​\d{2}|3([0­-5]\d|6[1-6]))))?"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 003990:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004035:119</code></th>
+<td>text not allowed here; expected the element end-tag or element "abbreviation", "addition", "completename", "forename", "formatted-initials", "note", "prefix",​ "surname" or "variant"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004035:89</code></th>
+<td>attribute "language" not allowed here; expected attribute "type"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004035:89</code></th>
+<td>attribute "script" not allowed here; expected attribute "type"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004035:89</code></th>
+<td>element "variant" missing required attribute "type"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004035:89</code></th>
+<td>element "variant" not allowed here; expected the element end-tag, text or element "br", "em", "passthrough", "smallcap", "stem", "strike",​ "strong",​ "sub", "sup", "tt" or "underline"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004037:20</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004041:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004043:54</code></th>
+<td>character content of element "validityBegins" invalid; must be a string matching the regular expression "([\+\-]?​\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]​\d|0[1-9]|3[01]​))?|W([0-4]\d|5[0-2])(-?[1-7])?​|(00[1-9]|0[1-9]\d|[12]​\d{2}|3([0­-5]\d|6[1-6]))))?"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004105:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004223:22</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004227:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004344:22</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004348:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004460:22</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004464:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004592:22</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004596:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004783:22</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 004787:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 005270:22</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 005274:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 005395:22</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 005399:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 005514:22</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 005518:18</code></th>
+<td>text not allowed here; expected the element end-tag or element "city", "country", "formattedPlace", "region" or "uri"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 005524:10</code></th>
+<td>element "title" not allowed here; expected the element end-tag or element "abstract", "accesslocation", "classification", "contributor", "copyright", "date", "depiction", "edition", "extent",​ "keyword", "language", "license", "locale",​ "medium",​ "note", "place", "price", "relation", "script",​ "series",​ "size", "status",​ "validity" or "version"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 005525:18</code></th>
+<td>element "docidentifier" not allowed here; expected the element end-tag or element "abstract", "accesslocation", "classification", "contributor", "copyright", "date", "depiction", "edition", "extent",​ "keyword", "language", "license", "locale",​ "medium",​ "note", "place", "price", "relation", "script",​ "series",​ "size", "status",​ "validity" or "version"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 005526:36</code></th>
+<td>element "docidentifier" not allowed here; expected the element end-tag or element "abstract", "accesslocation", "classification", "contributor", "copyright", "date", "depiction", "edition", "extent",​ "keyword", "language", "license", "locale",​ "medium",​ "note", "place", "price", "relation", "script",​ "series",​ "size", "status",​ "validity" or "version"</td><td><pre></pre></td><td>2</td></tr>
+</tbody></table>
+</body></html>
