@@ -1,0 +1,25 @@
+
+[[sec_1]]
+== Overview
+
+[[sec_1.1]]
+=== Introduction
+
+This document has been produced by the IHO Nautical Information Provision
+Working Group (NIPWG) in response to a requirement to produce a data
+product that can be used as a Nautical Publication Information Overlay
+(NPIO) within an Electronic Chart Display and Information Systems
+(ECDIS). It is based on the IHO S-100 framework specification and
+the ISO 19100 series of standards. It is a vector product specification
+that is primarily intended for encoding the extent and nature of Marine
+Traffic Management, for navigational purposes.
+
+Marine Traffic Management (MTM) datasets describe the availability
+and reliability of vessel traffic services, pilotage, routing measures,
+and ship reporting systems. This includes their service areas, services
+offered, and instructions for contacting or utilizing these services.
+MTM is intended to be a supplement to ENC, and therefore does not
+describe the geographic information in detail equal to ENC, rather
+it is shown as a simplified geometry to indicate location, and to
+be a means of geolocating more regulatory information than the
+typical ENC.

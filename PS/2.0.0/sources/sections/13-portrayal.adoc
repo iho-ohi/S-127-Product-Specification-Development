@@ -1,0 +1,10 @@
+
+[[sec_13]]
+== Portrayal
+
+Portrayal is not defined in this version of S-127 Marine Traffic Management
+Product Specifications. Users are free to choose the means and methodology
+of portrayal as they see best suited for their needs. It should be
+noted that future versions of S-127 may include a portrayal catalogue,
+and any implementer should therefore anticipate this, and make sufficient
+provisions in any system supporting S-127.

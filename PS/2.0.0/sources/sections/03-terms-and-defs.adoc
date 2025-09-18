@@ -1,0 +1,268 @@
+
+[[sec_3]]
+== Terms, definitions, and abbreviations
+
+[[sec_3.1]]
+[heading="Terms and definitions"]
+=== Terms and definitions
+
+The S-100 framework is based on the ISO 19100 series of geographic
+standards. The terms and definitions provided here are used to standardize
+the nomenclature found within that framework, whenever possible.
+They are taken from the references cited in <<sec_2.1>>. Modifications
+have been made when necessary.
+
+==== application
+
+manipulation and processing of data in support of user requirements
+
+[.source]
+<<ISO_19101>>
+
+==== application schema
+
+{{conceptual schema}} for data required by one or more {{application,applications}}
+
+[.source]
+<<ISO_19101>>
+
+==== conceptual model
+
+modelthat defines concepts of a {{universe of discourse}}
+
+[.source]
+<<ISO_19101>>
+
+==== conceptual schema
+
+formal description of a {{conceptual model}}
+
+[.source]
+<<ISO_19101>>
+
+==== coverage
+
+{{feature}} that acts as a function to return values from its range
+for any direct position within its spatial, temporal or spatiotemporal
+{{domain}}
+
+[.source]
+<<ISO_19123>>
+
+[example]
+Raster image, polygon overlay, digital elevation matrix.
+
+==== data product
+
+{{dataset}} or {{dataset series}} that conforms to a
+{{data product specification}}
+
+==== data product specification
+
+detailed description of a {{dataset}} or {{dataset series}} together
+with additional information that will enable it to be created, supplied
+to, and used by another party
+
+NOTE: A data product specification provides a description of the universe
+of discourse and a specification for mapping the universe of discourse
+to a dataset. It may be used for production, sales, end-use, or other
+purpose.
+
+==== dataset
+
+identifiable collection of data
+
+[.source]
+<<ISO_19115_2006>>
+
+NOTE: A dataset may be a smaller grouping of data which, though limited
+by some constraint such as spatial extent or feature type, is located
+physically within a larger dataset. Theoretically, a dataset may be
+as small as a single feature or feature attribute contained within
+a larger dataset. A hardcopy map or chart may be considered a dataset.
+
+==== dataset series
+
+collection of {{dataset,datasets}} sharing the same product specification
+
+[.source]
+<<ISO_19115_2006>>
+
+==== domain
+
+well-defined set
+
+[.source]
+<<ISO_TS_19103_2005>>
+
+NOTE: Well-defined means that the definition is both necessary and
+sufficient, as everything that satisfies the definition is in the
+set and everything that does not satisfy the definition is necessarily
+outside the set.
+
+==== feature
+
+abstraction of real world phenomena
+
+[.source]
+<<ISO_19101>>
+
+NOTE: A feature may occur as a type or an instance. Feature type or
+feature instance shall be used when only one is meant.
+
+==== feature association
+
+relationship that links instances of one {{feature}} type with instances
+of the same or a different {{feature}} type
+
+[.source]
+<<ISO_19110>>
+
+NOTE: A feature association may occur as a type or an instance. Feature
+association type or feature association instance is used when only
+one is meant.
+
+NOTE: Feature associations include aggregation of features.
+
+==== feature attribute
+
+characteristic of a {{feature}}
+
+[.source]
+<<ISO_19101>>
+
+NOTE: A feature attribute may occur as a type or an instance. Feature
+attribute type or feature attribute instance is used when only one
+is meant.
+
+NOTE: A feature attribute type has a name, a data type and a domain
+associated to it. A feature attribute for a feature instance has an
+attribute value taken from the domain.
+
+==== geographic data
+
+data with implicit or explicit reference to a location relative to
+the Earth
+
+[.source]
+<<ISO_19109_2005>>
+
+NOTE: Geographic information is also used as a term for information
+concerning phenomena implicitly or explicitly associated with a location
+relative to the Earth.
+
+==== metadata
+
+data about data
+
+[.source]
+<<ISO_19115_2006>>
+
+==== model
+
+abstraction of some aspects of reality
+
+[.source]
+<<ISO_19109_2005>>
+
+==== portrayal
+
+presentation of information to humans
+
+[.source]
+<<ISO_19117>>
+
+==== quality
+
+totality of characteristics of a product that bear on its ability
+to satisfy stated and implied needs
+
+[.source]
+<<ISO_19101>>
+
+==== universe of discourse
+
+view of the real or hypothetical world that includes everything of
+interest
+
+[.source]
+<<ISO_19101>>
+
+[[sec_3.2]]
+=== Abbreviations
+
+This product specification adopts the following convention for symbols
+and abbreviated terms:
+
+ASCII:: American Standard Code for Information Interchange
+
+ECDIS:: Electronic Chart Display and Information Systems
+
+ENC:: Electronic Navigational Chart
+
+GML:: Geography Markup Language
+
+IHO:: International Hydrographic Organization
+
+IOC:: International Oceanographic Commission
+
+ISO:: International Organization for Standardization
+
+JPEG:: Joint Photographic Experts Group
+
+MTM:: Marine Traffic Management
+
+NIPWG:: Nautical Information Provision Working Group
+
+NPIO:: Nautical Publication Information Overlay
+
+PNG:: Portable Network Graphics
+
+SVG:: Scalable Vector graphics
+
+TIFF:: Tagged Image File Format
+
+UML:: Unified Modelling Language
+
+URI:: Uniformed Resource Identifier
+
+URL:: Uniform Resource Locator
+
+WGS:: World Geodetic System
+
+XML:: eXtensible Markup Language
+
+XSD:: XML Schema Definition
+
+XSLT:: eXtensible Stylesheet Language Transformations
+
+[[sec_3.3]]
+=== Use of language
+
+Within this document, including appendices and annexes:
+
+* "Must" indicates a mandatory requirement.
+* "Should" indicates an optional requirement, that is the recommended
+process to be followed, but is not mandatory.
+* "May" means "allowed to" or "could possibly", and is not mandatory.
+
+[[sec_3.4]]
+=== UML notations
+
+In this document, conceptual schemas are presented in the Unified
+Modelling Language (UML). Several model elements used in this schema
+are defined in ISO standards or in IHO S-100 documents. In order to
+ensure that class names in the model are unique ISO TC/211 has adopted
+a convention of establishing a prefix to the names of classes that
+define the TC/211 defined UML package in which the UML class is defined.
+The IHO standards and this product specification make use of classes
+derived directly from the ISO standards. This convention is also followed
+in this document. In the IHO standards class names are identified
+by the name of the standard, such as "S100" as the prefix optionally
+followed by the bi-alpha prefix derived from ISO standard. In order
+to avoid having multiple classes instantiating the same root classes,
+the ISO classes and S-100 classes have been used where possible; however,
+a new instantiated class is required if there is a need to alter a
+class or relationship to prevent a reverse coupling between the model
+elements introduced in this document and those defined in S-100 or
+the ISO model.

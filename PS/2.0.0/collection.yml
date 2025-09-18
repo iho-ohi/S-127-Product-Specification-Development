@@ -1,0 +1,45 @@
+---
+directives:
+  - documents-inline
+  - recompile-xml: true
+  #- coverpage: index.html
+
+output_folder: collection
+
+bibdata:
+  title:
+    type: title-main
+    language: en
+    content: Marine Traffic Management Product Specification
+
+  type: collection
+
+  docid:
+    type: iho
+    id: IHO S-127
+
+  edition: "1.0.1"
+
+  date:
+    - type: created
+      value: "2019-11-01"
+
+  copyright:
+    owner:
+      name: International Hydrographic Organization
+      abbreviation: IHO
+    from: "2019"
+
+format:
+  - xml
+  - html
+  - presentation
+  - doc
+  - pdf
+
+manifest:
+  docref:
+    - file: sources/1.0.1/main/document.adoc
+      identifier: IHO S-127
+    - file: sources/1.0.1/annex-a/document.adoc
+      identifier: IHO S-127 Annex A

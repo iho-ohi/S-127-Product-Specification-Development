@@ -1,0 +1,136 @@
+
+[[sec_15]]
+== Appendix D-1. GML Data Format Overview
+
+This data format conforms to the profile described in <<IHO_S_100,part=10b>>,
+which is based on GML. Each dataset in the XML dataset format consists
+of a root or container element DataSet, whose structure is shown in
+<<fig_33>> below. A _Dataset_ contains of optional header information
+identifying the dataset
+(contained in element _DatasetIdentificationInformation_) and providing
+parameters (within element _DatasetStructureInformation_), followed
+by 0 or more spatial objects (points, curves, or surfaces -- these
+replace the S100:Geometry box in the figure), then information and
+feature objects (within _imember_ and _member_ container elements
+respectively). _Dataset_, _imember_, and _member_ elements are format
+constructs and not part of the application schema. Also, the root
+Dataset element is derived from _gml:AbstractFeatureType_
+(another GML data format idiom). <<fig_33>> shows the top-level structure
+of a dataset.
+
+The top-level _Dataset_ element includes the dataset bounding box
+(_gml:boundedBy_ - not required by the application schema, but used
+by GML off-the-shelf software).
+
+[[fig_33]]
+.Top-level structure of dataset
+image::figure-33.png[]
+
+
+
+Feature and information type instances are placed in <_member_> and
+<_imember_> containers respectively. The figures that follow show
+the allowed feature (<<fig_34>>) and information instances (<<fig_35>>)
+respectively. Following GML idiom, the schema uses the XML substitution
+groups mechanism to include the allowed feature and information types.
+
+[[fig_34]]
+.Features in the data format
+image::figure-34.png[]
+
+
+Note that even when abstract feature types are included in the substitution
+groups, they act only as stand-ins for their non-abstract sub-types.
+This means that for example, there cannot be any instances of
+*ReportableServiceArea* itself -- instead, it acts as a stand-in for
+its non-abstract subtypes *VesselTrafficServiceArea, *PiracyRiskArea*, etc,
+
+[[fig_35]]
+.Information types in the data format
+image::figure-35.png[]
+
+
+
+The structure of an example feature is shown in <<fig_36>>.
+The *PilotageDistrict* feature inherits the attributes of the S-127
+abstract feature *FeatureType*, which in turn is derived from generic
+S-100 type defined in the GML profile described in <<IHO_S_100,part=10b>>;
+that in turn derives from the GML *AbstractFeature* type. *PilotageDistrict*
+therefore inherits attributes from S-127 abstract type *FeatureType*
+(attributes _fixedDateRange_, _periodicDateRange_, _featureName_,
+_sourceIndication_, _textContent_) as also its association roles
+(_permission_, _providesInformation_, _positions_.) It also inherits
+the generic attributes and associations bound in the S-100 GML profile
+(_featureObjectIdentifier_, etc.). Attributes and association roles
+bound locally in the *PilotageDistrict* (_communicationChannel_, _serviceProvider_)
+are shown below the parent's type in the figure.
+
+Detailed documentation generated from the XSD file accompanies this
+specification as a separate document (Appendix D-2).
+
+
+[[fig_36]]
+.Structure of Marine Traffic Management feature in the GML data format
+image::figure-36.png[]
+
+
+<<fig_37>> shows an example of a *PilotageDistrict* feature instance.
+This feature is associated to a *PilotBoardingPlace* feature instance
+(the tag _<consistsOf_ with the target feature instance indicated
+by the _xlink:href="..."_ attributes). The _consistsOf_ tag also contains
+an _xlink:role_ XML attribute whose value indicate the role. It is
+also associated with two pilot services (the _<serviceProvider_ tags,
+with the target feature instances indicated by the _xlink:href="..."_
+attribute in each).
+
+[[fig_37]]
+.Extract from sample GML dataset
+image::figure-37.jpg[]
+
+NOTE: Directed associations in the application schema may be encoded
+only in the instance at the source end. Encoding the reverse link
+(target to source) is optional. This is for compatibility with other
+encodings.
+
+NOTE: In S-100 edition 4.0.0, feature catalogues do not allow feature
+bindings to be added to information types because the S-100 GFM does
+not permit information types to have feature bindings, nor does the
+<<ISO_8211>> encoding in <<IHO_S_100,part=10a>> permit such. In the interests
+of consistency across encodings, reverse links between information
+types and feature types are not used in GML format. If it is necessary
+to encode such reverse links from an information type to a feature
+type, the generic _invInformationAssociation_ element, which is defined
+in _S100:AbstractInformationType_ in the S-100 profile for Edition
+4.0.0 and is the base type for all information types.
+
+The format for update datasets is the same as for base datasets.
+A replacement feature instance, information type instance, or spatial
+object will have the same gml:id XML attribute as the instance it
+replaces -- GML applications can still distinguish between original
+and replacement by using the update dataset file name as a prefix
+to the gml:id value.
+
+== Feature Catalogue
+
+*Name:*:: Marine Traffic Management Feature Catalogue
+
+*Scope:*
+
+*Version Number:*:: 1.0.01
+
+*Version Date:*:: 2018-1106-289
+
+*Producer:*::
++
+--
+International Hydrographic Organization, +
+4 quai Antoine 1er, +
+B.P. 445 +
+MC 98011 MONACO CEDEX +
+Telephone: +377 93 10 81 00 +
+Telefax: +377 93 10 81 40
+--
+
+*Language:*:: English
+
+(See Annex with review print of Feature Catalogue.)

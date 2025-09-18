@@ -1,0 +1,49 @@
+= Marine Traffic Management - Product Specification
+:series: S
+:docnumber: 127
+:doctype: standard
+:edition: 1.0.1
+:language: en
+:published-date: 2019-11-01
+:copyright-year: 2019
+:draft:
+:committee: ircc
+:workgroup: ibsc
+:mn-document-class: iho
+:mn-output-extensions: xml,html,doc,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:imagesdir: images
+
+include::sections/00-preface.adoc[]
+
+include::sections/01-overview.adoc[]
+
+include::sections/02-references.adoc[]
+
+include::sections/03-terms-and-defs.adoc[]
+
+include::sections/04-specification-description.adoc[]
+
+include::sections/05-data-product-id.adoc[]
+
+include::sections/06-data-content-struct.adoc[]
+
+include::sections/07-feature-catalog.adoc[]
+
+include::sections/08-crs.adoc[]
+
+include::sections/09-data-quality.adoc[]
+
+include::sections/10-data-capture-classification.adoc[]
+
+include::sections/11-data-delivery.adoc[]
+
+include::sections/12-data-maintenance.adoc[]
+
+include::sections/13-portrayal.adoc[]
+
+include::sections/14-metadata.adoc[]
+
+include::sections/15-appendix-d-1.adoc[]
+
