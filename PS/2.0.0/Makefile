@@ -1,6 +1,7 @@
 DEST=
 SRC=
 DT=`date`
+NAME=S-127_Marine_Traffic_Management_Product_Specification_Ed_2.0.0.pdf
 
 all:	pull local
 
@@ -13,6 +14,7 @@ local:
 	DT=`date`
 	echo $(DT) " is the date"
 	cd sources && metanorma compile document.adoc -o build
+	cp sources/build/document.pdf ../../${NAME}
 	git commit -a -m "Build $(DT)"
 	git push
 
