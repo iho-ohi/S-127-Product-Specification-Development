@@ -2884,6 +2884,23 @@
 			</S100FC:listedValues>
 		</S100FC:S100_FC_SimpleAttribute>
 		<S100FC:S100_FC_SimpleAttribute>
+			<S100FC:name>Optimum Display Scale</S100FC:name>
+			<S100FC:definition>The largest intended viewing scale for the data.</S100FC:definition>
+			<S100FC:code>optimumDisplayScale</S100FC:code>
+			<S100FC:alias>CSCALE</S100FC:alias>
+			<S100FC:definitionReference>
+				<S100FC:sourceIdentifier>1223</S100FC:sourceIdentifier>
+				<S100FC:definitionSource ref="IHOREG" />
+			</S100FC:definitionReference>
+			<S100FC:valueType>integer</S100FC:valueType>
+			<S100FC:constraints>
+				<S100CD:range>
+					<S100Base:lowerBound>1</S100Base:lowerBound>
+					<S100Base:closure>geSemiInterval</S100Base:closure>
+				</S100CD:range>
+			</S100FC:constraints>
+		</S100FC:S100_FC_SimpleAttribute>
+		<S100FC:S100_FC_SimpleAttribute>
 			<S100FC:name>Orientation Uncertainty</S100FC:name>
 			<S100FC:definition>The best estimate of the accuracy of a bearing.</S100FC:definition>
 			<S100FC:code>orientationUncertainty</S100FC:code>
@@ -8905,6 +8922,13 @@
 					<S100Base:upper xsi:nil="false" infinite="false">1</S100Base:upper>
 				</S100FC:multiplicity>
 				<S100FC:attribute ref="minimumDisplayScale"/>
+			</S100FC:attributeBinding>
+			<S100FC:attributeBinding sequential="false">
+				<S100FC:multiplicity>
+					<S100Base:lower>0</S100Base:lower>
+					<S100Base:upper xsi:nil="false" infinite="false">1</S100Base:upper>
+				</S100FC:multiplicity>
+				<S100FC:attribute ref="optimumDisplayScale" />
 			</S100FC:attributeBinding>
 			<S100FC:featureUseType>meta</S100FC:featureUseType>
 			<S100FC:permittedPrimitives>surface</S100FC:permittedPrimitives>

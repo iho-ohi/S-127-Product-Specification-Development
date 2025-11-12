@@ -50,7 +50,7 @@
    <!-- producer: pointOfContact International Hydrographic Organization 4b quai Antoine 1er Monaco info@iho.int https://iho.int/ -->
    <!-- classification: unclassified -->
    <!-- S100_FC_DefinitionSources: IHO GI Registry http://registry.iho.int -->
-   <!-- Schema generated 2025-11-11T20:43:29-07:00 by Raphael Malyankar from catalogue file 127_FC_2.0.0.20251104.xml -->
+   <!-- Schema generated 2025-11-12T07:04:57-07:00 by Raphael Malyankar from catalogue file 127_FC_2.0.0.20251104.xml -->
    <xs:simpleType name="codelistTypeType">
       <xs:annotation>
          <xs:documentation>An S-100 codelist.</xs:documentation>
@@ -5709,6 +5709,14 @@
                <xs:documentation>The numerically smallest value computed from the applicable attributes or sub-attributes.</xs:documentation>
             </xs:annotation>
          </xs:enumeration>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="optimumDisplayScaleType">
+      <xs:annotation>
+         <xs:documentation>The largest intended viewing scale for the data.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:integer">
+         <xs:minInclusive value="1"/>
       </xs:restriction>
    </xs:simpleType>
    <xs:simpleType name="orientationUncertaintyType">
@@ -13085,6 +13093,10 @@
                            minOccurs="1"
                            maxOccurs="1"
                            nillable="true"/>
+               <xs:element name="optimumDisplayScale"
+                           type="optimumDisplayScaleType"
+                           minOccurs="0"
+                           maxOccurs="1"/>
                <xs:element name="geometry" maxOccurs="unbounded">
                   <xs:complexType>
                      <xs:choice>
