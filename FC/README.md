@@ -9,3 +9,6 @@ This folder is for work-in-progress feature catalogues and accompanying document
 
 ## FC files
 FC files for work in progress are named 127_2.0.0.YYYYMMDD.xml where YYYYMMDD is the date of the draft, to be consistent with apparent IHO Secretariat practice.
+
+* 2025-11-11: Updated version of 20251104 FC (see file history or concurrently updated review PDF file for changes)
+

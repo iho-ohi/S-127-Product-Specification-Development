@@ -2391,7 +2391,7 @@
 			<S100FC:quantitySpecification>frequency</S100FC:quantitySpecification>
 			<S100FC:constraints>
 				<S100CD:range>
-					<S100Base:lowerBound>1</S100Base:lowerBound>
+					<S100Base:lowerBound>0</S100Base:lowerBound>
 					<S100Base:closure>gtSemiInterval</S100Base:closure>
 				</S100CD:range>
 			</S100FC:constraints>
@@ -2412,7 +2412,7 @@
 			<S100FC:quantitySpecification>frequency</S100FC:quantitySpecification>
 			<S100FC:constraints>
 				<S100CD:range>
-					<S100Base:lowerBound>1</S100Base:lowerBound>
+					<S100Base:lowerBound>0</S100Base:lowerBound>
 					<S100Base:closure>gtSemiInterval</S100Base:closure>
 				</S100CD:range>
 			</S100FC:constraints>
@@ -4380,8 +4380,8 @@
 			</S100FC:uom>
 			<S100FC:constraints>
 				<S100CD:range>
-					<S100Base:lowerBound>0.0</S100Base:lowerBound>
-					<S100Base:upperBound>360.0</S100Base:upperBound>
+					<S100Base:lowerBound>0</S100Base:lowerBound>
+					<S100Base:upperBound>360</S100Base:upperBound>
 					<S100Base:closure>geLtInterval</S100Base:closure>
 				</S100CD:range>
 			</S100FC:constraints>
