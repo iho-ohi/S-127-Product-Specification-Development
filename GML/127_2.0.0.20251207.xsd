@@ -51,7 +51,7 @@
    <!-- producer: pointOfContact International Hydrographic Organization 4b quai Antoine 1er Monaco info@iho.int https://iho.int/ -->
    <!-- classification: unclassified -->
    <!-- S100_FC_DefinitionSources: IHO GI Registry http://registry.iho.int -->
-   <!-- Schema generated 2025-12-07T22:55:15-07:00 by Raphael Malyankar from catalogue file 127_FC_2.0.0.20251207.xml -->
+   <!-- Schema generated 2025-12-10T20:06:03-07:00 by Raphael Malyankar from catalogue file 127_FC_2.0.0.20251207.xml -->
    <xs:simpleType name="codelistTypeType">
       <xs:annotation>
          <xs:documentation>An S-100 codelist.</xs:documentation>
@@ -12297,6 +12297,14 @@
       <xs:complexContent>
          <xs:extension base="S100:AbstractFeatureType">
             <xs:sequence>
+               <xs:element name="interoperabilityIdentifier"
+                           type="interoperabilityIdentifierType"
+                           minOccurs="0"
+                           maxOccurs="unbounded"/>
+               <xs:element name="featureName"
+                           type="featureNameType"
+                           minOccurs="0"
+                           maxOccurs="unbounded"/>
                <xs:element name="fixedDateRange"
                            type="fixedDateRangeType"
                            minOccurs="0"
@@ -12305,20 +12313,16 @@
                            type="periodicDateRangeType"
                            minOccurs="0"
                            maxOccurs="unbounded"/>
-               <xs:element name="featureName"
-                           type="featureNameType"
+               <xs:element name="graphic"
+                           type="graphicType"
                            minOccurs="0"
                            maxOccurs="unbounded"/>
                <xs:element name="sourceIndication"
                            type="sourceIndicationType"
                            minOccurs="0"
-                           maxOccurs="1"/>
+                           maxOccurs="unbounded"/>
                <xs:element name="textContent"
                            type="textContentType"
-                           minOccurs="0"
-                           maxOccurs="unbounded"/>
-               <xs:element name="interoperabilityIdentifier"
-                           type="interoperabilityIdentifierType"
                            minOccurs="0"
                            maxOccurs="unbounded"/>
                <xs:element name="permission"

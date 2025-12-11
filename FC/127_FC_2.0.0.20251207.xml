@@ -7491,6 +7491,21 @@
 			<S100FC:attributeBinding sequential="false">
 				<S100FC:multiplicity>
 					<S100Base:lower>0</S100Base:lower>
+					<S100Base:upper infinite="true" xsi:nil="true"/>
+				</S100FC:multiplicity>
+				<S100FC:attributeVisibility>privateVisibility</S100FC:attributeVisibility>
+				<S100FC:attribute ref="interoperabilityIdentifier"/>
+			</S100FC:attributeBinding>
+			<S100FC:attributeBinding sequential="false">
+				<S100FC:multiplicity>
+					<S100Base:lower>0</S100Base:lower>
+					<S100Base:upper xsi:nil="true" infinite="true"/>
+				</S100FC:multiplicity>
+				<S100FC:attribute ref="featureName"/>
+			</S100FC:attributeBinding>
+			<S100FC:attributeBinding sequential="false">
+				<S100FC:multiplicity>
+					<S100Base:lower>0</S100Base:lower>
 					<S100Base:upper xsi:nil="false" infinite="false">1</S100Base:upper>
 				</S100FC:multiplicity>
 				<S100FC:attribute ref="fixedDateRange"/>
@@ -7507,12 +7522,12 @@
 					<S100Base:lower>0</S100Base:lower>
 					<S100Base:upper xsi:nil="true" infinite="true"/>
 				</S100FC:multiplicity>
-				<S100FC:attribute ref="featureName"/>
+				<S100FC:attribute ref="graphic"/>
 			</S100FC:attributeBinding>
 			<S100FC:attributeBinding sequential="false">
 				<S100FC:multiplicity>
 					<S100Base:lower>0</S100Base:lower>
-					<S100Base:upper xsi:nil="false" infinite="false">1</S100Base:upper>
+					<S100Base:upper xsi:nil="true" infinite="true"/>
 				</S100FC:multiplicity>
 				<S100FC:attribute ref="sourceIndication"/>
 			</S100FC:attributeBinding>
@@ -7523,18 +7538,10 @@
 				</S100FC:multiplicity>
 				<S100FC:attribute ref="textContent"/>
 			</S100FC:attributeBinding>
-			<S100FC:attributeBinding sequential="false">
-				<S100FC:multiplicity>
-					<S100Base:lower>0</S100Base:lower>
-					<S100Base:upper xsi:nil="true" infinite="true"/>
-				</S100FC:multiplicity>
-				<S100FC:attributeVisibility>privateVisibility</S100FC:attributeVisibility>
-				<S100FC:attribute ref="interoperabilityIdentifier" />
-			</S100FC:attributeBinding>
 			<S100FC:informationBinding roleType="association">
 				<S100FC:multiplicity>
 					<S100Base:lower>0</S100Base:lower>
-					<S100Base:upper xsi:nil="true" infinite="true"/>
+					<S100Base:upper  xsi:nil="true" infinite="true"/>
 				</S100FC:multiplicity>
 				<S100FC:association ref="PermissionType"/>
 				<S100FC:role ref="permission"/>
@@ -7543,7 +7550,7 @@
 			<S100FC:informationBinding roleType="association">
 				<S100FC:multiplicity>
 					<S100Base:lower>0</S100Base:lower>
-					<S100Base:upper xsi:nil="true" infinite="true"/>
+					<S100Base:upper  xsi:nil="true" infinite="true"/>
 				</S100FC:multiplicity>
 				<S100FC:association ref="AssociatedRxN"/>
 				<S100FC:role ref="theRxN"/>
