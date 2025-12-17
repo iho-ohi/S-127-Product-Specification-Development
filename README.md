@@ -1,6 +1,12 @@
 # S-127-Product-Specification-Development
 Collaboration space for IHO Nautical Information Provision Working Group for the development of S-127 Product Specification with its artifacts.
 
+## 12/2025
+* Added draft PDFs of Product Specification and DCEG (in folders PS/2.0.0 and DCEG/2.0.0 respectively)
+* Added draft FC and GML schema (folders FC and GML respectively - check the date suffixes for the current versions)
+* Removed PDF of Product Specification from top-level folder (now obsolete - see above)
+* Model diagrams are in EAP/UML-images
+
 ## 09/2025
 * Inserted metanorma sources from IHO conversion. Hourly builds instigated and PDF located on front page
 * Older version PDFs relocated to ARCHIVE folder
