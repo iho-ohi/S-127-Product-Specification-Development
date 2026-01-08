@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="SVGStyle.css" type="text/css"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny" xml:space="preserve" style="shape-rendering:geometricPrecision; fill-rule:evenodd;" width="7.21mm" height="9.73mm" viewBox="-3.45 -4.865 7.21 9.73">
+  <title>LocalPortServiceArea</title>
+  <desc>pattern of symbol</desc>
+  <metadata>
+    <S100SVG xmlns:iho="http://www.iho.int/SVGMetadata">
+      <Description publisher="IHB" creationDate="2019-08-14" source="S52Preslib4.0" format="S100SVG" version="0.1" />
+    </S100SVG>
+  </metadata>
+  <rect class="symbolBox layout" fill="none" x="-3.45" y="-4.865" height="9.73" width="7.21" />
+  <rect class="svgBox layout" fill="none" x="-3.45" y="-4.865" height="9.73" width="7.21" />
+  <path d=" M 0.38,-2.87 L 0.26,-2.84 L 0.1,-2.80 L -0.07,-2.76 L -0.25,-2.70 L -0.46,-2.61 L -0.65,-2.51 L -0.77,-2.43 L -0.96,-2.30 L -1.16,-2.14 L -1.39,-1.92 L -1.57,-1.70 L -1.73,-1.50 L -1.87,-1.26 L -2.06,-0.92 L -2.15,-0.70 L -2.24,-0.44 L -2.33,-0.16 L -2.38,0.09 L -2.42,0.34 L -2.45,0.60 L -2.45,0.96 L -2.44,1.22 L -2.41,1.50 L -2.36,1.71 L -0.55,1.73 L -0.59,1.56 L -0.63,1.39 L -0.67,1.22 L -0.69,1.02 L -0.71,0.84 L -0.71,0.66 L -0.71,0.46 L -0.72,0.24 L -0.74,0.03 L -0.74,-0.15 L -0.76,-0.31 L -0.76,-0.57 L -0.73,-0.80 L -0.69,-1.01 L -0.66,-1.23 L -0.60,-1.46 L -0.49,-1.75 L -0.39,-1.96 L -0.30,-2.13 L -0.17,-2.31 L -0.05,-2.46 L 0.06,-2.56 L 0.21,-2.68 L 0.31,-2.77 L 0.38,-2.86 L 0.38,-2.87" class="fUINFB" style="stroke-width:0.64;" />
+  <path d=" M -2.28,2.24 L 2.38,2.24 L 2.44,2.24 L 2.39,2.31 L 2.33,2.38 L 2.25,2.46 L 2.16,2.54 L 2.02,2.65 L 1.92,2.73 L 1.82,2.80 L 1.69,2.87 L 1.54,2.96 L 1.38,3.04 L 1.21,3.11 L 1,3.18 L 0.78,3.24 L 0.56,3.29 L 0.31,3.32 L 0.1,3.32 L -0.16,3.30 L -0.38,3.28 L -0.64,3.24 L -0.87,3.18 L -1,3.13 L -1.17,3.07 L -1.34,2.98 L -1.54,2.88 L -1.74,2.75 L -1.91,2.60 L -2.10,2.47 L -2.23,2.33 L -2.29,2.23 L -2.28,2.24" class="fUINFB" style="stroke-width:0.64;" />
+  <path d=" M 0.53,-2.27 L 0.53,-2.15 L 0.53,-1.98 L 0.54,-1.83 L 0.55,-1.71 L 0.57,-1.56 L 0.59,-1.34 L 0.61,-1.18 L 0.64,-0.98 L 0.71,-0.80 L 0.78,-0.55 L 0.85,-0.37 L 0.94,-0.16 L 1.06,0.08 L 1.13,0.20 L 1.25,0.42 L 1.36,0.57 L 1.51,0.74 L 1.66,0.90 L 1.81,1.05 L 1.99,1.20 L 2.18,1.33 L 2.37,1.45 L 2.54,1.55 L 2.76,1.65 L 0.54,1.68 L 0.53,-2.27" class="fUINFB" style="stroke-width:0.64;" />
+  <path d=" M -0.03,-2.71 L 0.18,-2.70 L 0.17,2.68 L -0.03,2.68 L -0.03,-2.71" class="fUINFB" style="stroke-width:0.64;" />
+</svg>

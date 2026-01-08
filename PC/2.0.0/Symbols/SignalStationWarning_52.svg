@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-stylesheet href="SVGStyle.css" type="text/css"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny" xml:space="preserve" shape-rendering="geometricPrecision" fill-rule="evenodd" width="8.24mm" height="5.12mm" viewBox="-4 -2.3 8.24 5.12">
+  <title>SignalStationWarning_v2</title>
+  <desc>pattern of symbol</desc>
+  <metadata>
+    <iho:S100SVG xmlns:iho="http://www.iho.int/SVGMetadata/5.2">
+      <iho:Description iho:publisher="IHB" iho:creationDate="2019-08-22" iho:source="S52Preslib4.0" iho:format="S100SVG" iho:version="0.1" />
+    </iho:S100SVG>
+  </metadata>
+  <path d="M -4,-2.3 v 5.1" fill="none" class="fNone sUINFB" stroke="#2E7BFF" stroke-opacity="1" stroke-width="0.32" />
+  <path d="M 4.24,-2.28 v 5.1" fill="none" class="fNone sUINFB" stroke="#2E7BFF" stroke-opacity="1" stroke-width="0.32" />
+  <g display="none" stroke-width="1" fill="none" class="layout">
+    <rect x="-3.495" y="-3.495" height="6.99" width="6.99" stroke="blue" class="svgBox" />
+    <g stroke="red" class="pivotPoint">
+      <circle cx="0" cy="0" r="0.2" />
+      <line x1="0" y1="-0.50" x2="0" y2="0.50" />
+      <line x1="-0.50" y1="0" x2="0.50" y2="0" />
+    </g>
+  </g>
+</svg>
