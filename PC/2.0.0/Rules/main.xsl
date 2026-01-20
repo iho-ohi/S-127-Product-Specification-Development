@@ -12,7 +12,7 @@
   <xsl:include href="CautionArea.xsl"/>
   <xsl:include href="ConcentrationOfShippingHazardArea.xsl"/>
   <xsl:include href="ISPSCodeSecurityLevel.xsl"/>
-  <xsl:include href="LocalPortServiceArea.xsl"/>
+  <xsl:include href="LocalPortBroadcastServiceArea.xsl"/>
   <xsl:include href="MilitaryPracticeArea.xsl"/>
   <xsl:include href="PilotageDistrict.xsl"/>
   <xsl:include href="PilotBoardingPlace.xsl"/>
@@ -21,23 +21,20 @@
   <xsl:include href="PlaceOfRefuge.xsl"/>
   <xsl:include href="RadarRange.xsl"/>
   <xsl:include href="RadioCallingInPoint.xsl"/>
-  <xsl:include href="RestrictedAreaNavigational.xsl"/>
-  <xsl:include href="RestrictedAreaRegulatory.xsl"/>
+  <xsl:include href="RestrictedArea.xsl"/>
   <xsl:include href="RouteingMeasure.xsl"/>
   <xsl:include href="ShipReportingServiceArea.xsl"/>
   <xsl:include href="SignalStationTraffic.xsl"/>
   <xsl:include href="SignalStationWarning.xsl"/>
+  <xsl:include href="TextPlacement.xsl"/>
   <xsl:include href="UnderKeelClearanceAllowanceArea.xsl"/>
   <xsl:include href="UnderKeelClearanceManagementArea.xsl"/>
   <xsl:include href="VesselTrafficServiceArea.xsl"/>
   <xsl:include href="WaterwayArea.xsl"/>
-  <xsl:include href="TextPlacement.xsl"/>
   
   <!--Include templates/rules for: MetaFeature-->
   <xsl:include href="DataCoverage.xsl"/>
-  <xsl:include href="DataQuality.xsl"/>
   <xsl:include href="QualityOfNonBathymetricData.xsl"/>
-  <xsl:include href="QualityOfTemporalVariation.xsl"/>
   
   <!--Include templates/rules for: Default-->
   <xsl:include href="Default.xsl"/>

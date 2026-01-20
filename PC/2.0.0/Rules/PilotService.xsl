@@ -7,7 +7,7 @@
         <featureReference>
           <xsl:value-of select="@id"/>
         </featureReference>
-        <viewingGroup>26</viewingGroup>
+        <viewingGroup>31020</viewingGroup>
         <displayPlane>UNDERRADAR</displayPlane>
         <drawingPriority>9</drawingPriority>
         <textPoint horizontalAlignment="Center" verticalAlignment="Center">
@@ -31,7 +31,7 @@
       <featureReference>
         <xsl:value-of select="@id"/>
       </featureReference>
-      <viewingGroup>12710</viewingGroup>
+      <viewingGroup>31020</viewingGroup>
       <displayPlane>OVERRADAR</displayPlane>
       <drawingPriority>15</drawingPriority>
       <symbol reference="127INFORM01"/>
@@ -40,7 +40,7 @@
       <featureReference>
         <xsl:value-of select="@id"/>
       </featureReference>
-      <viewingGroup>12710</viewingGroup>
+      <viewingGroup>31020</viewingGroup>
       <displayPlane>OVERRADAR</displayPlane>
       <drawingPriority>15</drawingPriority>
 	  	<xsl:call-template name="simpleLineStyle">

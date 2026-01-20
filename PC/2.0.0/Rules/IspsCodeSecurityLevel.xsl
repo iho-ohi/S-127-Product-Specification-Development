@@ -6,7 +6,7 @@
       <featureReference>
         <xsl:value-of select="@id"/>
       </featureReference>
-      <viewingGroup>12710</viewingGroup>
+      <viewingGroup>31020</viewingGroup>
       <displayPlane>OVERRADAR</displayPlane>
       <drawingPriority>15</drawingPriority>
       <lineStyleReference reference="ISPSCodeSecurityLevel"/>
@@ -17,7 +17,7 @@
       <featureReference>
         <xsl:value-of select="@id"/>
       </featureReference>
-      <viewingGroup>12710</viewingGroup>
+      <viewingGroup>31020</viewingGroup>
       <displayPlane>OVERRADAR</displayPlane>
       <drawingPriority>15</drawingPriority>
       <symbol reference="127INFORM01"/>
@@ -26,7 +26,7 @@
       <featureReference>
         <xsl:value-of select="@id"/>
       </featureReference>
-      <viewingGroup>12710</viewingGroup>
+      <viewingGroup>31020</viewingGroup>
       <displayPlane>OVERRADAR</displayPlane>
       <drawingPriority>15</drawingPriority>
 	  		<xsl:call-template name="simpleLineStyle">
@@ -35,16 +35,5 @@
 		<xsl:with-param name="colour">UINFB</xsl:with-param>
 		</xsl:call-template>
     </lineInstruction>
-  <!--  <areaInstruction>
-      <featureReference>
-        <xsl:value-of select="@id"/>
-      </featureReference>
-      <viewingGroup>12710</viewingGroup>
-      <displayPlane>OVERRADAR</displayPlane>
-      <drawingPriority>15</drawingPriority>
-      <colorFill>
-        <color transparency="0.70">TESTC</color>
-      </colorFill>
-    </areaInstruction> -->
   </xsl:template> 
 </xsl:transform>
