@@ -2,6 +2,7 @@
 Collaboration space for IHO Nautical Information Provision Working Group for the development of S-127 Product Specification with its artifacts.
 
 ## 01/2026
+* Portrayal catalog
 * Updated GML schema with nillability implemented
 * Updated PS and DCEG with corrections to December drafts
 * Draft Edition 1 of S-158:127 validation checks
