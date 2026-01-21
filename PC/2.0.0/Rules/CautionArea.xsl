@@ -6,20 +6,19 @@
       <featureReference>
         <xsl:value-of select="@id"/>
       </featureReference>
-      <viewingGroup>12710</viewingGroup>
+      <viewingGroup>31020</viewingGroup>
       <displayPlane>OVERRADAR</displayPlane>
       <drawingPriority>15</drawingPriority>
       <symbol reference="127INFORM01"/>
-    </pointInstruction>
-	
-	 <lineInstruction>
-	<featureReference>
+    </pointInstruction>	
+    <lineInstruction>
+	  <featureReference>
         <xsl:value-of select="@id"/>
       </featureReference>
-      <viewingGroup>12710</viewingGroup>
+      <viewingGroup>31020</viewingGroup>
       <displayPlane>OVERRADAR</displayPlane>
       <drawingPriority>15</drawingPriority>
-	      <lineStyle>
+	    <lineStyle>
         <capStyle/>
         <joinStyle/>
         <intervalLength>5.4</intervalLength>
@@ -33,48 +32,16 @@
         </dash>
       </lineStyle>
     </lineInstruction>
-<!--
-	
-	
-   <lineInstruction>
-      <featureReference>
-        <xsl:value-of select="@id"/>
-      </featureReference>
-      <viewingGroup>12710</viewingGroup>
-      <displayPlane>OVERRADAR</displayPlane>
-      <drawingPriority>15</drawingPriority>
-	  	<xsl:call-template name="simpleLineStyle">
-			<xsl:with-param name="style">dash</xsl:with-param>
-			<xsl:with-param name="width">0.64</xsl:with-param>
-		<xsl:with-param name="colour">UINFB</xsl:with-param>
-		</xsl:call-template>
-    </lineInstruction>
-  -->
- <!-- <lineInstruction>
-      <featureReference>
-        <xsl:value-of select="@id"/>
-      </featureReference>
-      <viewingGroup>12710</viewingGroup>
-      <displayPlane>OVERRADAR</displayPlane>
-      <drawingPriority>15</drawingPriority>
-	  	<xsl:call-template name="simpleLineStyle">
-			<xsl:with-param name="style">dash</xsl:with-param>
-			<xsl:with-param name="width">4</xsl:with-param>
-		<xsl:with-param name="colour">UINFB</xsl:with-param>
-		<xsl:with-param name="transparency">30</xsl:with-param>
-		</xsl:call-template>
-    </lineInstruction>
--->
   </xsl:template>
     <xsl:template match="CautionArea[@primitive='Point']" priority="1">
     <pointInstruction>
       <featureReference>
         <xsl:value-of select="@id"/>
       </featureReference>
-      <viewingGroup>12710</viewingGroup>
+      <viewingGroup>31020</viewingGroup>
       <displayPlane>OVERRADAR</displayPlane>
       <drawingPriority>15</drawingPriority>
-      <symbol reference="127symb"/>
+      <symbol reference="127SYMB"/>
     </pointInstruction>
   </xsl:template>
 </xsl:transform>

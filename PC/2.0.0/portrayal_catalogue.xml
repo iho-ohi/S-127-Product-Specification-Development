@@ -24,248 +24,69 @@
       <fileType>Symbol</fileType>
       <fileFormat>SVG</fileFormat>
     </symbol>
-    <symbol id="CautionArea">
+	<symbol id="127SYMB">
       <description>
         <language>en</language>
-        <name>CautionArea</name>
-        <description>CautionArea</description>
+        <name>127SYMB</name>
+        <description>S-127 Point Symbol</description>
       </description>
-      <fileName>CautionArea.svg</fileName>
+      <fileName>127SYMB.svg</fileName>
       <fileType>Symbol</fileType>
       <fileFormat>SVG</fileFormat>
     </symbol>
-    <symbol id="IspscodeSecurityLevel_1">
+	<symbol id="127SYMBL">
       <description>
         <language>en</language>
-        <name>IspscodeSecurityLevel_1</name>
-        <description>IspscodeSecurityLevel_1</description>
+        <name>127SYMBL</name>
+        <description>S-127 Point Symbol (Large)</description>
       </description>
-      <fileName>IspscodeSecurityLevel_1.svg</fileName>
+      <fileName>127SYMBL.svg</fileName>
       <fileType>Symbol</fileType>
       <fileFormat>SVG</fileFormat>
     </symbol>
-    <symbol id="LocalPortServiceArea">
+	<symbol id="127INFORM01">
       <description>
         <language>en</language>
-        <name>LocalPortServiceArea</name>
-        <description>LocalPortServiceArea</description>
+        <name>127INFORM01</name>
+        <description>S-127 polygon center symbol</description>
       </description>
-      <fileName>LocalPortServiceArea.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="MilitaryPracticeArea">
-      <description>
-        <language>en</language>
-        <name>MilitaryPracticeArea</name>
-        <description>MilitaryPracticeArea</description>
-      </description>
-      <fileName>MilitaryPracticeArea.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="PilotageDistrict">
-      <description>
-        <language>en</language>
-        <name>PilotageDistrict</name>
-        <description>PilotageDistrict</description>
-      </description>
-      <fileName>PilotageDistrict.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="PilotageService">
-      <description>
-        <language>en</language>
-        <name>PilotageService</name>
-        <description>PilotageService</description>
-      </description>
-      <fileName>PilotageService.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="PilotBoardingPlace">
-      <description>
-        <language>en</language>
-        <name>PilotBoardingPlace</name>
-        <description>PilotBoardingPlace</description>
-      </description>
-      <fileName>PilotBoardingPlace.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="PiracyRiskArea">
-      <description>
-        <language>en</language>
-        <name>PiracyRiskArea</name>
-        <description>PiracyRiskArea</description>
-      </description>
-      <fileName>PiracyRiskArea.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="PlaceOfRefuge">
-      <description>
-        <language>en</language>
-        <name>PlaceOfRefuge</name>
-        <description>PlaceOfRefuge</description>
-      </description>
-      <fileName>PlaceOfRefuge.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="RadarRange">
-      <description>
-        <language>en</language>
-        <name>RadarRange</name>
-        <description>RadarRange</description>
-      </description>
-      <fileName>RadarRange.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="RadioCallingInPoint_1">
-      <description>
-        <language>en</language>
-        <name>RadioCallingInPoint_1</name>
-        <description>RadioCallingInPoint_1</description>
-      </description>
-      <fileName>RadioCallingInPoint_1.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-	<symbol id="RadioCallingInPoint_1A">
-      <description>
-        <language>en</language>
-        <name>RadioCallingInPoint_1A</name>
-        <description>RadioCallingInPoint_1A</description>
-      </description>
-      <fileName>RadioCallingInPoint_1A.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="RadioCallingInPoint_2">
-      <description>
-        <language>en</language>
-        <name>RadioCallingInPoint_2</name>
-        <description>RadioCallingInPoint_2</description>
-      </description>
-      <fileName>RadioCallingInPoint_2.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="RadioCallingInPoint_3">
-      <description>
-        <language>en</language>
-        <name>RadioCallingInPoint_3</name>
-        <description>RadioCallingInPoint_3</description>
-      </description>
-      <fileName>RadioCallingInPoint_3.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-	    <symbol id="RadioCallingInPoint_3A">
-      <description>
-        <language>en</language>
-        <name>RadioCallingInPoint_3A</name>
-        <description>RadioCallingInPoint_3A</description>
-      </description>
-      <fileName>RadioCallingInPoint_3A.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="RestrictedAreaNavigational">
-      <description>
-        <language>en</language>
-        <name>RestrictedAreaNavigational</name>
-        <description>RestrictedAreaNavigational</description>
-      </description>
-      <fileName>RestrictedAreaNavigational.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="RestrictedAreaRegulatory">
-      <description>
-        <language>en</language>
-        <name>RestrictedAreaRegulatory</name>
-        <description>RestrictedAreaRegulatory</description>
-      </description>
-      <fileName>RestrictedAreaRegulatory.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="RouteingMeasure">
-      <description>
-        <language>en</language>
-        <name>RouteingMeasure</name>
-        <description>RouteingMeasure</description>
-      </description>
-      <fileName>RouteingMeasure.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="ShipReportingServiceArea">
-      <description>
-        <language>en</language>
-        <name>ShipReportingServiceArea</name>
-        <description>ShipReportingServiceArea</description>
-      </description>
-      <fileName>ShipReportingServiceArea.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="SignalStationTraffic">
-      <description>
-        <language>en</language>
-        <name>SignalStationTraffic</name>
-        <description>SignalStationTraffic</description>
-      </description>
-      <fileName>SignalStationTraffic.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="SignalStationWarning">
-      <description>
-        <language>en</language>
-        <name>SignalStationWarning</name>
-        <description>SignalStationWarning</description>
-      </description>
-      <fileName>SignalStationWarning.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="UnderKeelClearanceAllowanceArea">
-      <description>
-        <language>en</language>
-        <name>UnderKeelClearanceAllowanceArea</name>
-        <description>UnderKeelClearanceAllowanceArea</description>
-      </description>
-      <fileName>UnderKeelClearanceAllowanceArea.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="VesselTrafficService">
-      <description>
-        <language>en</language>
-        <name>VesselTrafficService</name>
-        <description>VesselTrafficService</description>
-      </description>
-      <fileName>VesselTrafficService.svg</fileName>
-      <fileType>Symbol</fileType>
-      <fileFormat>SVG</fileFormat>
-    </symbol>
-    <symbol id="WaterwayArea">
-      <description>
-        <language>en</language>
-        <name>WaterwayArea</name>
-        <description>WaterwayArea</description>
-      </description>
-      <fileName>WaterwayArea.svg</fileName>
+      <fileName>127INFORM01.svg</fileName>
       <fileType>Symbol</fileType>
       <fileFormat>SVG</fileFormat>
     </symbol>
   </symbols>
-  <styleSheets/>
+  <styleSheets>
+      <styleSheet id="daySvgStyle">
+         <description>
+            <name>Day</name>
+            <description>CSS file for day palette</description>
+            <language>eng</language>
+         </description>
+         <fileName>daySvgStyle.css</fileName>
+         <fileType>StyleSheet</fileType>
+         <fileFormat>XML</fileFormat> <!-- fileFormat will need to be updated when Part 9 is updated to include CSS file format. -->
+      </styleSheet>
+      <styleSheet id="duskSvgStyle">
+         <description>
+            <name>Dusk</name>
+            <description>CSS file for dusk palette</description>
+            <language>eng</language>
+         </description>
+         <fileName>duskSvgStyle.css</fileName>
+         <fileType>StyleSheet</fileType>
+         <fileFormat>XML</fileFormat> <!-- fileFormat will need to be updated when Part 9 is updated to include CSS file format. -->
+      </styleSheet>
+      <styleSheet id="nightSvgStyle">
+         <description>
+            <name>Night</name>
+            <description>CSS file for night palette</description>
+            <language>eng</language>
+         </description>
+         <fileName>nightSvgStyle.css</fileName>
+         <fileType>StyleSheet</fileType>
+         <fileFormat>XML</fileFormat> <!-- fileFormat will need to be updated when Part 9 is updated to include CSS file format. -->
+      </styleSheet>
+  </styleSheets>
   <lineStyles>
     <lineStyle id="ISPSCodeSecurityLevel">
       <description>
@@ -277,33 +98,13 @@
       <fileType>LineStyle</fileType>
       <fileFormat>XML</fileFormat>
     </lineStyle>
-    <lineStyle id="RadioCallingInPoint_1">
+    <lineStyle id="RadioCallingInPoint_1A">
       <description>
         <language>en</language>
         <name>RadioCallingInPoint_1A</name>
         <description>RadioCallingInPoint_1A</description>
       </description>
       <fileName>RadioCallingInPoint_1A.xml</fileName>
-      <fileType>LineStyle</fileType>
-      <fileFormat>XML</fileFormat>
-    </lineStyle>
-    <lineStyle id="RadioCallingInPoint_2">
-      <description>
-        <language>en</language>
-        <name>RadioCallingInPoint_2</name>
-        <description>RadioCallingInPoint_2</description>
-      </description>
-      <fileName>RadioCallingInPoint_2.xml</fileName>
-      <fileType>LineStyle</fileType>
-      <fileFormat>XML</fileFormat>
-    </lineStyle>
-    <lineStyle id="RadioCallingInPoint_3A">
-      <description>
-        <language>en</language>
-        <name>RadioCallingInPoint_3A</name>
-        <description>RadioCallingInPoint_3A</description>
-      </description>
-      <fileName>RadioCallingInPoint_3A.xml</fileName>
       <fileType>LineStyle</fileType>
       <fileFormat>XML</fileFormat>
     </lineStyle>
@@ -314,7 +115,35 @@
     <viewingGroup id="1">
       <description>
         <language>en</language>
-        <name>26010</name>
+        <name>31010</name>
+        <description/>
+      </description>
+    </viewingGroup>
+	<viewingGroup id="2">
+      <description>
+        <language>en</language>
+        <name>31020</name>
+        <description/>
+      </description>
+    </viewingGroup>
+	<viewingGroup id="3">
+      <description>
+        <language>en</language>
+        <name>31040</name>
+        <description/>
+      </description>
+    </viewingGroup>
+	<viewingGroup id="4">
+      <description>
+        <language>en</language>
+        <name>32400</name>
+        <description/>
+      </description>
+    </viewingGroup>
+	<viewingGroup id="5">
+      <description>
+        <language>en</language>
+        <name>36050</name>
         <description/>
       </description>
     </viewingGroup>
@@ -388,17 +217,6 @@
       <fileFormat>XSLT</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-	<ruleFile id="QualityOfTemporalVariation.xsl">
-      <description>
-        <language>en</language>
-        <name>QualityOfTemporalVariation</name>
-        <description>QualityOfTemporalVariation</description>
-      </description>
-      <fileName>QualityOfTemporalVariation.xsl</fileName>
-      <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
-      <ruleType>SubTemplate</ruleType>
-    </ruleFile>
     <ruleFile id="CautionArea.xsl">
       <description>
         <language>en</language>
@@ -421,7 +239,7 @@
       <fileFormat>XSLT</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-	<ruleFile id="ConcentrationOfShippingHazardArea.xsl">
+	<ruleFile id="ConcentrationofShippingHazardArea.xsl">
       <description>
         <language>en</language>
         <name>Concentration of shipping hazard area</name>
@@ -432,13 +250,13 @@
       <fileFormat>XSLT</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>	
-    <ruleFile id="LocalPortServiceArea.xsl">
+    <ruleFile id="LocalPortBroadcastServiceArea.xsl">
       <description>
         <language>en</language>
-        <name>Local Port Service Area</name>
-        <description>Local Port Service Area rule file</description>
+        <name>LocalPortBroadcastServiceArea</name>
+        <description>Local Port Broadcast Service Area rule file</description>
       </description>
-      <fileName>LocalPortServiceArea.xsl</fileName>
+      <fileName>LocalPortBroadcastServiceArea.xsl</fileName>
       <fileType>Rule</fileType>
       <fileFormat>XSLT</fileFormat>
       <ruleType>SubTemplate</ruleType>
@@ -531,24 +349,13 @@
       <fileFormat>XSLT</fileFormat>
       <ruleType>SubTemplate</ruleType>
     </ruleFile>
-    <ruleFile id="RestrictedAreaNavigational.xsl">
+    <ruleFile id="RestrictedArea.xsl">
       <description>
         <language>en</language>
-        <name>Restricted Area Navigational</name>
-        <description>Restricted Area Navigational rule file</description>
+        <name>RestrictedArea</name>
+        <description>Restricted Area</description>
       </description>
-      <fileName>RestrictedAreaNavigational.xsl</fileName>
-      <fileType>Rule</fileType>
-      <fileFormat>XSLT</fileFormat>
-      <ruleType>SubTemplate</ruleType>
-    </ruleFile>
-    <ruleFile id="RestrictedAreaRegulatory.xsl">
-      <description>
-        <language>en</language>
-        <name>Restricted Area Regulatory</name>
-        <description>Restricted Area Regulatory rule file</description>
-      </description>
-      <fileName>RestrictedAreaRegulatory.xsl</fileName>
+      <fileName>RestrictedArea.xsl</fileName>
       <fileType>Rule</fileType>
       <fileFormat>XSLT</fileFormat>
       <ruleType>SubTemplate</ruleType>
@@ -615,6 +422,17 @@
         <description>textStyle</description>
       </description>
       <fileName>textStyle.xsl</fileName>
+      <fileType>Rule</fileType>
+      <fileFormat>XSLT</fileFormat>
+      <ruleType>SubTemplate</ruleType>
+    </ruleFile>
+	<ruleFile id="TextPlacement.xsl">
+      <description>
+        <language>en</language>
+        <name>TextPlacement</name>
+        <description>TextPlacement</description>
+      </description>
+      <fileName>TextPlacement.xsl</fileName>
       <fileType>Rule</fileType>
       <fileFormat>XSLT</fileFormat>
       <ruleType>SubTemplate</ruleType>

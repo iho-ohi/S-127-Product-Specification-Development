@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="SVGStyle.css" type="text/css"?><svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny" xml:space="preserve" style="shape-rendering:geometricPrecision; fill-rule:evenodd;" width="16.65mm" height="16.62mm" viewBox="-1.45 -15.37 16.65 16.62">
-  <title>INFORM01</title>
-  <desc>this object has additional SVGStyle.cssmation available by cursor query</desc>
+<?xml-stylesheet href="daySvgStyle.css" type="text/css"?><svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny" xml:space="preserve" style="shape-rendering:geometricPrecision; fill-rule:evenodd;" width="16.65mm" height="16.62mm" viewBox="-1.45 -15.37 16.65 16.62">
+  <title>127INFORM01</title>
+  <desc>S-127 polygon center symbol</desc>
   <metadata>
     <iho:S100SVG xmlns:iho="http://www.iho.int/SVGMetadata">
       <iho:Description iho:publisher="IHB" iho:creationDate="2014-06-09" iho:source="S52Preslib4.0" iho:format="S100SVG" iho:version="0.1"/>

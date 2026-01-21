@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="daySvgStyle.css" type="text/css"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     version="1.2"
+     baseProfile="tiny"
+     xml:space="preserve"
+     style="shape-rendering:geometricPrecision; fill-rule:evenodd;"
+     width="12.87mm"
+     height="12.87mm"
+     viewBox="-6.435 -6.435 12.87 12.87">
+
+  <title>127SYMBL</title>
+  <desc>S-127 Point Symbol (Large)</desc>
+
+  <metadata>
+    <S100SVG xmlns:iho="http://www.iho.int/SVGMetadata">
+      <Description publisher="IHB"
+                   creationDate="2019-08-21"
+                   source="S52Preslib4.0"
+                   format="S100SVG"
+                   version="0.1" />
+    </S100SVG>
+  </metadata>
+
+  <!-- Symbol bounding box (centered on origin) -->
+  <rect class="symbolBox layout"
+        fill="none"
+        x="-6.435"
+        y="-6.435"
+        width="12.87"
+        height="12.87" />
+
+  <!-- SVG bounding box (centered on origin) -->
+  <rect class="svgBox layout"
+        fill="none"
+        x="-6.435"
+        y="-6.435"
+        width="12.87"
+        height="12.87" />
+
+  <!-- Circle centered exactly on symbol origin -->
+  <circle cx="0"
+          cy="0"
+          r="4.935"
+          class="sl f0 sUINFB"
+          style="stroke-width:0.64" />
+
+</svg>

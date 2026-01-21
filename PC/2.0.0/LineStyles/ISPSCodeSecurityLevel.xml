@@ -62,10 +62,10 @@
     <start>63.988</start>
     <length>2</length>
   </dash>
-  <symbol reference="127symb">
+  <symbol reference="127SYMB">
     <position>18</position>
   </symbol>
-  <symbol reference="127symb">
+  <symbol reference="127SYMB">
     <position>48</position>
   </symbol>
 </lineStyle>
