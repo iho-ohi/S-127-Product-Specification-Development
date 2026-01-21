@@ -5319,7 +5319,7 @@
          </xs:enumeration>
       </xs:restriction>
    </xs:simpleType>
-   <xs:complexType name="InclusionType_membershipType">
+   <!--<xs:complexType name="InclusionType_membershipType">
       <xs:annotation>
          <xs:documentation>Restricted values of membership in InclusionType</xs:documentation>
       </xs:annotation>
@@ -5328,8 +5328,8 @@
             <xs:attribute name="code" type="InclusionType_membershipCode" use="required"/>
          </xs:extension>
       </xs:simpleContent>
-   </xs:complexType>
-   <xs:simpleType name="InclusionType_membershipLabel">
+   </xs:complexType>-->
+   <!--<xs:simpleType name="InclusionType_membershipLabel">
       <xs:annotation>
          <xs:documentation>Custom enum: InclusionType/membership</xs:documentation>
       </xs:annotation>
@@ -5337,8 +5337,8 @@
          <xs:enumeration value="Included"/>
          <xs:enumeration value="Excluded"/>
       </xs:restriction>
-   </xs:simpleType>
-   <xs:simpleType name="InclusionType_membershipCode">
+   </xs:simpleType>-->
+   <!--<xs:simpleType name="InclusionType_membershipCode">
       <xs:annotation>
          <xs:documentation>Custom enum: InclusionType/membership</xs:documentation>
       </xs:annotation>
@@ -5354,7 +5354,7 @@
             </xs:annotation>
          </xs:enumeration>
       </xs:restriction>
-   </xs:simpleType>
+   </xs:simpleType>-->
    <xs:complexType name="nameUsageType">
       <xs:annotation>
          <xs:documentation>Classification of the type and display level of the name of a feature in an end-user system.</xs:documentation>
