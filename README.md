@@ -1,6 +1,9 @@
 # S-127-Product-Specification-Development
 Collaboration space for IHO Nautical Information Provision Working Group for the development of S-127 Product Specification with its artifacts.
 
+## 01/21/2026
+* S-127 ed2.0.0 Release candidate for NIPWG endorsement.
+
 ## 01/2026
 * Portrayal catalog
 * Updated GML schema with nillability implemented
