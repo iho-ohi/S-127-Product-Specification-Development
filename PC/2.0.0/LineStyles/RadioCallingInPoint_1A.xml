@@ -2,7 +2,7 @@
 <?S100lineage source="S52Preslib4.0" format="S100Ed2" version="0.1" creationDate="2015 - 03 - 13"?>
 <?S100Meta name="RadioCallingInPoint_1A" exposition="boundary of a restricted area"?>
 <lineStyle offset="0">
-  <intervalLength>65.988</intervalLength>
+  <intervalLength>67.752</intervalLength>
   <pen width="0.32">
     <color>UINFB</color>
   </pen>
@@ -39,10 +39,6 @@
     <length>2</length>
   </dash>
   <dash>
-    <start>37.64</start>
-    <length>2</length>
-  </dash>
-  <dash>
     <start>41.404</start>
     <length>2</length>
   </dash>
@@ -70,7 +66,11 @@
     <start>63.988</start>
     <length>2</length>
   </dash>
+  <dash>
+    <start>67.752</start>
+    <length>0.1</length>
+  </dash>
   <symbol reference="127SYMBL">
-    <position>32.95</position>
+    <position>35.043</position>
   </symbol>
 </lineStyle>
