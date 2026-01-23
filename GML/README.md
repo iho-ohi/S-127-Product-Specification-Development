@@ -1,7 +1,7 @@
 # GML schemas
 
 ## January 2026
-8 Updated GML schema to add nillability of enumeration attributes
+* Updated GML schema to add nillability of enumeration attributes
 
 ## November 11, 2025
 * Draft GML schema for Edition 2.0.0
