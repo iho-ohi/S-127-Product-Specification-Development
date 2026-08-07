@@ -2,6 +2,12 @@
 
 This folder is for work-in-progress feature catalogues and accompanying documentation. The official version for the finalized and approved Product Specification will be available from the GI Registry.
 
+## 08/2026
+* HSSC Draft updated with source identifiers for recently approved data dictionary entries (suffix 20260804)
+
+## 03/2026
+* HSSC draft (suffix 20260313)
+
 ## 08/2025
 * New version 2.0.0 of the FC uploaded as received 08/2025 from TG.
 * Date of FC- file updated to 2025-08-12.
