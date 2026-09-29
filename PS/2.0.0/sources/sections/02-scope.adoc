@@ -1,0 +1,9 @@
+[[sec_2]]
+== Specification Scope
+
+* *Scope ID:*:: Global
+* *Level:*:: 006 - series
+* *Level name:*:: MTM Dataset
+* *Level description*: information applies to all MTM datasets
+* *Extent:*: EX_Extent.description: Global coverage of maritime areas
+

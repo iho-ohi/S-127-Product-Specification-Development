@@ -1,0 +1,58 @@
+= IHO Marine Traffic Management (MTM) - Annex A Data Classification and Encoding Guide
+series: S
+:docnumber: 127
+:doctype: standard
+:edition: 2.0.0
+:language: en
+:published-date: 2026-03-23
+:copyright-year: 2026
+:committee: hssc
+:workgroup: nipwg
+:mn-document-class: iho
+:mn-output-extensions: pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:imagesdir: images
+:stem: latexmath
+:status: draft-development
+:log-filter-category: Style
+
+
+include::sections/overview.adoc[]
+
+include::sections/general.adoc[]
+
+include::sections/table-format.adoc[]
+
+include::sections/meta-features.adoc[]
+
+include::sections/abstract-geo-features.adoc[]
+
+include::sections/domain-features.adoc[]
+
+include::sections/cartographic-features.adoc[]
+
+include::sections/abstract-info-types.adoc[]
+
+include::sections/textual-regs.adoc[]
+
+include::sections/services-organizations-schedules.adoc[]
+
+include::sections/limitations.adoc[]
+
+include::sections/shipreports.adoc[]
+
+include::sections/spatial-quality.adoc[]
+
+<<<
+include::sections/association-names.adoc[]
+
+<<<
+include::sections/association-roles.adoc[]
+
+<<<
+include::sections/simple-attributes.adoc[]
+
+<<<
+include::sections/complex-attributes.adoc[]
+

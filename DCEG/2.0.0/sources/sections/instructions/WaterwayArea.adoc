@@ -1,0 +1,19 @@
+==== General
+
+Waterways can be encoded to indicate how specific sections of water have been divided for various administrative purposes such as for organizing traffic
+and managing the available water column.
+
+When it is required to encode a section of water as a waterway, this must be done using the feature *WaterwayArea*.
+
+A waterway area must declare how a vessel must used either a shore-based or other resource to obtain up-to-date information about the waterway, by using the
+attribute _dynamicResource_.
+
+
+
+==== Remarks
+
+* When it is required to encode the siltation rate of a waterway, this must be done using the attribute _siltationRate_.
+* The _textContent_ complex attribute is available by inheritance as well as in *ContactDetails* but the same information about how and where to obtain
+dynamic information should not be encoded in both places (that is, though _onlineResource_ is available both via *ContactDetails* and as
+a local complex attribute, it should not be populated in both places. It is recommended that network details for obtaining dynamic information
+be encoded in *WaterwayArea*._textContent.onlineResource_.

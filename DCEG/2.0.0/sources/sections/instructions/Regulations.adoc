@@ -1,0 +1,11 @@
+==== General
+
+*Regulations* is intended to be used for official rules, laws, and similar source material, i.e., sources that have the force of law or are mandated by a controlling authority. They will generally originate from some kind of administration or authority, including port authorities.
+
+A single instance of *Regulations* can be referenced by multiple feature instances.
+
+==== Remarks
+
+* Instances of *Regulations* do not encode a reverse link to the geographic features which reference them. While an association from geographic feature to information type can be encoded in
+the geographic feature instance, the reverse association from the information type to the geographic feature is omitted from the
+information type instance.

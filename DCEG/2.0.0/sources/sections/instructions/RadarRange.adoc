@@ -1,0 +1,9 @@
+==== General
+
+Many large ports have a radar surveillance system covering their approaches to provide guidance for vessels, particularly in poor visibility. The maximum range
+of the system forms an arc or series of overlapping arcs. 
+If it is required to encode a radar range, it must be done using the feature *RadarRange*.
+
+==== Remarks
+
+* Each VHF-channel should be indicated, using the attribute _communicationChannel_ (clause <<attr_communicationChannel,droploc%>>).

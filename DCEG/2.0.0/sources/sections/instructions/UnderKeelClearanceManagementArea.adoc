@@ -1,0 +1,21 @@
+==== General
+
+If it is required to encode an underkeel clearance management area where an appropriate authority has permitted the use of dynamic underkeel clearance information,
+it must be done using *UnderkeelClearanceManagementArea*. The attribute _dynamicResource_ is used to indicate what kind of dynamic underkeel clearance information
+is provided.
+
+If the value of _dynamicResource_ is either 2:mandatory external dynamic or 3:optional external dynamic, the external source must be encoded in an
+associated *ContactDetails* instance.
+
+Note that the _textContent_ complex attribute provides the _onlineResource_ attribute which may be used to encode the Internet location where dynamic information
+can be obtained.
+
+This feature should not be used as a substitute for potentially more accurate information available in S-129 data, where that is available.
+
+==== Remarks
+
+* The _textContent_ complex attribute is available by inheritance as well as in *ContactDetails* but the same information about how and where to obtain
+dynamic underkeel clearance information should not be encoded in both places (that is, though _onlineResource_ is available both via *ContactDetails* and as
+a local complex attribute, it should not be populated in both places. It is recommended that network details for obtaining dynamic underkeel clearance information
+be encoded in *UnderkeelClearanceManagementArea*._textContent.onlineResource_.
+

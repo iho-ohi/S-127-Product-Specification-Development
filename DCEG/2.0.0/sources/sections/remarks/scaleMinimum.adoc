@@ -1,0 +1,14 @@
+
+*Additional Remarks*:
+
+* The _scaleMinimum_ value of a feature determines the display scale below which the feature is no longer displayed. Its purpose is to reduce clutter, to prioritise the display of features and to improve display speed. In encoding its value, the producing authority should consider
+these factors, as well as the scale at which the feature is no longer likely to be required for navigation.
+* _scaleMinimum_ only affects the display of a feature on an ECDIS, not its presence in the Electronic Navigational Data Service (ENDS).
+* If _scaleMinimum_ is not encoded, the feature is displayed at all scales.
+* Where _scaleMinimum_ is used, it must always be set to a scale less (that is, to a smaller scale) than the optimum display scale of the data. Failure to follow this rule will mean that features will not be displayed on the ECDIS until the overscale indication is activated.
+* _scaleMinimum_ is not encoded on Meta features.
+* If the same feature exists in datasets of different optimum display scales, consideration should be given to whether each occurence of the feature should be assigned the same _scaleMinimum_ value.
+** This is a weaker requirement than S-101, which requires that each occurence must be assigned the same _scaleMinimum_ value.
+** This recommendation does not apply to _scaleMinimum_ values encoded on links to spatial primitives, which are intended to allow for more or less detailed geometry according to scale;
+however, if _scaleMinimum_ values are present on links to spatial primitives, the values should be consistent with any _scaleMinimum_ values encoded as feature attributes. In case of conflict, the
+_scaleMinimum_ feature attributes prevail.

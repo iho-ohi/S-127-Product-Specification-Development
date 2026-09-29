@@ -1,0 +1,85 @@
+<<<
+[data2text,PROD=config/product.json]
+----
+[[sec_3]]
+== Description of table format for feature and information types
+
+The tables describing feature and information types are based on the template below.
+
+[css color:red]#*X.X Feature Name*#
+
+[cols="a,a,a,a,a,a,a,a",options="unnumbered"]
+|===
+8+| [underline]#IHO Definition:# [css color:red]#(Definition) (followed by Remarks if any)#
+8+h| [underline]#{{PROD.id}}  [Geo Feature/Information Type]#: [css color:red]#S-1XX Feature or Information Type (followed by  (Abstract) if abstract type)#
+8+h| [underline]#Super Type:# [css color:red]#(supertype)#
+8+h| [underline]#Primitives:# [css color:red]#(allowed spatial primitives)#
+3+| _Real World_ 2+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
+3+| [css color:red]#_(Reserved)_# 2+| [css color:red]#_(Reserved)_# 3+| [css color:red]#_(Reserved)_#
+3+h|S-1XX Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| [css color:red]#(This section lists the allowabe *local* attributes)# | 2+| [css color:red]#(Allowed values for enumeration and codelist attributes)# | &nbsp; | &nbsp;
+            
+8+h| Inherited Attributes
+
+3+h|S-1XX Attribute 3+h| Inherited From h| Type h| Multiplicity
+
+3+| [css color:red]#(attribute)# 3+| [css color:red]#(supertype where defined)# | &nbsp; | &nbsp;
+
+|===
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Feature/information associations [css color:red]#(permitted associations)#*
+h|{{PROD.id}} Role	h|{{PROD.id}} Association Name	h| Associated to	h| Type	h| Mult.
+
+| Role of target class | Name of the Association +
+if inherited, "(Inherited from ...)"  | Name of the target (the feature or information type referenced by the link) | aggregation / composition / aggregation | (How many target instances a single source instance can link to.)
+
+5+| If the association is listed in only one of the feature or information types in the asspciation, it means the association is unidirectional,
+that is, the binding for the association is only in one of the participating features or information types. This is sometimes the case for information
+associations that link a feature to an information type - the feature type has a binding to the information type, but not vice versa. +
+Associations to or from any type are inherited by all sub-types of the type at any level unless explicitly prohibited in the relevant encoding instructions. +
+Hyphens in roles and association names (camel-case codes) are only for document formatting and should be ignored for production purposes.
+
+|===
+
+INT 1 Reference (optional): The INT 1 location(s) of the Feature – by INT1 Section and Section Number.
+
+[css color:red]#_(Encoding instructions are provided in sub-clauses following the table.)_#
+
+[css color:red]#*X.X.X General*#
+
+General guidance for encoding.
+
+Introductory remarks. Includes information regarding the real world entity/situation requiring the 
+encoding of the Feature in the product, and where required nautical cartographic principles relevant to 
+the Feature to aid the compiler in determining encoding requirements.
+
+*X.X.X.X  Sub-clause heading(s)* (if needed) If applicable - S-4 reference
+
+Additional encoding guidance relevant to the feature.
+
+Clauses related to specific encoding scenarios for the Feature (if required).
+
+[css color:red]#*X.X.X Remarks*#
+
+Guidance for encoding specific attributes.
+
+[underline]#Remarks:#
+
+{{PROD.id}} Attribute:  Indentation of attributes indicates sub-attributes of complex attributes.  Complex attributes may also be sub-attributes of complex attributes. Complex sub-attributes are  generally not expanded to show their own sub-attributes, because expanding sub-attributes produces tables of inordinate length, but if expansion is done, further levels of indentation are applied to the sub-attributes. Inherited attributes are shown separately from locally defined attributes. Inherited complex attributes are not expanded to show their sub-attributes.
+
+Allowable Encoding Value:  For (EN) type attributes, the enumerates listed are only those allowable for the particular occurrence of the attribute relevant to the feature.  Allowable values may vary for the attribute depending on the feature to which the attribute is bound.  Such bindings are defined in the {{PROD.id}} Feature Catalogue.  The full list of enumerates that may be assigned to an attribute in {{PROD.id}} can be found in the Simple Attributes section of the printed feature catalogue document.
+
+Type:  The prefix *C* indicates that the attribute is a complex attribute.  Complex attributes are aggregates of other attributes that can be simple type or complex type.  The prefix *S* indicates that the attribute is a sub-attribute of a complex attribute.  Complex attributes that are sub-attributes of a complex attribute, and their sub-attributes, are indicated by indentation of the attribute name in the {{PROD.id}} Attribute column.
+
+Introductory clauses may depict associations using a UML diagram showing the relationships that apply to the class and its super-classes (generalizations). Relationships which are inherited from super-classes are shown by including the super-classes and their associations in the diagram.
+
+The usual UML conventions apply. For explanations of standard UML notations, see S-100 Part 1.
+
+Association ends and multiplicities: A lower bound of 0 in the multiplicity at any end of an association indicates only that the association is not mandatory for any particular instance of the feature at the other end (i.e., it is not mandatory for an instance of “that” feature type to have an association to a feature of “this” type). A lower bound of “1” means that if an instance of “that” type exists, it must be associated to an instance of “this” type. If the association is actually encoded then it amounts to saying that “this relationship exists between these two instances” and there must be an appropriate feature instance at both ends. Associations that are not mandatory should be encoded if and only if they convey useful information.
+
+----
+
+
+

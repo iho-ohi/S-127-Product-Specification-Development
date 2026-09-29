@@ -1,0 +1,12 @@
+==== General
+
+Signal stations communicating visually have declined in importance. They are encoded for their main role of signalling information and instructions, and also as
+a form of landmark. The signals generally exhibit lights by day and night but may display shapes or flags by day.
+
+If it is required to encode a warning signal station, it must be done using the feature *SignalStationWarning*.
+
+==== Remarks
+
+* The *SignalStationWarning* must only be used to describe the function of the signal station, independent of any building or structure that
+the *SignalStationWarning* is associated with. 
+* Each VHF-channel should be indicated, using the attribute _communicationChannel_ (clause <<attr_communicationChannel,droploc%>>).

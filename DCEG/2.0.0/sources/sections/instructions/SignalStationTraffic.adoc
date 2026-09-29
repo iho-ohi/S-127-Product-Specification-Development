@@ -1,0 +1,23 @@
+==== General
+
+Signal stations communicating visually have declined in importance. They are encoded on the largest maximum display scale ENC data not only for their main
+role of signalling information and instructions but also as a form of landmark. The signals generally exhibit lights by day and night but may display shapes
+or flags by day.
+
+The nature of traffic signals varies from country to country and even from port to port. For charting purposes traffic signals can be considered to include,
+for instance:
+
+* Port entry and departure signals;
+* Lock, docking, and berthing signals;
+* Bridge signals;
+* International traffic signals.
+
+If it is required to encode a traffic signal station, it must be done using the feature *SignalStationTraffic*.
+
+==== Remarks
+
+* *SignalStationTraffic* should not be used to encode a bridge light marking the centre of a navigable span.
+* The *SignalStationTraffic* must only be used to describe the function of the signal station, independent of any building or structure that
+the *SignalStationTraffic* is associated with. 
+* Each VHF-channel should be indicated, using the attribute _communicationChannel_ (see clause <<attr_communicationChannel,droploc%>>).
+

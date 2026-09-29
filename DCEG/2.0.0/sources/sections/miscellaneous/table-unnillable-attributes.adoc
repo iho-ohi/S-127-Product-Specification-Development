@@ -1,0 +1,17 @@
+[[table_unnillable_attributes]]
+[cols="a,2a",options="headers",width="90%"]
+.Attributes which cannot be nilled
+|===
+h|Feature / Information type / Complex attribute	h| Un-nillable attribute(s)
+
+|TextPlacement |textOffsetBearing textOffsetDistance textType
+|UnderKeelClearanceManagementArea |dynamicResource
+|onlineResource |linkage
+|featureName |language name
+|graphic |pictorialRepresentation
+|periodicDateRange |dateStart dateEnd
+|vesselMeasurementsSpecification |comparisonOperator vesselsCharacteristics vesselsCharacteristicsValue
+|DataCoverage |maximumDisplayScale
+|PermissionType |categoryOfRelationship
+|InclusionType |membership
+|===

@@ -1,0 +1,570 @@
+
+[[sec_1]]
+== Overview
+
+[[sec_1.1]]
+=== Introduction
+
+This document has been produced by the IHO Nautical Information Provision
+Working Group (NIPWG) in response to a requirement to produce a data
+product that can be used as a Nautical Publication Information Overlay
+within an Electronic Chart Display and Information Systems
+(ECDIS). It is based on the IHO S-100 framework specification and
+the ISO 19100 series of standards. It is a vector product specification
+that is primarily intended for encoding the extent and nature of Marine
+Traffic Management, for navigational purposes.
+
+Marine Traffic Management (MTM) datasets describe the availability
+and reliability of vessel traffic services, pilotage, routing measures,
+and ship reporting systems. This includes their service areas, services
+offered, and instructions for contacting or utilizing these services.
+MTM is intended to be a supplement to ENC, and therefore does not
+describe the geographic information in detail equal to ENC, rather
+it is shown as a simplified geometry to indicate location, and to
+be a means of geolocating more regulatory information than the
+typical ENC.
+
+[[sec_1.2]]
+=== Scope
+
+This document describes an S-100 compliant Product Specification for
+Marine Traffic Managememt, which will form an overlay layer for
+an S-100 based marine navigation system. It specifies the content,
+structure, and metadata needed for creating a fully compliant S-127
+product and for its portrayal within an S-100 system. This Product
+Specification includes the content model, the encoding, the Feature
+Catalogue, Portrayal Catalogue, and metadata.
+
+[[sec_1.3]]
+=== References
+
+[[sec_1.3.1]]
+[bibliography]
+==== Normative
+
+* [[[ISO_639_2_T,ISO 639-2]]] Codes for the representation of names of languages -- Part 2: Alpha-3 code
+
+* [[[ISO_3166_1,ISO 3166-1]]] Codes for the Representation of Names of Countries and their Subdivisions -- Part 1: Country Codes
+
+* [[[IHO_M_3,IHO M-3 2025]]] M-3: Resolutions of the International Hydrographic Organization, IHO Publication M-3, 2nd Edition, 2010 (updated July 2025). (https://iho.int/uploads/user/pubs/misc/M3-E-2025.pdf)
+
+* [[[IHO_S_62,nofetch(IHO S-62)]]] S-62: List of Data Producer Codes (online), URL: https://registry.iho.int/producercode/list.do
+
+* [[[IHO_S_97,nofetch(IHO S-97)]]] S-97: IHO Guidelines for Creating S-100 Product Specifications, Edition 2.0.0 (in preparation).
+
+* [[[IHO_S_98,nofetch(IHO S-98)]]] S-98: Data Product Interoperability in S-100 Navigation Systems, Edition 2.0.0 (in preparation).
+
+* [[[IHO_S_100,IHO S-100 5.2.0]]] IHO Universal Hydrographic Data Model, Edition 5.2.0. International Hydrographic Organization, June 2024.
+
+* [[[IHO_S_158,IHO S-158]]] S-158: Validation Checks - Introduction and Structure, Edition 1.0.0, International Hydrographic Organization, February 2025.
+
+* [[[IHO_S158_100,IHO S-158:100]]] S-158:100: Universal Hydrographic Data Model Validation Checks, Edition 1.0.0, International Hydrographic Organization, February 2025.
+
+* [[[IHO_S_158_127,nofetch(IHO S-158:131)]]] S-158:127: Marine Traffic Management Validation Checks, Edition 1.0.0, International Hydrographic Organization. (In preparation.)
+
+
+[[sec_1.3.2]]
+[bibliography]
+==== Informative
+
+* [[[NIST_FIPS_186,nofetch(NIST FIPS 186)]]] FIPS 186-5: Federal Information Processing Standards -- Digital Signature Standard, National Institute of Standards and Technology (NIST) (https://csrc.nist.gov/pubs/fips/186-5/final).
+
+* [[[IALA_G1143,nofetch((G1143)IALA G1143)]]] IALA G1143: Unique Identifiers for Maritime Resources.
+International Association of Marine Aids to Navigation and Lighthouse Authorities, Edition 3.1, June 2021 (https://www.iala.int/product/g1143/).
+
+* [[[ISO_8601_2004,ISO 8601:2004]]] Data Elements and Interchange Formats -- Information Interchange -- Representation of Dates and Times
+
+* [[[ISO_10646,ISO/IEC 10646]]] Information technology -- Universal coded character set. ISO, Edition 6, 2020.
+
+* [[[ISO_19101_2003,ISO 19101:2002]]] Geographic Information -- Reference Model
+
+* [[[ISO_19103_2005,ISO/TS 19103:2005]]] Geographic Information -- Conceptual Schema Language
+
+* [[[ISO_19108_2002,ISO 19108:2002]]] Geographic Information -- Temporal Schema
+
+* [[[ISO_19109_2005,ISO 19109:2005]]] Geographic Information -- Rules for Application Schema
+
+* [[[ISO_19110_2005,ISO 19110:2005]]] Geographic Information -- Methodology for Feature Cataloguing
+
+* [[[ISO_19111_2007,ISO 19111:2007]]] Geographic Information -- Spatial Referencing by Coordinates
+
+* [[[ISO_19115_1,ISO 19115-1]]] Geographic information -- Metadata -- Part 1 - Fundamentals. As amended by Amendment 01 (2018)
+
+* [[[ISO_TS_19115_3,ISO/TS 19115-3]]] Geographic information - Metadata - XML schema implementation for fundamental concepts
+
+* [[[ISO_19117_2012,ISO 19117:2012]]] Geographic Information -- Portrayal
+
+* [[[ISO_19131_2008,ISO 19131:2007]]] Geographic Information -- Data Product Specifications
+
+* [[[ISO_19157_2013,ISO 19157:2013]]] Geographic Information -- Data Quality
+
+* [[[ISO_IEC_19501_2005,ISO/IEC 19501:2005]]] Information Technology -- Unified Modelling Language (UML), Version 1.4.2
+
+* [[[ISO_IEC_19757_3,ISO/IEC 19757-3]]] Information technology -- Document Schema Definition Languages (DSDL) -- Part 3: Rule-based validation -- Schematron.
+
+* [[[IHO_S_44,IHO S-44]]] S-44: IHO Standards for Hydrographic Surveys, Edition 6.0.0, September 2020.
+
+* [[[IHO_S_101_2_0_0,IHO S-101 Edition 2.0.0]]] S-101: Electronic Navigational Chart Product Specification Edition 2.0.0, December 2024.
+
+
+* [[[W3C_XMLSchema_1,nofetch(W3C XML Schema Part 1)]]] XML Schema Part 1 -- W3C XML Schema Part 1, Structures, Second Edition. W3C Recommendation. (https://www.w3.org/TR/xmlschema-1/)
+
+* [[[XML_Catalogs,nofetch(OASIS XML Catalogs)]]] XML Catalogs: XML Catalogs -- OASIS Standard V1.1, Organization for the Advancement of Structured Information Standards (OASIS), 7 October 2005. (URL: https://groups.oasis-open.org/higherlogic/ws/public/document?document_id=14810 retrieved 14 January 2026).
+
+[[sec_1.4]]
+=== Terms, definitions, and abbreviations
+
+[[sec_1.4.1]]
+[heading="Terms and definitions"]
+==== Terms and definitions
+
+The S-100 framework is based on the ISO 19100 series of geographic
+standards. The terms and definitions provided here are used to standardize
+the nomenclature found within that framework, whenever possible.
+They are taken from the references cited in <<sec_1.3>>. Modifications
+have been made when necessary.
+
+===== accuracy
+
+closeness of agreement between a test result and the accepted reference values
+
+NOTE&#58; A test result can be from an observation or measurement.
+
+===== aggregation
+
+special form of *association* that specifies a whole-part relationship
+between the aggregate (whole) and a component part
+
+===== application
+
+manipulation and processing of data in support of user requirements
+
+===== application schema
+
+**conceptual schema** for data required by one or more **application**s
+
+===== association
+
+Semantic relationship between two or more classifiers that specifies
+connections among their instances.
+
+===== attribute
+
+(1) Named property of an entity.
+
+NOTE&#58; Describes a geometrical, topological, thematic, or other characteristi
+of an entity.
+
+(2) Feature within a classifier that describes a range of values that
+instances of the classifier may hold.
+
+NOTE&#58; An attribute is semantically equivalent to a composition association;
+however, the intent and usage is normally different.
+
+NOTE&#58; "Feature" used in this definition is the UML meaning of the
+term.
+
+===== conceptual model
+
+model that defines concepts of a **universe of discourse**
+
+===== conceptual schema
+
+formal description of a **conceptual model**
+
+===== coverage
+
+**feature** that acts as a function to return values from its range
+for any direct position within its spatial, temporal or spatiotemporal
+**domain**
+
+[example]
+Raster image, polygon overlay, digital elevation matrix.
+
+===== data product
+
+**dataset** or **dataset series** that conforms to a **data product specification**
+
+===== data product specification
+
+detailed description of a **dataset** or **dataset series** together
+with additional information that will enable it to be created, supplied
+to, and used by another party
+
+NOTE: A data product specification provides a description of the universe
+of discourse and a specification for mapping the universe of discourse
+to a dataset. It may be used for production, sales, end-use, or other
+purpose.
+
+===== data type
+
+specification of a value domain with operations allowed on values
+in this domain
+
+NOTE&#58; Data types include primitive predefined types and user-definable
+types.
+
+NOTE&#58; A data type is identified by a term, for example Integer.
+
+[example]
+Integer, Real, Boolean, String, DirectPosition and Date
+
+===== dataset
+
+an identifiable collection of data
+
+NOTE&#58; A dataset may be a smaller grouping of data which, though limited
+by some constraint such as spatial extent or feature type, is located
+physically within a larger dataset. Theoretically, a dataset may be
+as small as a single feature or feature attribute contained within
+a larger dataset. A hardcopy map or chart may be considered a dataset.
+
+===== dataset series
+
+collection of **dataset**s sharing the same product specification
+
+===== datum
+
+parameter or set of parameters that define the position of the origin,
+the scale, and the orientation of a *coordinate* system
+
+===== domain
+
+well-defined set
+
+NOTE&#58; Well-defined means that the definition is both necessary and
+sufficient, as everything that satisfies the definition is in the
+set and everything that does not satisfy the definition is necessarily
+outside the set.
+
+===== enumeration
+
+a fixed list of valid identifiers of named literal values.
+**Attribute**s of an enumerated type may only take values
+from this list
+
+===== feature
+
+abstraction of real world phenomena
+
+NOTE&#58; A feature may occur as a type or an instance. Feature type or
+feature instance shall be used when only one is meant.
+
+===== feature association
+
+**relationship** that links instances of one **feature** type with instances
+of the same or a different **feature** type
+
+NOTE 1: A feature association may occur as a type or an instance. Feature
+association type or feature association instance is used when only
+one is meant.
+
+NOTE 2: Feature associations include aggregation of features.
+
+===== feature attribute
+
+characteristic of a **feature**
+
+NOTE&#58; A feature **attribute** may occur as a type or an instance.
+Feature attribute type or feature attribute instance is used when only one is meant.
+
+NOTE&#58; A feature **attribute** type has a name, a **data type** and a domain associated to it.
+A feature **attribute** instance has an attribute value taken from the domain.
+
+NOTE&#58; In a *feature catalogue*, a feature *attribute* may include
+a value domain but does not specify *attribute* values for feature
+instances.
+
+[example]
+A feature attribute named _communication channel_ may have an attribute
+value _VHF0007_ which belongs to the data type _text_
+
+[example]
+A feature attribute named _length_ may have an attribute value _82.4_
+which belongs to the data type _real_
+
+===== geographic data
+
+data with implicit or explicit reference to a location relative to the Earth
+
+NOTE&#58; Geographic information is also used as a term for information
+concerning phenomena implicitly or explicitly associated with a location
+relative to the Earth.
+
+===== geometric primitive
+
+geometric object representing a single, connected, homogeneous element of geometry
+
+NOTE&#58; Geometric primitives are non-decomposed objects that present
+information about geometric configuration. They include points, curves,
+surfaces, and solids.
+
+===== metadata
+
+data about data
+
+===== model
+
+abstraction of some aspects of reality
+
+NOTE&#58; A semantically complete abstraction of a system.
+
+===== multiplicity
+
+specification of the number of possible occurrences of a property,
+or the number of allowable elements that may participate in a given
+relationship
+
+[example]
+1..++*++ (one to many); 1 (exactly one); 0..1 (zero or one)
+
+===== quality
+
+totality of characteristics of a product that bear on its ability to satisfy stated and implied needs
+
+===== relationship
+
+semantic connection among model elements
+
+NOTE&#58; Kinds of relationships include association, generalization,
+metarelationship, flow, and several kinds grouped under dependency.
+
+===== vertical datum
+
+datum describing the relation of gravity-related heights or depths to the Earth
+
+===== universe of discourse
+
+view of the real or hypothetical world that includes everything of interest
+
+[[sec_1.4.2]]
+==== Abbreviations
+
+This product specification adopts the following convention for symbols
+and abbreviated terms:
+
+ASCII:: American Standard Code for Information Interchange
+
+DCEG:: Data Classification and Encoding Guide
+
+ECDIS:: Electronic Chart Display and Information System
+
+ENC:: Electronic Navigational Chart
+
+EPSG:: European Petroleum Survey Group
+
+GML:: Geography Markup Language
+
+IHO:: International Hydrographic Organization
+
+IMO:: International Maritime Organization
+
+IOGP:: International association of Oil and Gas Producers (formerly OGP)
+
+IOC:: International Oceanographic Commission
+
+ISO:: International Organization for Standardization
+
+JPEG:: Joint Photographic Experts Group
+
+KiB:: IEC 80000-13 unit corresponding to stem:[2^10] bytes
+
+MiB:: IEC 80000-13 unit corresponding to stem:[2^20] bytes
+
+MRN:: Maritime Resource Name
+
+MTM:: Marine Traffic Management
+
+NIPWG:: Nautical Information Provision Working Group
+
+PNG:: Portable Network Graphics
+
+SVG:: Scalable Vector graphics
+
+TIFF:: Tagged Image File Format
+
+UML:: Unified Modelling Language
+
+URI:: Uniform Resource Identifier
+
+URL:: Uniform Resource Locator
+
+WGS:: World Geodetic System
+
+XML:: eXtensible Markup Language
+
+XSD:: XML Schema Definition
+
+XSLT:: eXtensible Stylesheet Language Transformations
+
+[[sec_1.5]]
+=== Use of language
+
+Within this document:
+
+* "Must" indicates a mandatory requirement.
+* "Should" indicates an optional requirement, that is the recommended process to be followed, but is not mandatory.
+* "May" means "allowed to" or "could possibly", and is not mandatory.
+
+[[sec_1.5A]]
+=== UML notations
+
+In this document, conceptual schemas are presented in the Unified
+Modelling Language (UML). Several model elements used in this schema
+are defined in ISO standards or in IHO S-100 documents. In order to
+ensure that class names in the model are unique ISO TC/211 has adopted
+a convention of establishing a prefix to the names of classes that
+define the TC/211 defined UML package in which the UML class is defined.
+The IHO standards and this product specification make use of classes
+derived directly from the ISO standards. This convention is also followed
+in this document. In the IHO standards class names are identified
+by the name of the standard, such as "S100" as the prefix optionally
+followed by the bi-alpha prefix derived from ISO standard. In order
+to avoid having multiple classes instantiating the same root classes,
+the ISO classes and S-100 classes have been used where possible; however,
+a new instantiated class is required if there is a need to alter a
+class or relationship to prevent a reverse coupling between the model
+elements introduced in this document and those defined in S-100 or
+the ISO model.
+
+[[sec_1.6]]
+=== General data product description
+
+NOTE&#58; This information contains general information about the data
+product.
+
+*Title:*:: Marine Traffic Management
+
+*Abstract:*:: Marine Traffic Management (MTM) datasets describe the
+availability and reliability of vessel traffic services, pilotage,
+routing measures, and ship reporting systems. This includes their
+service areas, services offered, and instructions for contacting or
+utilizing these services. MTM is intended to be a supplement to ENC,
+and therefore does not describe the geographic information in detail
+equal to ENC, rather it is shown as a simplified geometry to indicate
+location, and to be a means of geolocating more regulatory information
+than the typical ENC.
+
+*Content:*:: Datasets conforming to this specification will contain
+all relevant MTM information for the area of coverage. Additionally,
+there will be relevant metadata data quality, production authority,
+data sources, and publication date.
+
+*Spatial Extent:*::
++
+--
+*Description:*:: Global coverage of maritime areas. +
+*East Bounding Longitude:*:: 180° +
+*West Bounding Longitude:*:: -180° +
+*North Bounding Latitude:*:: 90° +
+*South Bounding Latitude:*:: -90°
+--
+
+*Specific Purpose:*:: Describing traffic management in the maritime
+domain for utilization in ECDIS, and to allow the producer to exchange
+marine traffic management information with interested stakeholders.
+
+[[sec_1.7]]
+=== Data Product Specification metadata
+
+NOTE&#58; The information in this clause identifies this Product Specification
+and provides information about its creation and maintenance. Dataset
+metadata is described in a separate clause.
+
+*Title:*:: Marine Traffic Management
+
+*S-100 Version:*:: 5.2.0
+
+*S-127 Version:*:: 2.0.0
+
+*Date:*:: 23 March 2026
+
+*Language:*:: English
+
+*Classification:*:: Unclassified
+
+*Contact:*::
++
+--
+International Hydrographic Organization +
+4b Quai Antoine 1er +
+B.P. 445 +
+MC 98011 MONACO CEDEX +
+Telephone: +377 93 10 81 00 +
+Fax: + 377 93 10 81 40 +
+Email: mailto:info@iho.int[info@iho.int]
+--
+
+*URL:*:: https://iho.int/[https://iho.int]
+
+*Identifier:*:: S-127
+
+*Maintenance:*:: Changes to the S-127 Product Specification are coordinated
+by the Nautical Information Provision Working Group, a technical group
+established by the International Hydrographic Organization, and are
+made available via the IHO web site. Maintenance of the Product Specification
+must conform to IHO Resolution 2/2007, as amended.
+
+[[sec_1.8]]
+=== IHO Product Specification maintenance
+
+[[sec_1.8.1]]
+==== Introduction
+
+Changes to S-127 will be released by the IHO as a New Edition, revision,
+or clarification.
+
+[[sec_1.8.2]]
+==== New Edition
+
+_New Editions_ of S-127 introduce significant changes. _New Editions_
+enable new concepts, such as the ability to support new functions
+or applications, or the introduction of new constructs or data types.
+_New Editions_ are likely to have a significant impact on either existing
+users or future users of S-127. All cumulative _revisions_ and _clarifications_
+must be included with the release of approved New Editions.
+
+[[sec_1.8.3]]
+==== Revision
+
+_Revisions_ are defined as substantive semantic changes to S-127.
+Typically, _revisions_ will change S-127 to correct factual errors;
+or introduce necessary changes that have become evident as a result
+of practical experience or changing circumstances. A _revision_ must
+not be classified as a clarification. _Revisions_ could have an impact
+on either existing users or future users of S-127. All cumulative
+_clarifications_ must be included with the release of approved corrections
+revisions.
+
+Changes in a _revision_ are minor and ensure backward compatibility
+with the previous versions within the same Edition. Newer revisions,
+for example, introduce new features and attributes. Within the same
+Edition, a dataset of one version could always be processed with a
+later version of the Feature and Portrayal Catalogues.
+
+In most cases a new Feature Catalogue will result in a _revision_
+of S-127.
+
+[[sec_1.8.4]]
+==== Clarification
+
+_Clarifications_ are defined as non-substantive changes. Typically,
+_clarifications_: remove ambiguity; correct grammatical and spelling
+errors; amend or update cross references; and insert improved graphics.
+A _clarification_ must not cause any substantive semantic change to
+a data product.
+
+Changes in a _clarification_ are minor and ensure backward compatibility
+with the previous versions.
+
+[[sec_1.8.5]]
+==== Version numbers
+
+The associated version control numbering to identify changes (n) to
+this Product Specification must be as follows:
+
+New Editions denoted as *n*.0.0
+
+Revisions denoted as n.*n*.0
+
+Clarifications denoted as n.n.*n*

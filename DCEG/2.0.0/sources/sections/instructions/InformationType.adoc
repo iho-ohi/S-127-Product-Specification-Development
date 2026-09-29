@@ -1,0 +1,23 @@
+==== General
+
+Where a complex attribute has all its sub-attributes optional (e.g., multiplicity 0..1 or 0..*), at least one of the sub-attributes must be populated.
+
+The _featureName_ attribute of an instance of an information type can be used for a short title that is either a proper name (if such is relevant) or which
+describes the instance. For example, the _featureName_ attribute of an *Authority* information type can be the name of a government agency.
+
+The _featureName_ attributes of information types should not duplicate the geographic feature name of an associated feature, but should pertain to the information
+instance itself. 
+
+The _featureName_ attribute should be populated only if the value conveys useful information to the end user. Some examples of such situations are:
+
+* providing the name of an organisation, such as the name of an *Authority*.
+* distinguishing between instances – if multiple instances of the same information type are associated to the same feature type (or another information type), the different instances may be given descriptive names to make it easier for the mariner to distinguish their content.
+
+Some information instances are associated to multiple features, in which case its name should be general enough to be relevant to all the features.
+
+For example, if naming *Regulations* instances describing regulations, consider whether (for example) there is a general regulation applicable to all areas
+in a jurisdiction and an exceptional regulations object associated to a single area or a subset of areas in the jurisdiction. In this situation, the general regulations may be encoded with the name “General regulations for (feature type) Areas” and associated to several features, while a specific feature can also have a specific regulation whose name is “Special regulations for (named area)”.
+
+==== Remarks
+
+* If the complex attribute _bearingInformation_ is present, at least one of its sub-attributes must be populated.

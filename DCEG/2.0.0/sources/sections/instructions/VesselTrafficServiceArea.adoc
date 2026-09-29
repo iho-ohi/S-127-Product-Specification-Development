@@ -1,0 +1,21 @@
+==== General
+
+A Vessel Traffic Service (VTS) is a service implemented by a competent authority to improve the safety and efficiency of vessel traffic operations and to protect the environment. A VTS provides, from one or more traffic control centres, a number of services which may include:
+
+* Traffic management for the safe and efficient movement of vessels within the area, usually including mandatory reporting;
+* Navigational assistance to support onboard decision making, usually on request (see also S-4 B-487.2 for radar reference lines);
+* Information for vessels operating in the area, for example: on arrival, berthing, anchoring, and departure from ports; about movements of other vessels; on navigational hazards; regarding weather. These may be regularly broadcast or be available on request.
+
+A VTS service area may range from supporting entry and departure to an individual port to a much larger regional VTS (possibly containing local VTS) that may provide services to vessels in the outer approaches to ports or transiting through the region. Consequently, there may be VTS within VTS and also overlapping VTS, making it difficult for the mariner to always be aware which VTS area is applicable. Therefore, wherever the information is available, limits of VTS areas should be charted, at least on the largest scale chart and on appropriate smaller scales where navigation is practicable and/or to assist passage planning.
+
+If it is required to encode a Vessel Traffic Service Area, it must be done using the feature class *VesselTrafficServiceArea*. If it is required to associate related Radio Calling-In Points, Signal Stations (Warning or Traffic), or Radar Ranges this must be done using the association *TrafficControlServiceAggregation*.
+
+A ship reporting service may be operated by the VTS, and if it is required to encoding an associated ship reporting service, this must be done by encoding a *ShipReportingServiceArea* (see clause <<ftable_ShipReportingServiceArea,droploc%>>).
+
+==== Remarks
+
+* If it is required to describe the procedures for accessing the VTS services, this must be done using the _serviceAccessProcedure_ attribute.
+* The requirements for maintaining listening watch within the VTS area must be encoded in a summarized form using the _requirementsForMaintenanceOfListeningWatch_ attribute. Any detailed elaborations should be encoded in the textContent attribute. As a text attribute, _requirementsForMaintenanceOfListeningWatch_ can be populated with the text “not specified”, “unknown”, etc., if the requirements are unknown. If it is known that there are no listening watch requirements, the attribute must be encoded with “not applicable”. (There may be a general requirement in the applicable national shipping regulations instead of or in addition to a specific requirement.) Any detailed elaborations (for example, formatted text, over-long strings, etc.) should be encoded in the _textContent_ attribute. As a text attribute, this can be populated with the text “not specified”, “unknown”, etc., if the requirements
+are unknown. If it is known that there are no listening watch requirements, the attribute must be encoded with “not applicable”. (There may be a general
+requirement in the applicable national shipping regulations instead of or in addition to a specific requirement.)
+

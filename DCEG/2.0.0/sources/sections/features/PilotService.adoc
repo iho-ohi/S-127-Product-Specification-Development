@@ -1,0 +1,105 @@
+[[ftable_PilotService]]
+=== Pilot Service
+
+[cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+8+| [underline]#IHO Definition:# The service provided by a person who directs the movements of a vessel through pilot waters, usually a person who has demonstrated extensive knowledge of channels, aids to navigation, dangers to navigation, etc., in a particular area and is licensed for that area.
+8+h| [underline]#S-127 Geo Feature:# PilotService
+8+h| [underline]#Super Type:# ReportableServiceArea
+8+h| [underline]#Primitives:# surface
+3+| _Real World_ 2+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
+3+h|S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| Category of Pilot |
+2+|1: Pilot +
+2: Deep Sea +
+3: Harbour +
+4: Bar +
+5: River +
+6: Channel +
+7: Lake +
+ |EN | 0,*
+
+3+| Pilot Qualification |
+2+|1: Government Pilot +
+2: Pilot Approved by Government +
+3: State Pilot +
+4: Federal Pilot +
+5: Company Pilot +
+6: Local Pilot +
+7: Citizen With Sufficient Local Knowledge +
+8: Citizen With Doubtful Local Knowledge +
+ |EN | 0,1
+
+3+| Pilot Request |
+2+| |TE | 0,1
+
+3+| Remote Pilot |
+2+| |BO | 1,1
+
+3+| Notice Time | 2+| |  C | 0,1
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Notice Time Hours |
+2+| |(S) RE | 0,* (ordered)
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Notice Time Text |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Operation |
+2+|1: Largest Value +
+2: Smallest Value +
+ |(S) EN | 0,1
+
+8+h| Inherited Attributes
+
+3+h|S-127Attribute 3+h| Inherited From h| Type h| Multiplicity
+
+3+| Interoperability Identifier 3+| FeatureType | URN | 0,*
+3+| Feature Name 3+| FeatureType | C | 0,*
+3+| Fixed Date Range 3+| FeatureType | C | 0,1
+3+| Periodic Date Range 3+| FeatureType | C | 0,*
+3+| Scale Minimum 3+| FeatureType | IN | 0,1
+3+| Graphic 3+| FeatureType | C | 0,*
+3+| Source Indication 3+| FeatureType | C | 0,*
+3+| Text Content 3+| FeatureType | C | 0,*
+|===
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Information associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+
+|theServiceHours|LocationHours|ServiceHours|association|0,1
+|reptForTrafficServ|TrafficServiceReport + 
+(inherited from ReportableServiceArea) |ShipReport|association|0,*
+|controlAuthority|ServiceControl + 
+(inherited from SupervisedArea) |Authority|association|0,1
+|theContactDetails|ServiceContact + 
+(inherited from OrganizationContactArea) |ContactDetails|association|0,*
+|permission|PermissionType + 
+(inherited from FeatureType) |Applicability|association|0,*
+|theRxN|AssociatedRxN + 
+(inherited from FeatureType) |AbstractRxN|association|0,*
+|theInformation|AdditionalInformation + 
+(inherited from FeatureType) |NauticalInformation|association|0,*
+|===
+
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Feature associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+|serviceArea|ServiceProvisionArea|PilotageDistrict|association|0,1
+|serviceArea|ServiceProvisionArea|PilotBoardingPlace|association|0,*
+|theCartographicText|TextAssociation + 
+(inherited from FeatureType) |TextPlacement|association|0,1
+|===
+
+
+include::../instructions/PilotService.adoc[]
+* If the complex attribute _noticeTime_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _fixedDateRange_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _sourceIndication_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _textContent_ is present at least one of its sub-attributes must be populated.
+** If the _textContent_ sub-attribute _information_ is present at least one of its sub-attributes must be populated.
+

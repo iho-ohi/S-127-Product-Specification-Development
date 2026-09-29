@@ -1,0 +1,71 @@
+<<<
+[[sec_text_regs]]
+== Textual Regulations
+
+=== Introduction
+
+The information types *Regulations*, *Restrictions*, *Recommendations*, and *NauticalInformation* all inherit the attributes of their immediate abstract superclass
+*AbstractRxN*, which provides attributes _textContent_ and _graphic_ for textual and pictorial material respectively. The sub-attributes of its complex attribute _rxnCode_
+allow optional classification of the material encoded in _textContent_ or _graphic_ according to the type of material and the kind of nautical activity affected by it.
+The classifications in _rxNCode_ sub-attributes _categoryOfRxN_ and _actionOrActivity_ are intended to facilitate software queries for information, while the
+sub-attribute _headline_ provides additional topic headings for subject matter.
+
+These four information types also inherit the attributes of abstract superclass InformationType, which allows encoding of the effective and expiry dates, if any,
+and the source of information , if it is necessary to encode that data.
+
+The content of the regulation (recommendation, etc.) should be encoded in the _textContent_ attribute, which is also inherited from the abstract superclass
+*InformationType*. It may be encoded inline (_textContent.information.text_) or in an external file (_textContent.information.fileReference_) depending on its length,
+on whether it is unique to the feature instance, and on whether the producer decides to include a support file containing multiple sections referenced from
+different places in the dataset. (See also clauses <<sec_2.4.8,droploc%>> and <<sec_2.4.9,droploc%>> for general guidance on encoding textual information.)
+
+These four information types are intended primarily for encoding textual information, such as that which derives from textual source material such as
+port handbooks, national or local laws or official publications.
+
+The four types for textual information are depicted in <<Fig_TextualInfo_Types>>
+
+[[Fig_TextualInfo_Types]]
+.Types for textual information concerning regulations, etc.
+image::../images/Types&#32;Textual&#32;Info.png[]
+
+Where possible, these types should be classified using the _categoryOfRxN_ and _actionOrActivity_ codelists in the rxnCode complex attribute. Being open
+enumeration codelists, they allow for additional categories not listed among their standard values. For example, an “under repair” activity might be
+encoded in the _actionOrActivity_ attribute (as “other: underRepair”, following the syntax rule for encoding “extra” values in open
+enumerationsfootnote:[S-100 3-6.7 specifies the format as “The word ‘other’ followed by a colon and a single space character (that is ‘other: ’ without quotes),
+followed by one or more alphanumeric strings separated by single spaces.”]).
+
+Producers should note that such extra values will merely be displayed and not processed (for example, the user interface will not use extra values
+to choose symbols or filter instances of Regulationsfootnote:[In the interest of brevity, “Regulations” in this sub-clause stands for any one of the
+four types described by this section.], whereas it may apply filters to the standard values and/or them in portrayal).
+
+===	Regulations, etc., for specific locations
+
+All geo features may have an association to any of *Regulations* or its sibling information types. This association is *AssociatedRxN* and it is inherited
+from the root feature type *FeatureType*.
+
+If it is necessary to identify an authority or organization related to a particular regulation (restriction, etc.) object, this may be done using the
+*RelatedOrganisation* association between *Regulations*, etc., and an *Authority* object.
+
+[[Fig_RegsForGeoFeatures]]
+.Regulations, etc., for geo features
+image::../images/Regulations&#32;For&#32;Geo&#32;Features.png[]
+
+=== Regulations applying only to vessels with specific characteristics or cargoes
+
+Regulations applying only to vessels of specified types, exceeding specified dimensions, or carrying 
+specified cargoes (or other limitations which apply only to subsets of vessels) are encoded by defining 
+the subset of vessels using an *Applicability* instance and associating the *Regulations* object to that 
+*Applicability*.
+
+For information on the use of *Applicability* to define subsets of vessels, see clause <<sec_limitations,droploc%>> in this DCEG and
+clause 4 in the main PS.
+
+
+include::features/Regulations.adoc[]
+
+include::features/Restrictions.adoc[]
+
+include::features/Recommendations.adoc[]
+
+include::features/NauticalInformation.adoc[]
+
+

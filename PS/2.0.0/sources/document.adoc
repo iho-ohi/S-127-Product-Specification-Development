@@ -1,0 +1,50 @@
+= Marine Traffic Management Product Specification
+:series: S
+:docnumber: 127
+:doctype: standard
+:edition: 2.0.0
+:language: en
+:published-date: 2026-03-23
+:copyright-year: 2026
+:committee: hssc
+:workgroup: nipwg
+:mn-document-class: iho
+:mn-output-extensions: pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:imagesdir: images
+:stem: latexmath
+:status: draft-development
+:log-filter-category: Style
+
+include::sections/00-preface.adoc[]
+
+include::sections/01-overview.adoc[]
+
+include::sections/02-scope.adoc[]
+
+include::sections/03-dataset.adoc[]
+
+include::sections/04-data-content-struct.adoc[]
+
+include::sections/05-feature-catalogue.adoc[]
+
+include::sections/06-crs.adoc[]
+
+include::sections/07-datasets.adoc[]
+
+include::sections/08-data-quality.adoc[]
+
+include::sections/09-data-capture-classification.adoc[]
+
+include::sections/10-maintenance.adoc[]
+
+include::sections/11-portrayal.adoc[]
+
+include::sections/12-data-product-format.adoc[]
+
+include::sections/13-data-product-delivery.adoc[]
+
+include::sections/14-metadata.adoc[]
+
+include::sections/15-list-of-annexes.adoc[]

@@ -1,0 +1,40 @@
+
+[.preface]
+== Document History
+
+Changes to this Specification are coordinated by the Nautical Information
+Provision Working Group, an IHO working group under HSSC. New editions
+will be made available via the IHO web site. Maintenance of the Specification
+shall conform to IHO Resolution 2/2007 (as amended).
+
+[cols="69,99,71,345",options="unnumbered"]
+|===
+h| Version Number h| Date h| Approved By h| Purpose
+
+| 0.1	| 2018-05-31	|	| First draft
+| 0.2	| 2018-08-24	|RM	|Address comments in the June 2018 round of NIPWG reviews; conform to draft S-100 Edition 4.0.0 (July 2018).
+| 1.0.0 RC1	| 2018-11-29	|RM	|Address comments received during second round of NIPWG review; harmonize with October 2018 drafts of S-100 Ed. 4.0.0 and S-101 Ed. 1.0.0.
+| 1.0.1	| 2019-11-15	|RM	|Clarifications and removal of unused elements.
+| 2.0.0 | 2025-12-07 | RM | Draft Edition 2.0.0; apply amendmenta accepted by task group; align with S-100 5.2.0.
+|2.0.0 | 2026-01-15 |  |Draft Edition 2.0.0; align more closely with S-131 and S-122 including nilling; miscellaneous requirements for validation. 
+| 2.0.0 | 2026-03-23 | NIPWG | Applied NIPWG review comments
+| | | |
+|===
+
+////
+[.preface]
+== Summary of Significant Changes in Edition 2.0.0
+
+Bold references in the Clauses Affected column indicate the principal sections/clauses that are affected by the described change.
+
+[cols="75,25",options="unnumbered,header"]
+|===
+^h| Change Summary ^h| Clauses Affected
+
+| Aligned with S-100 Edition 5.2.0 | *12*, *14*
+| Modified application schema | *4.2.1*
+| |
+| | 
+|===
+////
+

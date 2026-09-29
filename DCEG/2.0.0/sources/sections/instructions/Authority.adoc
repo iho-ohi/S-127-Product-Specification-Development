@@ -1,0 +1,13 @@
+==== General
+
+The *Authority* information type is used for encoding information about organizations, including official authorities (port and other) as well as private organizations which control or operate port facilities.
+
+For encoding the contact details for an organization, use an associated *ContactDetails* information type (see the information associations table below).
+
+For encoding the general operating hours of an organization, use an associated *ServiceHours* information type (see clause 4 in the main Product Specification).
+
+For encoding the supervisory or operating organization for a facility or area, such as a *VesselTrafficServiceArea* use an information association from the geo feature to
+*Authority* (see clause <<ftable_SupervisedArea>> (Supervised Area) and clause 4 in the main Product Specification).
+
+==== Remarks
+

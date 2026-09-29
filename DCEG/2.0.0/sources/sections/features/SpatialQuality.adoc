@@ -1,0 +1,45 @@
+[[ftable_SpatialQuality]]
+=== Spatial Quality
+
+[cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+8+| [underline]#IHO Definition:# The indication of the quality of the locational information for features in a dataset.
+8+h| [underline]#S-127 Information Type:# SpatialQuality (Abstract type)
+8+h| [underline]#Super Type:# 
+3+h| S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+            
+3+| Quality of Horizontal Measurement |
+2+|1: Surveyed +
+2: Unsurveyed +
+3: Inadequately Surveyed +
+4: Approximate +
+5: Position Doubtful +
+6: Unreliable +
+7: Reported (Not Surveyed) +
+8: Reported (Not Confirmed) +
+9: Estimated +
+10: Precisely Known +
+11: Calculated +
+ |EN | 0,1
+
+3+| Spatial Accuracy | 2+| |  C | 0,*
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Fixed Date Range | 2+| | (S)  C | 0,1
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Horizontal Position Uncertainty | 2+| | (S)  C | 0,1
+8+h| Inherited Attributes
+
+3+h| S-127 Attribute 3+h| Inherited From h| Type h| Multiplicity
+            
+8+h| No inherited attributes
+|===
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Information associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+|===
+
+
+include::../instructions/SpatialQuality.adoc[]
+* If the complex attribute _spatialAccuracy_ is present at least one of its sub-attributes must be populated.
+

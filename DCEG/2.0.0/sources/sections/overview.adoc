@@ -1,0 +1,72 @@
+[data2text,PROD=config/product.json]
+----
+[[sec_1]]
+== Overview
+
+[[sec_1.1]]
+=== Introduction
+
+The “Data Classification and Encoding Guide” has been developed to provide consistent, 
+standardized instructions for encoding S-100 compliant {{PROD.name}} ({{PROD.abbrev}}) ({{PROD.id}}) 
+data.
+
+The purpose of the Data Classification and Encoding Guide is to facilitate {{PROD.id}} encoding to 
+meet IHO standards for the proper display of {{PROD.name}} information in an ECDIS 
+and other electronic charting displays.  This document describes how to encode information 
+that the modeller considers relevant to a {{PROD.name}} data product.  The content of a dataset is at the 
+discretion of the producing authority provided that the conventions described within this 
+document are followed.  A “producing authority” is a Hydrographic Office (HO) or other 
+organization authorized by a government, to produce definitive nautical information. 
+The entire S-100 Universal Hydrographic Data Model, including the {{PROD.id}} {{PROD.abbrev}} Product 
+Specification, is available at the following web site, https://iho.int.
+
+
+[[sec_1.2]]
+=== Document Metadata
+
+NOTE&#58;  This information uniquely identifies this Data Classification and Encoding Guide to the Product Specification and provides information about its creation and maintenance.
+
+[cols="a,2a",headers,grid="none"]
+.Document metadata
+|===
+h| Metadata h| Content
+|Title:	| {{PROD.name}}, Data Classification and Encoding Guide
+|Version:	|2.0.0
+|Date:	|23 March 2026
+|Language:	|English
+|Classification:	|Unclassified
+|Contact:	| International Hydrographic Organization +
+4 Quai Antoine 1er +
+B.P. 445 +
+MC 98011 MONACO CEDEX +
+Telephone:  +377 93 10 81 00 +
+Fax:  +377 93 10 81 40 +
+URL: https://iho.int
+|Identifier:	|{{PROD.id}} Annex A Data Classification and Encoding Guide
+|Maintenance:	|Changes to {{PROD.id}} Annex A; Data Classification and Encoding Guide are coordinated by the IHO Nautical Information Provision Working Group (NIPWG) and must be made available via the IHO web site.
+|===
+
+[[sec_1.3]]
+===	Terms and definitions
+
+For terms and definitions, see the {{PROD.name}} Product Specification, Clause 1.4.2.
+
+[[sec_1.4]]
+===	Abbreviations
+
+For a list of abbreviations, see the {{PROD.name}} Product Specification, Clause 1.4.3.
+
+[[sec_1.5]]
+=== Use of language
+
+Within this document:
+
+* “Must” indicates a mandatory requirement;
+* “Should” indicates an optional requirement, that is the recommended process to be followed, but is not mandatory;
+* “May” means “allowed to” or “could possibly”, and is not mandatory, or recommended.
+
+[[sec_1.6]]
+===	Maintenance
+
+Changes to the Data Classification and Encoding Guide must occur in accordance with the IHO Resolution 2/2007 as amended.
+----

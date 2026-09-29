@@ -1,0 +1,182 @@
+[data2text,PROD=config/product.json]
+----
+
+[[sec_FC]]
+== Feature Catalogue
+
+[[sec_FC.1]]
+=== Introduction
+
+The Feature Catalogue describes the feature types, information types,
+attributes, attribute values, associations and roles which may be
+used in the product. The {{PROD.id}} Feature Catalogue is available in an
+XML document which conforms to the S-100 XML Feature Catalogue Schema
+and can be downloaded from the IHO Geospatial Information Registry
+website (https://registry.iho.int/).
+
+[[sec_FC.2]]
+=== Feature types
+
+Feature types contain descriptive attributes that characterize real-world
+entities. The word 'feature' may be used in one of two senses -- feature
+type and feature instance. A feature type is a class and is defined
+in a Feature Catalogue. A feature instance is a single occurrence
+of the feature type and represented as an object in a dataset. A feature
+instance is located by a relationship to one or more spatial instances.
+A feature instance may exist without referencing a spatial instance.
+
+[[sec_FC.2.1]]
+==== Geographic
+
+Geographic (geo) feature types carry the descriptive characteristics
+of a real-world entity (a location or place on the surface of the Earth).
+In the context of hydrographic products, this includes the adjacent
+regions from the sea floor to elevations of landforms and structures
+above the Earth's surface.
+
+[[sec_FC.2.2]]
+==== Meta
+
+Meta features contain information about other features within a dataset.
+Information defined by meta features override the default metadata
+values defined by the dataset descriptive records. Meta attribution
+on individual features overrides attribution on meta features.
+
+[[sec_FC.2.3]]
+==== Cartographic
+
+Cartographic features contain information about the cartographic representation
+(including text) of real world entities.
+
+[[sec_FC.3]]
+=== Information types
+
+Information types define identifiable pieces of information in a dataset
+that can be shared using information associations. They have attributes
+but have no geometry.
+
+[[sec_FC.3.1]]
+==== Spatial quality
+
+Spatial quality attributes are carried in an information class called
+*SpatialQuality*. Only points and curves can be associated
+with spatial quality. Currently no use case for associating surfaces
+with spatial quality attributes has been identified, therefore this
+is prohibited. Vertical uncertainty is prohibited for curves as this
+dimension is not supported by curves.
+
+[[sec_FC.4]]
+=== Feature and information relationships
+
+A feature relationship links instances of one feature type with instances
+of the same or a different feature type.
+
+An information relationship links instances of feature types or information
+types to instances of information types.
+
+[[sec_FC.5]]
+=== Attributes
+
+{{PROD.id}} defines attributes as either simple or complex.
+
+[[sec_FC.5.1]]
+==== Simple attributes
+
+{{PROD.id}} uses seven types of simple attributes; they are listed in the
+following Table:
+
+[[table_5-1]]
+.Simple attribute types
+[cols="a,a"]
+|===
+h| Type h| Definition
+
+| Boolean                 | A logical value, either 'True' or 'False'
+| Integer                 | An integer number
+| Real                    | A floating point number
+| Enumeration             | One of a list of predefined values
+| Text or CharacterString | General text.
+| Date
+| A date gives values for year, month and day according to the Gregorian
+Calendar. +
+In XML formats including {{PROD.id}}, the XML Schema standard type
+should be used instead of the ISO 8601 basic representation
+(which is not a standard type in XML).
+
+EXAMPLE&#58; 1998-09-18
+| Truncated Date | A S100_TruncatedDate allows a date or partial date
+to be given. At least one of the year/month/day components must be
+present. Since {{PROD.id}} uses XML formats for both dataset and metadata,
+the XML encoding of truncated dates must be used (i.e., the ISO 8601
+basic format is not used in {{PROD.id}}).
+
+Components: +
+YYYY Year integer between 0000 and 9999 +
+MM Month integer between 01 -- 12 (inclusive) +
+DD Day integer between 01 and 28, 29, 30, or 31 (inclusive), consistent with year
+and month values if these are specified. +
+This type can be used to encode recurring instants (see S-100 Part 3, clause 3-8).
+
+EXAMPLE&#58; The appropriate XML Schema type should be used: `--12-17` representing
+17 December of any year (conforming to the XML type (gMonthDay). S-100
+Part 10b provides further details about encoding in GML datasets.
+
+| Time | A 24-hour time, it may contain a time zone. Since {{PROD.id}} uses
+XML formats for both datasets and metadata, the XML encoding must
+be used.
+
+In XML formats (including {{PROD.id}}), the XML Schema standard
+type should be used instead of the ISO 8601 basic representation
+(which is not a standard type in XML).
+
+EXAMPLE&#58; 18:30:59Z (local time in UTC); +
+18:30:59+01:00 (local time with given offset); +
+18:30:59 (local time without an offset to UTC).
+
+| Codelist
+| A type of flexible enumeration. A code list type is a list of literals
+which may be extended only in conformance with specified rules.
+| URI | A uniform resource identifier as defined in RFC 3986. Character
+encoding of a URI shall follow the syntax rules defined in RFC 3986.
+
+EXAMPLE&#58; http://registry.iho.int
+| URL
+| A uniform resource locator (URL) is a URI that provides a means
+of locating the resource by describing its primary access mechanism
+(RFC 3986).
+
+EXAMPLE&#58; http://registry.iho.int
+| URN | A persistent, location-independent, resource identifier that
+follows the syntax and semantics for URNs specified in RFC 2141.
+
+EXAMPLE&#58; urn:iho:s101:1:0:0:AnchorageArea
+
+|===
+
+[[sec_FC.5.2]]
+==== Complex attributes
+
+Complex attributes are aggregations of other attributes that are either
+simple or complex. The aggregation is defined by means of attribute
+bindings. Bindings of complex attributes are represented in the {{PROD.id}}
+UML diagrams by a local attribute (<<fig_5.1>>).
+
+[[fig_5.1]]
+.Complex attribute
+image::Fig&#32;Y&#32;Example&#32;of&#32;complex&#32;attribute.png[]
+
+[[sec_FC.6]]
+=== Units of measure
+
+The following units of measure are used in {{PROD.name}}
+datasets;
+
+* Orientation is given in decimal degrees
+* Radio frequency is given in hertz
+* Uncertainty is given in metres
+* Distances are given in metres or nautical miles
+* Depths are given in metres.
+
+The feature catalogue specifies the unit of measure for each attribute
+for which a unit is needed.
+----

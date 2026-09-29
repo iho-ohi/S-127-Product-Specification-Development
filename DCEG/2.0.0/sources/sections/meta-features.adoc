@@ -1,0 +1,27 @@
+<<<
+[[sec_metafeatures]]
+== Meta-Features
+
+=== Introduction
+
+Meta-features are used to reduce the need to code quality and datum attributes in individual features, as well as to delimit the extent of data in the dataset.
+In a base dataset, some meta-features are mandatory (clause <<sec_metafeatures_mandatory,droploc%>>).
+
+Horizontal and vertical uncertainties that apply to the majority of features are encoded as attributes of one or more *QualityOfNonBathymetricData* features
+together covering the same extent as the spatial union of the *DataCoverage* features in the dataset. (Typically, there would be one *DataCoverage* feature and
+one *QualityOfNonBathymetricData* feature, having the same spatial extent.) Exceptional horizontal and vertical uncertainties are encoded in a *SpatialQuality*
+information type associated to particular spatial primitives.
+
+[[sec_metafeatures_mandatory]]
+===	Mandatory meta features
+
+The mandatory meta features are:
+
+* DataCoverage
+* QualityOfNonBathymetricData
+
+include::features/DataCoverage.adoc[]
+
+include::features/QualityOfNonbathymetricData.adoc[]
+
+

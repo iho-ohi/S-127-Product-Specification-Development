@@ -1,0 +1,20 @@
+==== General
+
+A local port broadcast service aims facilitating the exchange of information and coordination among key stakeholders during each phase of a ship transit. To
+promote an optimal coordination and efficient operations all along the transportation chain, the exchange of information must be done in a timely manner. This
+allows all actors involved to take specific actions at the right moment either to respond or to adapt to new situations, such as delay, premature departure/arrival,
+incident, and so forth.  
+
+A *LocalPortBroadcastServiceArea* covers an individual port and may provide services to vessels in the outer approaches to the port or that are transiting
+through the region. It may be difficult for the mariner to always be aware which area is applicable. Therefore, wherever the information is available, limits
+of *LocalPortBroadcastServiceArea* areas should be charted, at least on the largest scale chart and on appropriate smaller scales where navigation is practicable
+and/or to assist passage planning.
+
+If it is required to encode a local port broadcast service area, it must be done using the feature class *LocalPortBroadcastServiceArea*. If it is required to
+associate related Radio Calling-In Points, Signal Stations (Warning or Traffic), or Radar Ranges this must be done using the association *TrafficControlServiceAggregation*.
+
+==== Remarks
+
+* If it is required to describe the procedures for accessing the port services, this must be done using the _serviceAccessProcedure_ attribute.
+* The requirements for maintaining listening watch within the area must be encoded using the _requirementsForMaintenanceOfListeningWatch_ attribute. As a
+text attribute, this can be populated with the text “not specified”, “unknown”, etc., if the requirements are unknown.

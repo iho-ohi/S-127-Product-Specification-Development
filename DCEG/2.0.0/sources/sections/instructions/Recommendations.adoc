@@ -1,0 +1,15 @@
+==== General
+
+*Recommendations* is intended for encoding suggestions, limitations, or preferred procedures that are not mandatory.
+
+For example, a recommendation for approaching a particular berth at a given orientation may be encoded in a Recommendations object associated to the
+Berth feature with an *AssociatedRxN* association from the Berth to the *Recommendations* object. If it is a port rule rather than a recommendation,
+it should be encoded as a *Restrictions* or *Regulations* object instead, with the same association from the Berth feature.
+
+A single instance of *Recommendations* can be referenced by multiple feature instances.
+
+==== Remarks
+
+* Instances of *Recommendations* do not encode a reverse link to the geographic features which reference them. While an association from geographic feature to information type can be encoded in
+the geographic feature instance, the reverse association from the information type to the geographic feature is omitted from the
+information type instance.

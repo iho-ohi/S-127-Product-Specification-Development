@@ -1,0 +1,23 @@
+==== General
+
+IMO MSC 43(64) states that the objectives of a ship reporting system should be based upon: +
+“the improvement of the safety of life at sea, the safety and efficiency of navigation and/or to increase the protection of the marine environment. They may or may not be operated as part of a vessel traffic service.”
+
+As such, the Ship Reporting Service (SRS) contributes to the traffic situational awareness of a Coastal administration either by being informed of the ships heading into its waters or the ones already transiting it. Based on the information collected, a Coastal administration can initiate an intervention plan if required. 
+
+An SRS is generally regional in scale and may provide services to vessels in the outer approaches to ports or transiting through the region. Therefore, wherever the information is available, limits of SRS areas should be charted, at least on the largest scale chart and on appropriate smaller scales where navigation is practicable and/or to assist passage planning. The service can range from providing information and guidelines on reporting formalities and when, what and how to report in a specific port to a full exchange of information in a Single Window ship reporting system. A reportable area may also be encoded as an *ShipReportingServiceArea*.
+
+If it is required to encode a Ship Reporting Service, it must be done using the feature class *ShipReportingServiceArea*. If it is required to associate related Radio Calling-In Points or VTS this must be done using the association *TrafficControlServiceAggregation*.
+
+If it is required to encode a Ship Reporting Service that is operated by a VTS, this must be done by encoding coincident Ship Reporting Service and VTS areas. 
+
+Ship reporting services may be indicated on ENCs, small scale charts, or routeing guides, as depicted in <<figure_SRS_example>>.
+
+[[figure_SRS_example]]
+.Ship reporting service area
+image::../images/ShipReportingServiceArea.png[]
+
+==== Remarks
+
+* If it is required to describe the procedures for accessing the SRS services, this must be done using the _serviceAccessProcedure_ attribute.
+* The requirements for maintaining listening watch within the VTS area must be encoded in a summarized form using the _requirementsForMaintenanceOfListeningWatch_ attribute. Any detailed elaborations (for example, formatted text representations or content exceeding string length limits for text attributes) should be encoded in the _textContent_ attribute. As a text attribute, _requirementsForMaintenanceOfListeningWatch_ can be populated with the text “not specified”, “unknown”, etc., if the requirements are unknown. If it is known that there are no listening watch requirements, the attribute must be encoded with “not applicable”.

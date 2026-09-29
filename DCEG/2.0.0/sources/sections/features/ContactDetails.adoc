@@ -1,0 +1,160 @@
+[[ftable_ContactDetails]]
+=== Contact Details
+
+[cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+8+| [underline]#IHO Definition:# Information on how to reach a person or organisation by postal, internet, telephone, telex and radio systems.
+8+h| [underline]#S-127 Information Type:# ContactDetails (Abstract type)
+8+h| [underline]#Super Type:# InformationType
+3+h| S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+            
+3+| Call Name |
+2+| |TE | 0,1
+
+3+| Call Sign |
+2+| |TE | 0,1
+
+3+| Category of Communication Preference |
+2+|1: Preferred Calling +
+2: Alternate Calling +
+3: Preferred Working +
+4: Alternate Working +
+ |EN | 0,1
+
+3+| Communication Channel |
+2+| |TE | 0,*
+
+3+| Contact Instructions |
+2+| |TE | 0,1
+
+3+| Language |
+2+| |TE | 0,*
+
+3+| MMSI Code |
+2+| |TE | 0,1
+
+3+| Contact Address | 2+| |  C | 0,*
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Delivery Point |
+2+| |(S) TE | 0,* (ordered)
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;City Name |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Administrative Division |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Country Name |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Postal Code |
+2+| |(S) TE | 0,1
+
+3+| Frequency Pair | 2+| |  C | 0,*
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Frequency Shore Station Receives |
+2+| |(S) IN | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Frequency Shore Station Transmits |
+2+| |(S) IN | 1,1
+
+3+| Information | 2+| |  C | 0,*
+3+| &nbsp;&nbsp;&nbsp;&nbsp;File Locator |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;File Reference |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Headline |
+2+| |(S) TE | 0,* (ordered)
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Language |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Text |
+2+| |(S) TE | 0,1
+
+3+| Online Resource | 2+| |  C | 0,*
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Linkage |
+2+| |(S) URI | 1,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Protocol |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Application Profile |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Name of Resource |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Online Resource Description |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Online Function |
+2+|1: Download +
+3: Offline Access +
+4: Order +
+5: Search +
+6: Complete Metadata +
+7: Browse Graphic +
+8: Upload +
+9: Email Service +
+10: Browsing +
+11: File Access +
+ |(S) EN | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Protocol Request |
+2+| |(S) TE | 0,1
+
+3+| Telecommunications | 2+| |  C | 0,*
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Category of Communication Preference |
+2+|1: Preferred Calling +
+2: Alternate Calling +
+3: Preferred Working +
+4: Alternate Working +
+ |(S) EN | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Telecommunication Identifier |
+2+| |(S) TE | 1,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Telecommunication Carrier |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Contact Instructions |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Telecommunication Service |
+2+|1: Voice +
+2: Facsimile +
+3: SMS +
+4: Data +
+5: Streamed Data +
+6: Telex +
+7: Telegraph +
+8: Email +
+ |(S) EN | 0,*
+
+8+h| Inherited Attributes
+
+3+h| S-127 Attribute 3+h| Inherited From h| Type h| Multiplicity
+            
+3+| Feature Name 3+| InformationType | C | 0,*
+3+| Fixed Date Range 3+| InformationType | C | 0,1
+3+| Periodic Date Range 3+| InformationType | C | 0,*
+3+| Graphic 3+| InformationType | C | 0,*
+3+| Source Indication 3+| InformationType | C | 0,*
+|===
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Information associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+|theAuthority|AuthorityContact|Authority|association|0,*
+|===
+
+
+include::../instructions/ContactDetails.adoc[]
+* If the complex attribute _contactAddress_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _information_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _fixedDateRange_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _sourceIndication_ is present at least one of its sub-attributes must be populated.
+

@@ -1,0 +1,67 @@
+[[ftable_Authority]]
+=== Authority
+
+[cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+8+| [underline]#IHO Definition:# A person or organisation having political or administrative power and control.
+8+h| [underline]#S-127 Information Type:# Authority (Abstract type)
+8+h| [underline]#Super Type:# InformationType
+3+h| S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+            
+3+| Category of Authority |
+2+|2: Border Control +
+3: Police +
+4: Port +
+5: Immigration +
+6: Health +
+7: Coast Guard +
+8: Agricultural +
+9: Military +
+10: Private Company +
+11: Maritime Police +
+12: Environmental +
+13: Fishery +
+14: Finance +
+15: Maritime +
+16: Customs +
+ |EN | 1,1
+
+3+| Text Content | 2+| |  C | 0,1
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Category of Text |
+2+|1: Abstract or Summary +
+2: Extract +
+3: Full Text +
+ |(S) EN | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Information | 2+| | (S)  C | 0,*
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Online Resource | 2+| | (S)  C | 0,1
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Source Indication | 2+| | (S)  C | 0,*
+8+h| Inherited Attributes
+
+3+h| S-127 Attribute 3+h| Inherited From h| Type h| Multiplicity
+            
+3+| Feature Name 3+| InformationType | C | 0,*
+3+| Fixed Date Range 3+| InformationType | C | 0,1
+3+| Periodic Date Range 3+| InformationType | C | 0,*
+3+| Graphic 3+| InformationType | C | 0,*
+3+| Source Indication 3+| InformationType | C | 0,*
+|===
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Information associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+|theContactDetails|AuthorityContact|ContactDetails|association|0,*
+|organisationRelatedRxN|RelatedOrganisation|AbstractRxN|association|0,*
+|theServiceHours|AuthorityHours|ServiceHours|association|0,*
+|theShipReport|ReportingAuthority|ShipReport|association|0,*
+|===
+
+
+include::../instructions/Authority.adoc[]
+* If the complex attribute _textContent_ is present at least one of its sub-attributes must be populated.
+** If the _textContent_ sub-attribute _information_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _fixedDateRange_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _sourceIndication_ is present at least one of its sub-attributes must be populated.
+

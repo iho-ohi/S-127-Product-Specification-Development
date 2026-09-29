@@ -1,0 +1,9 @@
+==== General
+
+An instance of *NonStandardWorkingDay* is used in conjunction with *ServiceHours* to indicate exceptions to normal work or operating schedules.
+
+==== Remarks
+
+* Non-standard workdays which cannot be represented using fixed or variable dates should be encoded using the information complex attribute, preferably as a short description in the text sub-attribute of information. The information attribute can also be used for encoding any additional explanatory information if the explanation is essential knowledge for specifying the day.
+* The two date range attributes (fixed and periodic date range) should be used if the non-standard day applies only in specific years or periods (e.g., seasonally).
+* At least one of the attributes _dateFixed_, _dateVariable_, or _information_ should be populated.

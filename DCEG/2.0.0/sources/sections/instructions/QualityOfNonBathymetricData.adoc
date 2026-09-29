@@ -1,0 +1,11 @@
+==== General
+
+The meta feature *QualityOfNonBathymetricData* may be used to provide an indication of the overall uncertainty of position for all non-bathymetric features.  It must not be used to provide the uncertainty of bathymetric information.
+
+The attribute _horizontalPositionUncertainty_ may be applied to any spatial type, in order to qualify the location of a feature.
+
+_HorizontalDistanceUncertainty_ and horizontal position uncertainty must not be applied to the spatial type of any geo feature if they are identical to the horizontal distance uncertainty and position uncertainty values of the underlying meta feature.
+
+Position uncertainty on the *QualityOfNonBathymetricData* applies to non-bathymetric data situated within the area, while position uncertainty on the associated spatial types qualifies the location of the *QualityOfNonBathymetricData* feature itself.
+
+==== Remarks

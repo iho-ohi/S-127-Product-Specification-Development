@@ -1,0 +1,12 @@
+<<<
+[[sec_cartographic_features]]
+== Cartographic Features
+
+=== Introduction
+
+This product specification uses the *TextPlacement* cartographic features derived from S-101. The structure of the feature and its usage are the
+same as in S-101 but the feature specification in S-127 omits elements which are not relevant to marine traffic management, for example, ‘light characteristic’
+is omitted as a listed value for the attribute _textType_.
+
+include::features/TextPlacement.adoc[]
+

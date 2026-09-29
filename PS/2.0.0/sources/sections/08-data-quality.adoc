@@ -1,0 +1,352 @@
+[data2text,PROD=config/product.json]
+----
+[[sec_8]]
+== Data Quality
+
+[[sec_8.1]]
+=== Introduction to Data Quality
+
+Data quality allows users and user systems to assess fitness for use
+of the provided data. Data quality measures and the associated evaluation
+are reported as metadata of a data product. This metadata improves
+interoperability with other data products and provides scope for usage
+by user groups that the data product was not originally intended for.
+The secondary users can make assessments of the data product usefulness
+in their application based on the reported data quality measures.
+
+For {{PROD.id}} the following data quality elements have been included:
+
+* Conformance to this Product Specification;
+* Intended purpose of the data product;
+* Completeness of the data product in terms of coverage;
+* Logical consistency;
+* Positional uncertainty and accuracy;
+* Thematic accuracy;
+* Temporal quality;
+* Aggregation measures;
+* Validation checks or conformance checks including:
+** General tests for dataset integrity; and
+** Specific tests for compliance against the {{PROD.id}} data model.
+
+[[sec_DQ_reporting]]
+==== Data quality reports
+
+For this edition of {{PROD.id}}, data quality reports are optional, because S-100 Edition 5.2.0 does not specify a report format or a location for
+data quality reports in exchange sets. If a data quality report is provided it must be separate from the exchange set (specifically, data quality
+reports are not treated as support files and are not included in the SUPPORT_FILES folder). The format of a data quality report is left to the
+producer or evaluator. The method of provision of data quality reports is also left to the producer or evaluator.
+
+[[sec_C-8.2]]
+===	Completeness
+
+The presence and absence of features is described by the data quality elements Completeness (including commission and omission).
+Completeness should only be used on the feature type level, describing whether the features in the universe of discourse are found in the data set or not.
+
+[[sec_C-8.2.1]]
+====	Commission
+
+Commission is applicable for {{PROD.id}}.
+
+{{PROD.id}} products must be tested with commission checks prior to release by the Data Producer. The Data Producer must review the check results and address any issues to ensure sufficient quality of the data products. The checks are listed in S-158:127. It is allowable to publish the data with a quality statement which indicates non-conformance.
+
+In terms of commission, {{PROD.id}} products must at least populate numberOfExcessItems that indicates the number of items that should not have been present in the dataset, and numberOfDuplicateFeatureInstances that indicates the total number of exact duplications of feature instances within the data.
+
+[[sec_C-8.2.2]]
+====	Omission
+
+Omission is applicable for {{PROD.id}}.
+
+{{PROD.id}} products must be tested with omission checks prior to release by the Data Producer. The Data Producer must review the check results and address any issues to ensure sufficient quality of the data products. The checks are listed in S-158:127. Data should only be published if it passesfootnote:fid_passes[In terms of validation checks, the dataset passes the test if it passes the relevant Critical validation checks in S-158:127.] the test.
+
+In terms of omission, {{PROD.id}} products must at least populate numberOfMissingItems that indicates the total number of missing items.
+
+[[sec_C-8.3]]
+===	Logical consistency
+
+[[sec_C-8.3.1]]
+====	Conceptual consistency
+
+Conceptual Consistency is applicable for {{PROD.id}} and follows the guidelines from S-100 Part 1.
+
+{{PROD.id}} products must be tested with conceptual consistency checks prior to release by the Data Producer. The Data Producer must review the check results and address any issues to ensure sufficient quality of the data products. The checks are listed in S-158:127. Data should only be published if it passesfootnote:fid_passes[] the test.
+
+In terms of conceptual consistency, {{PROD.id}} products shall at least populate numberOfNonCompliantItems that is a count of all items in the dataset that are noncompliant to the rules of the Conceptual Schema.
+
+As a Product Specification with geometric surfaces, {{PROD.id}} shall also at least populate numberOfInvalidSurfaceOverlaps that indicates the total number of erroneous overlaps within the data.
+
+
+[[sec_C-8.3.2]]
+====	Domain consistency
+
+Domain consistency is applicable for {{PROD.id}} and follows the guidelines from S-100 Part 5.
+
+{{PROD.id}} products must be tested with domain consistency checks prior to release by the Data Producer. The Data Producer must review the check results and address any issues to ensure sufficient quality of the data products. The checks are listed in S-158:127.
+Data should only be published if it passesfootnote:fid_passes[] the test. 
+
+In terms of domain consistency, {{PROD.id}} products must at least populate numberOfNonconformantItems that is a count of all items in the dataset that are not in conformance with their value domain.
+
+[[sec_C-8.3.3]]
+====	Format Consistency
+
+Format Consistency is applicable for {{PROD.id}} and follows the guidelines from S-100 Part 10b.
+
+{{PROD.id}} products must be tested with format consistency checks prior to release by the Data Producer. The Data Producer must review the check results and address any issues to ensure sufficient quality of the data products. The checks are listed in S-158:127.
+Data should only be published if it passesfootnote:fid_passes[] the test.
+
+In terms of Format Consistency, {{PROD.id}} products must at least populate physicalStructureConflictsNumber that is a count of all items in the dataset that are stored in conflict with the physical structure of the dataset.
+
+[[sec_C-8.3.4]]
+====	Topological consistency
+
+Topological consistency is applicable for {{PROD.id}} and follows the guidelines from S-100 Part 7.
+
+{{PROD.id}} products must be tested with topological consistency checks prior to release by the Data Producer. The Data Producer must review the check results and address any issues to ensure sufficient quality of the data products. The checks are listed in S-158:127. Data should only be published if it passesfootnote:fid_passes[] the test.
+
+As a Product Specification with curves and geometric surfaces, {{PROD.id}} products must at least populate:
+
+* rateOfFaultyPointCurveConnections that indicates the number of faulty link-node connections in relation to the number of supposed link-node connections;
+* numberOfMissingConnectionsUndershoots that is a count of items in the dataset within the parameter tolerance that are mismatched due to undershoots;
+* numberOfMissingConnectionsOvershoots that is a count of items in the dataset within the parameter tolerance that are mismatched due to overshoots;
+* numberOfInvalidSlivers that is a count of all items in the dataset that are invalid sliver surfaces;
+* numberOfInvalidSelfIntersects that is a count of all items in the dataset that illegally intersect with themselves; and 
+* numberOfInvalidSelfOverlap that indicates all items in the dataset that illegally self-overlap.
+
+[[sec_C-8.4]]
+===	Positional uncertainty and accuracy
+
+[[sec_C-8.4.1]]
+====	Absolute or external accuracy
+
+[[sec_C-8.4.1.1]]
+=====	Vertical position accuracy
+
+Vertical Position Accuracy is not applicable for {{PROD.id}} which is a Product Specification without objects that have a vertical coordinative value associated.
+
+[[sec_C-8.4.1.2]]
+=====	Horizontal position accuracy
+
+Horizontal position accuracy is applicable for {{PROD.id}} and follows the guidelines from S-100 Part 4c.
+
+{{PROD.id}} products must be tested with horizontal position accuracy checks prior to release by the Data Producer. The Data Producer must review the check results and address any issues to ensure sufficient quality of the data products. The checks are listed in S-158:127. Data should only be published if it passesfootnote:fid_passes[] the test.
+
+In terms of horizontal position accuracy, {{PROD.id}} products must at least populate circularError95 that indicates the radius describing a circle in which the true point location lies with the probability of 95%.
+
+Recommendations on thresholds for Positional Accuracy / Absolute or External Accuracy are as follows:
+
+Maximum RMSE (horizontal) = E / 10000
+
+Where:
+
+E = Denominator of intended scale of mapping
+
+[[sec_C-8.4.2]]
+====	Relative or internal accuracy
+
+Relative or internal accuracy is applicable for {{PROD.id}} and follows the guidelines from S-100 Part 4c.
+
+{{PROD.id}} products must be tested with relative or internal accuracy checks prior to release by the Data Producer. The Data Producer must review the check results and address any issues to ensure sufficient quality of the data products. The checks are listed in S-158:127. It is allowable to publish the data with a quality statement which indicates non-conformance.
+
+In terms of relative or internal accuracy, {{PROD.id}} products must populate relativeHorizontalError that indicates an evaluation of the random errors in the horizontal position of one feature to another in the same data set or on the same map/chart.
+
+[[sec_C-8.4.3]]
+====	Gridded data positional accuracy
+
+Gridded data positional accuracy is not applicable for {{PROD.id}} which is a Product Specification without objects that have a gridded coordinative value associated.
+
+
+[[sec_C-8.5]]
+===	Thematic accuracy
+
+[[sec_C-8.5.1]]
+====	Thematic classification correctness
+
+Thematic classification correctness is applicable for {{PROD.id}} and follows the guidelines from S-100 Part 4c.
+
+{{PROD.id}} products must be tested with thematic classification correctness checks prior to release by the Data Producer. The Data Producer must review the check results and address any issues to ensure sufficient quality of the data products. The checks are listed in S-158:127.  Data should only be published if it passesfootnote:fid_passes[] the test.
+
+In terms of thematic classification correctness, {{PROD.id}} products must at least populate miscalculationRate that indicates the number of incorrectly classified features in relation to the number of features that are supposed to be there.
+
+[[sec_C-8.5.2]]
+====	Non-quantitative attribute accuracy
+
+Non-quantitative attribute accuracy is applicable for {{PROD.id}} and follows the guidelines from S-100 Part 4c.
+
+{{PROD.id}} products must be tested with non-quantitative attribute accuracy checks prior to release by the Data Producer. The Data Producer must review the check results and address any issues to ensure sufficient quality of the data products. The checks are listed in S-158:127. Data should only be published if it passesfootnote:fid_passes[] the test.
+
+The accuracy of non-quantitative attributes can be correct or incorrect. {{PROD.id}} products shall at least populate numberOfIncorrectAttributeValues that is a count of all attribute values where the value is incorrect.
+
+[[sec_C-8.5.3]]
+====	Quantitative attribute accuracy
+
+Quantitative attribute accuracy is applicable for {{PROD.id}} and follows the guidelines from S-100 Part 4c.
+
+{{PROD.id}} products must be tested with quantitative attribute accuracy checks prior to release by the Data Producer. The Data Producer must review the check results and address any issues to ensure sufficient quality of the data products. The checks are listed in S-158:127. Data should only be published if it passesfootnote:fid_passes[] the test.
+
+The accuracy of quantitative attributes can be measured in terms of uncertainty intervals. {{PROD.id}} products shall at least populate attributeValueUncertainty3Sigma that indicates the attribute value of uncertainty where half the length of the interval defined by an upper and lower limit in which the true value for the quantitative attribute lies with a probability of 95%.
+
+[[sec_C-8.6]]
+===	Temporal quality
+
+[[sec_C-8.6.1]]
+====	Temporal consistency
+
+Temporal consistency is applicable for {{PROD.id}} and follows the guidelines from S-100 Part 4c.
+
+{{PROD.id}} products must be tested with temporal consistency checks prior to release by the Data Producer. The Data Producer must review the check results
+and address any issues to ensure sufficient quality of the data products. The checks are listed in S-158:127. It is allowable to publish the data with a quality
+statement which indicates non-conformance.
+
+[[sec_C-8.6.2]]
+====	Temporal validity
+
+Temporal validity is applicable for {{PROD.id}} and follows the guidelines from S-100 Part 4c.
+
+{{PROD.id}} products must be tested with temporal validity checks prior to release by the Data Producer. The Data Producer must review the check results and address any issues to ensure sufficient quality of the data products. The checks are listed in S-158:127. It is allowable to publish the data with a quality statement which indicates non-conformance.
+
+In terms of temporal validity, {{PROD.id}} products must at least populate numberOfNonConformantItems that is a count of all items in the dataset that are not in conformance with their value domain.
+
+[[sec_C-8.6.3]]
+====	Temporal accuracy
+
+Temporal accuracy is applicable for {{PROD.id}} and follows the guidelines from S-100 Part 4c.
+
+{{PROD.id}} products must be tested with temporal accuracy checks prior to release by the Data Producer. The Data Producer must review the check results and address any issues to ensure sufficient quality of the data products. The checks are listed in S-158:127. It is allowable to publish the data with a quality statement which indicates non-conformance.
+
+In terms of temporal accuracy, {{PROD.id}} products shall at least populate attributeValueUncertainty3Sigma that indicates the attribute value of uncertainty where half the length of the interval defined by an upper and lower limit in which the true value for the quantitative attribute lies with a probability of 95%.
+
+[[sec_C-8.7]]
+===	Aggregation
+
+Aggregation is applicable for {{PROD.id}}. The aggregated data quality result provides a result if the dataset has passed conformance to the Product Specification. A data set may be deemed to be of an acceptable aggregate quality even though one or more individual data quality results fails acceptance.
+
+The quality of an {{PROD.id}} dataset may be represented by one aggregated data quality results (ADQR). The ADQR combines quality results from data quality evaluations based on different data quality elements described in clauses <<sec_C-8.2,droploc%>> through <<sec_C-8.6,droploc%>>.
+Only those quality elements for which the dataset must pass data quality testing before release, as indicated in clauses <<sec_C-8.2,droploc%>> through <<sec_C-8.6,droploc%>>, are included in the computation of ADQR.
+
+The aggregate data quality (ADQR) is determined by the formula:
+
+ADQR = v1 * v2 * v3 * . . . * vn
+
+Where n is the number of data quality measurement frames.
+
+Where: 
+
+1 = Omission
+
+2 = Conceptual consistency
+
+3 = Domain consistency
+
+4 = Format consistency
+
+5 = Topological consistency
+
+6 = Horizontal position accuracy
+
+7 = Thematic classification correctness
+
+8 = Non-quantitative attribute accuracy
+
+9 = Quantitative attribute accuracy
+
+Each data quality result involved in the computation is given a Boolean value of one (1) if it passed and zero (0) if it failed. If ADQR=1, then the overall data set quality is deemed to be fully conformant, hence pass. If ADQR=0, then it is deemed non-conformant, hence fail.
+
+[[sec_C_8.8]]
+=== Quality measure elements
+
+The data quality measures recommended in S-97 (Part C) and their applicability
+in {{PROD.id}} are indicated in <<table_8.1>> below. NA indicates the measure
+is not applicable. This table reproduces the first 4 columns of the
+data quality checklist recommended elements and replaces the final
+column with descriptions of the scope of the element in the context
+of {{PROD.id}} datasets.
+
+[%landscape]
+<<<
+[[table_8.1]]
+.Quality measure elements
+[cols="a,a,a,a,a,a"]
+|===
+h| No. h| Data quality element and sub element h| Definition h| DQ measure / description h| Evaluation scope h| Scope in {{PROD.id}}
+
+| 1 | Completeness / Commission 
+| Excess data present in a dataset, as described by the scope.
+| numberOfExcessItems / This data quality measure indicates the number
+of items in the dataset, that should not have been present in the dataset.
+| dataset/dataset series | All features and info types
+| 2 | Completeness / Commission
+| Excess data present in a dataset, as described by the scope.
+| numberOfDuplicateFeatureInstances / This data quality measure indicates
+the total number of exact duplications of feature instances within the data.
+| dataset/dataset series | All features and info types
+| 3 | Completeness / Omission | Data absent from the dataset, as described by the scope.
+| numberOfMissingItems / This data quality measure is an indicator that shows that a specific item is missing in the data.
+| dataset/dataset series/spatial object type | All features and info types
+| 4| Logical Consistency / Conceptual Consistency | Adherence to the rules of a conceptual schema. | numberOfNonCompliantItems / This data quality measure is a count of all items in the dataset that are noncompliant to the rules of the Conceptual Schema. | spatial object / spatial object type | All features and info types
+| 5 | Logical Consistency / Conceptual Consistency | Adherence to the rules of a conceptual schema. | numberOfInvalidSurfaceOverlaps / This data quality measure is a count of the total number of erroneous overlaps within the data. Which surfaces may overlap and which must not is application dependent. Not all overlapping surfaces are necessarily erroneous. | spatial object / spatial object type | Features with surface geometry; spatial objects of type surface
+| 6 | Logical Consistency / Domain Consistency | Adherence of the values to the value domains. | numberOfNonconformantItems / This data quality measure is a count of all items in the dataset that are not in conformance with their value domain. | spatial object / spatial object type | All features and info types
+| 7 | Logical Consistency / Format Consistency | Degree to which data is stored in accordance with the physical structure of the data set, as described by the scope | physicalStructureConflictsNumber / This data quality measure is a count of all items in the dataset that are stored in conflict with the physical structure of the dataset. | dataset/dataset series | All features and info types
+| 8 | Logical Consistency / Topological Consistency | Correctness of the explicitly encoded topological characteristics of the dataset, as described by the scope. | rateOfFaultyPointCurveConnections / This data quality measure indicates the number of faulty link-node connections in relation to the number of supposed link-node connections. This data quality measure gives the erroneous point-curve connections in relation to the total number of point-curve connections. | spatial object / spatial object type | Features with curve geometry; spatial objects of curve types
+| 9 | Logical Consistency / Topological Consistency | Correctness of the explicitly encoded topological characteristics of the dataset, as described by the scope. | numberOfMissingConnectionsUndershoots / This data quality measure is a count of items in the dataset within the parameter tolerance that are mismatched due to undershoots. | spatial object / spatial object type | Features with curve geometry; spatial objects of curve types
+| 10 | Logical Consistency / Topological Consistency | Correctness of the explicitly encoded topological characteristics of the dataset, as described by the scope. | numberOfMissingConnectionsOvershoots / This data quality measure is a count of items in the dataset within the parameter tolerance that are mismatched due to overshoots. | spatial object / spatial object type | Features with curve geometry; spatial objects of curve types
+| 11 | Logical Consistency / Topological Consistency | Correctness of the explicitly encoded topological characteristics of the dataset, as described by the scope. | numberOfInvalidSlivers / This data quality measure is a count of all items in the dataset that are invalid sliver surfaces. A sliver is an unintended area that occurs when adjacent surfaces are not digitized properly. The borders of the adjacent surfaces may unintentionally gap or overlap to cause a topological error. | dataset / dataset series | Features with surface geometry; spatial objects of type surface
+| 12 | Logical Consistency / Topological Consistency | Correctness of the explicitly encoded topological characteristics of the dataset, as described by the scope. | numberOfInvalidSelfIntersects / This data quality measure is a count of all items in the dataset that illegally intersect with themselves. | spatial object / spatial object type | Features with surface geometry; spatial objects of type surface or curve
+| 13 | Logical Consistency / Topological Consistency | Correctness of the explicitly encoded topological characteristics of the dataset, as described by the scope. | numberOfInvalidSelfOverlap / This data quality measure is a count of all items in the dataset that illegally self-overlap. | spatial object / spatial object type | Features with surface geometry; spatial objects of type surface or curve
+| 14 | Positional Accuracy / Vertical Position Accuracy | Closeness of reported coordinative values to values accepted as or being true. | linearMapAccuracy3Sigma / Half length of the interval defined by an upper and lower limit in which the true value lies with probability 95%. | spatial object / spatial object type | N/A {{PROD.id}} does not use 3-D coordinates.
+| 15 | Positional Accuracy / Horizontal Position Accuracy | Closeness of reported coordinative values to values accepted as or being true. | circularError95/Radius describing a circle in which the true point location lies with the probability of 95%. | spatial object / spatial object type | Objects that have horizontal coordinate values associated.
+| 16 | Positional Accuracy / Relative or Internal Accuracy | Closeness of the relative positions of features in a dataset to their respective relative positions accepted as or being true. | relativeVerticalError / An evaluation of the random errors of one relief feature to another in the same data set or on the same map / chart. It is a function of the random errors in the two elevations with respect to a common vertical datum. [Adapted from ISO 19157] | spatial object / spatial object type | N/A. {{PROD.id}} does not use 3-D coordinates.
+| 17 | Positional Accuracy / Relative or Internal Accuracy | Closeness of the relative positions of features in a dataset to their respective relative positions accepted as or being true. | relativeHorizontalError / An evaluation of the random errors in the horizontal position of one feature to another in the same data set or on the same map/chart. [Adapted from ISO 19157] | spatial object / spatial object type | Objects that have horizontal coordinate values associated.
+| 18 | Positional Accuracy / Gridded Data Position Accuracy | Closeness of reported coordinative values to values accepted as or being true. | RMSErrorPlanimetry / Radius of a circle around the given point, in which the true value lies with probability P. | spatial object / spatial object type | NA. {{PROD.id}} does not have features with gridded geometry
+| 19 | Temporal Quality / Temporal Consistency | Correctness of ordered events or sequences, if reported. | chronologicalOrder / This data quality measure that indicate that an event is incorrectly ordered against the other events. [Adapted from ISO 19157] | dataset/dataset series/spatial object type | Features with time intervals, fixed/periodic date ranges, schedules.
+| 20 | Temporal Quality / Temporal Validity | Validity of data with respect to time | numberOfNonConformantItems / This data quality measure is a count of all items in the dataset that are not in conformance with their value domain. [Adapted from ISO 19157] | dataset/dataset series/spatial object type | Features with time intervals, fixed/periodic date ranges, schedules.
+| 21 | Temporal Quality / DQ_AccuracyOfATimeMeasurement | Correctness of the temporal references of an item (reporting of error in time measurement) | attributeValueUncertainty3Sigma / This data quality measure indicates the attribute value of uncertainty where half the length of the interval defined by an upper and lower limit in which the true value for the quantitative attribute lies with a probability of 95%.  [Adapted from ISO 19157] | dataset/dataset series/spatial object type | Features with time intervals, fixed/periodic date ranges, schedules.
+| 22 | Thematic Accuracy / ThematicClassificationCorrectness | Comparison of the classes assigned to features or their attributes to a universe of discourse.
+| miscalculationRate / This data quality measure indicates the number of incorrectly classified features in relation to the number of features that are supposed to be there. [Adapted from <<ISO_19157_2013>>] +
+This is a RATE which is a ratio, and is expressed as a REAL number representing the rational fraction corresponding to the numerator and denominator of the ratio.
+
+For example, if there are 1 items that are classified incorrectly and there are 100 of the items in the dataset then the ratio is 1/100 and the reported rate = 0.01.
+| dataset/dataset series/spatial object type | All features and info types
+| 23 | Thematic Accuracy / Non-Quantitative Attribute Accuracy | Correctness of non-quantitative attribute. | numberOfIncorrectAttributeValues / This data quality measure is count of the total number of erroneous attribute values within the relevant part of the dataset. It is a count of all attribute values where the value is incorrect. [Adapted from ISO 19157] | dataset/dataset series/spatial object type | Features and info types with non-quantitative attribute value.
+| 24 | Thematic Accuracy / Quantitative Attribute Accuracy | Accuracy of a quantitative attribute. | attributeValueUncertainty3Sigma / This data quality measure indicates the attribute value of uncertainty where half the length of the interval defined by an upper and lower limit in which the true value for the quantitative attribute lies with a probability of 95%. [Adapted from ISO 19157] | dataset/dataset series/spatial object type | Features and info types with quantitative attribute value.
+| 25 | Aggregation Measures / AggregationMeasures | In a data product specification, several requirements are set up for a product to conform to the specification. | DataProductSpecificationPassed / This data quality measure is a boolean indicating that all requirements in the referred data product specification are fulfilled. | dataset/dataset series/spatial object type | Dataset as a whole
+| 26 | Aggregation Measures / AggregationMeasures | In a data product specification, several requirements are set up for a product to conform to the specification. | DataProductSpecificationFailRate / This data quality measure is a number indicating the number of data product specification requirements that are not fulfilled by the current product/dataset in relation to the total number of data product specification requirements. | dataset/dataset series/spatial object type | Dataset as a whole
+|===
+
+[%portrait]
+<<<
+[[sec_8.3]]
+=== Test methods for data compliance and usability
+
+Test methods for evaluating data compliance consist of executing the
+relevant tests from the Validation Checks (S-158:127) for each quality
+element in <<table_8.1>> and counting the number of instances in the
+dataset which fail the checks for that quality element.
+
+Note that in some cases "executing the relevant test" may involve
+comparing the encoded {{PROD.id}} dataset to the source material by visual
+means. For tests requiring visual comparison
+of encoded data to source material, sampling methods may be used if
+the volume of data precludes checking all the relevant data objects.
+
+Accuracy computations for Positional Accuracy / Absolute or External
+Accuracy should use the following recommendations:
+
+Maximum RMSE (horizontal) = E / 10000
+
+Where:
+
+E = Denominator of intended scale of mapping
+
+In addition to the above, dataset usability must be assessed against:
+
+* Intended user requirements in regard to coverage, scale and specific
+content requirements as defined by the Producing Agency and key stakeholders;
+
+* Conformance to established maintenance processes; and
+
+* Overall compliance with the {{PROD.id}} Product Specification, including
+context-specific evaluation of individual encoding instances for requirement
+of conformance to checks classified as "Error" and "Warning" in
+S-158:100 (generic S-100 validation checks) and S-158:127 (product-specific validation checks).
+
+For dataset integrity requirements, see clause <<sec_DatasetIntegrity,droploc%>>.
+----

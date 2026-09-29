@@ -1,0 +1,60 @@
+==== General
+
+(see S-4 – B-431.4; B-435.7; B-435.11; B-437.1-7; B-439.2-4; B-445.9; B-448; B-448.1 and B-449.5) 
+
+There are many types of areas within which certain activities are discouraged or prohibited, or from which certain 
+classes of vessels are excluded. The general term for all areas in which certain aspects of navigation may be 
+restricted or prohibited by regulations is “Restricted Area”, or equivalent. The word “prohibited”, or its equivalent, 
+may appear in terms relating to activities which are contrary to the regulations, e.g. “Anchoring Prohibited”, “Entry 
+Prohibited”. 
+
+If it is required to encode a restricted area, it must be done using the feature *RestrictedArea*, or using other features having the attribute restriction (such as *MilitaryPracticeArea*, *PiracyRiskArea*)
+if such other features are more representative of conditions in the area.
+
+==== Ice control zones
+
+Ice Control Zones where navigational restrictions are applied to all or some vessels must be encoded as a *RestrictedArea* with attribute _restriction = 8 (Entry Restricted)_.
+Any seasonality must be encoded in the attribute _periodicDateRange_. Additional details on restrictions in effect must be captured as an associated instance
+of *Restrictions* (see clause <<ftable_Restrictions,droploc%>>). The authority managing the Ice Control Zone must be captured as an associated instance of *Authority* information type (see
+clause <<ftable_Authority,droploc%>>). Means of contacting the managing authority must be captured as an associated instance of *ContactDetails* information type (see
+clause <<ftable_ContactDetails,droploc%>>). If the area is specific to only some vessels, details regarding this must be captured as an associated instance of
+*Applicability* information type (see clause <<ftable_Applicability,droploc%>>). Additional information may be captured in an associated instance of the information
+type *NauticalInformation* (see clause <<ftable_NauticalInformation,droploc%>>) when applicable to multiple instances, or as the complex attribute _textContent_ when
+the information is specific to the instance.
+
+===== Nature reserves (see S-4 – B-437.3) 
+
+Nature reserves should be encoded in S-122 (Marine Protected Areas), if an S-122 dataset is produced for the area in question.
+
+===== Speed limits (see S-4 – B-430.2) 
+
+Speed limits in Marine Protected Areas should be encoded in S-122 if an S-122 dataset is produced covering the area in question.
+
+Speed limits within the official limits of ports and harbour areas should be encoded in S-131 if an S-131 dataset is produced covering the
+area in question.
+
+If it is required to encode other types of speed limited areas 
+it must be done using a *RestrictedArea* feature, with the attribute _restriction_ = 27 (speed restricted),
+with the speed limit and its unit of measurement encoded using an associated instance of 
+the information type *Regulations*(see clause <<ftable_Regulations,droploc%>>).
+
+===== Areas to be avoided (see S-4 – B-435.7) 
+
+If it is required to encode an IMO designated Area to be Avoided, it must be done using a *RestrictedArea* feature, with
+attribute _restriction_ = 14 (area to be avoided).
+  
+===== Environmentally Sensitive Sea Areas (see S-4 – B-437)
+ 
+Environmentally Sensitive Sea Areas should be encoded in S-122 if an S-122 dataset is produced covering the area in question.
+
+==== Remarks
+
+* *RestrictedArea* must only be encoded if one of the allowable values for restriction applies for the area.
+* The term “no anchoring area” is used to identify the IMO routeing measure of that name. Such areas, where required, must be encoded as *RestrictedArea* with
+attribute _restriction = 1 (anchoring prohibited)_.
+* The attribute _categoryOfRestrictedArea_ is used to describe the type of area, while the attribute _restriction_
+describes the restrictions. 
+* An associated instance of the information types *Restrictions*, *Regulations*, *Recommendations* and *NauticalInformation*,
+complex attributes text content sub-attribute _information_ or solely attribute 
+_information_ may be used to provide an additional explanation about the restriction, where required.
+

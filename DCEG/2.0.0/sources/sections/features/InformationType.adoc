@@ -1,0 +1,112 @@
+[[ftable_InformationType]]
+=== Information Type
+
+[cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+8+| [underline]#IHO Definition:# Generalized information type which carries all the common attributes.
+8+h| [underline]#S-127 Information Type:# InformationType (Abstract type)
+8+h| [underline]#Super Type:# 
+3+h| S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+            
+3+| Feature Name | 2+| |  C | 0,*
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Language |
+2+| |(S) TE | 1,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Name |
+2+| |(S) TE | 1,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Name Usage |
+2+|1: Default Name Display +
+2: Alternate Name Display +
+3: No Chart Display +
+ |(S) EN | 0,1
+
+3+| Fixed Date Range | 2+| |  C | 0,1
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Date Start |
+2+| |(S) TD | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Date End |
+2+| |(S) TD | 0,1
+
+3+| Periodic Date Range | 2+| |  C | 0,*
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Date Start |
+2+| |(S) TD | 1,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Date End |
+2+| |(S) TD | 1,1
+
+3+| Graphic | 2+| |  C | 0,*
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Pictorial Representation |
+2+| |(S) TE | 1,*
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Picture Caption |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Source Date |
+2+| |(S) DA | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Picture Information |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Bearing Information | 2+| | (S)  C | 0,1
+3+| Source Indication | 2+| |  C | 0,*
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Category of Authority |
+2+|2: Border Control +
+3: Police +
+4: Port +
+5: Immigration +
+6: Health +
+7: Coast Guard +
+8: Agricultural +
+9: Military +
+10: Private Company +
+11: Maritime Police +
+12: Environmental +
+13: Fishery +
+14: Finance +
+15: Maritime +
+16: Customs +
+ |(S) EN | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Country Name |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Source |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Source Type |
+2+|1: Law or Regulation +
+2: Official Publication +
+7: Mariner Report, Confirmed +
+8: Mariner Report, Not Confirmed +
+9: Industry Publications and Reports +
+10: Remotely Sensed Images +
+11: Photographs +
+12: Products Issued by HO Services +
+13: News Media +
+14: Traffic Data +
+ |(S) EN | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Reported Date |
+2+| |(S) TD | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Feature Name | 2+| | (S)  C | 0,*
+8+h| Inherited Attributes
+
+3+h| S-127 Attribute 3+h| Inherited From h| Type h| Multiplicity
+            
+8+h| No inherited attributes
+|===
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Information associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+|===
+
+
+include::../instructions/InformationType.adoc[]
+* If the complex attribute _fixedDateRange_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _sourceIndication_ is present at least one of its sub-attributes must be populated.
+

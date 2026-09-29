@@ -1,0 +1,13 @@
+==== General
+
+If it is required to identify an area in which the mariner must be aware of circumstances influencing the safety of navigation (for example an area of continually changing depths), and which cannot be encoded using other feature types, it must be done using the feature *CautionArea*.
+This feature may be required to identify a danger, a risk, a rule or advice that is not directly related to a particular feature.
+
+==== Remarks
+
+* To encode the relevant cautionary information, an instance of the information type NauticalInformation (see clause <<ftable_NauticalInformation,droploc%>>) must be associated to the Caution Area. 
+* If the information applies to a specific area the *CautionArea* feature should cover only that area. 
+* If the information to be encoded is spatially linear, this should be encoded using a “very narrow” *CautionArea* feature of type area (approximately 0.3mm wide at the maximum display scale of the ENC data) similar to the method for encoding linear maritime jurisdiction areas (see the S-101 DCEG Caution Area encoding instructions).
+* Information which may be of use to the mariner, but is not significant to safe navigation and cannot be encoded using other feature types, should be encoded using a different feature type and an associated instance of the information type Nautical Information (see clause <<ftable_NauticalInformation,droploc%>>), complex attribute _information_ (see clause <<attr_information,droploc%>>). This encoding is intended to reduce the number of alarms or indications generated in the ECDIS due to the overuse of *CautionArea* features. 
+* Notes should be kept to a minimum and be as concise as is compatible with accuracy and intelligibility. Hydrographic terminology (jargon) should be avoided, giving preference to easily understood words, for example “depths” rather than “bathymetry”. 
+* In order to ensure correct ECDIS display, *CautionArea* features of type surface should not share the geometry of features such as Depth Contour (S-101) and other features with higher ECDIS display priorities, as the *CautionArea* will appear to be “open ended”, which may confuse the mariner. Where this occurs, the edge of the *CautionArea* should be extended outward to clear the “shared” edge, sufficient to avoid “duplicate geometry” validation errors (that is, at least 0.3 mm at the maximum display scale for the ENC data). 

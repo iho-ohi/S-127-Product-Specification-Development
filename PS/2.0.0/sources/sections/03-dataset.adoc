@@ -1,0 +1,57 @@
+
+[[sec_3]]
+== Dataset Identification
+
+A dataset that conforms to this Product Specification may be identified
+by its discovery metadata as defined in clause <<sec_14,droploc%>>.
+
+*Title:*:: Marine Traffic Management
+
+*Alternate Title:*:: MTM
+
+*Abstract:*:: S-127 datasets must be produced in accordance with the
+rules defined in the S-127 Product Specification.
+Marine Traffic Management dataset is a vector dataset
+containing all maritime navigationally relevant information regarding
+the traffic management within a defined geographical area.
+
+*Topic Category:*:: Transportation (<<ISO_19115_1>> MD_TopicCategoryCode
+018)
+
+*Geographic Description:*:: *EX_GeographicDescription* E.g., official name of region
+
+*Spatial Resolution:*:: MD_Resolution>equivalentScale.denominator (integer) or MD_Resolution>levelOfDetail (CharacterString). E.g.: “All scales” +
+An MTM dataset must indicate a value for maximum
+display scale. Each *Data Coverage* feature must also carry a value
+for minimum display scale. Recommended values for scales can be found
+in the S-101 ENC Product Specification. Producers should note that
+at the smaller scales, geographic details within ports will have no
+perceptible visual separation on a graphic display, and are therefore
+encouraged to determine display scales taking into account the content
+and intended navigation purpose of the dataset.
+
+*Purpose:*::  Describing traffic management in the maritime domain for
+utilization in ECDIS, and to allow the producer to exchange Marine
+Traffic Management information with interested stakeholders.
+
+*Language:*:: English (Mandatory), other (Optional)
+
+*Classification:*:: Data may be classified as one of the following:
++
+--
+. Unclassified;
+. Restricted;
+. Confidential;
+. Secret;
+. Top Secret;
+. Sensitive but Unclassified;
+. For Official Use Only;
+. Protected;
+. Limited Distribution.
+--
+
+*Spatial Representation Type:*:: Vector
+
+*Point of Contact:*:: Producing Agency
+
+*Use Limitation:*:: Not for sole use in navigation; must be used with an ENC.

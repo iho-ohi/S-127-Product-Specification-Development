@@ -1,0 +1,61 @@
+==== General
+
+The *RouteingMeasure* feature is a simplification of the tracks and routes features in the ENC. A *RouteingMeasure* feature is created by combining the
+spatial extents of the tracks and routes feature instances which together make up a specific track or route. The purpose of this feature in S-127 is to
+provide an indication of the existence of a route or track, as well as physical locations to which specific information can be associated in the form of
+information types. In S-127, each *RouteingMeasure* feature has only a category attribute that indicates the type of track or route.
+
+In S-101 Edition 2.0.0, Traffic Separation Scheme is an aggregate feature that may or may not have its own geometry. If an aggregate geometry is available
+in an S-101 dataset it may be re-used in S-127 instead of combining the geometry of the traffic separation scheme components.
+
+The table below indicates which S-101 features can be combined to create *RouteingMeasure* features of each category. Note that line features are used if
+not covered by an appropriate track/route feature, or if information must be associated to the line that cannot be associated to an area feature.
+
+A suggested guide for deciding whether component S-101 features should be combined is whether they are aggregated to the same (or related) aggregate
+track/route features. E.g., combine TSS Lane Part and TSS Roundabout features that are associated with the same Traffic Separation Scheme feature in the ENC
+via a “Traffic Separation Scheme Aggregation” association.  
+
+
+[[table_map_routeimg_measures]]
+[cols="a,a",options="headers",width="80%"]
+.Guide to mapping ENC routeing measure features to S-127 routeing measure categories
+|===
+h|Category of routeing measure (S-127)	h| S-101 features used
+
+| recommended route	| Navigation line +
+	Recommended track +
+	Recommended route centreline (only if not covered by an area track/route feature) +
+	Recommended traffic lane part
+	
+| fairway system	| Fairways
+
+| two-way route	| Two-way route part +
+	Two-way route +
+	Recommended traffic lane part (when adjoining a two-way route)
+	
+| deep-water route	| Deep water route centreline (only if not covered by an area track/route feature) +
+	Deep water route part +
+	Deep water route +
+	Recommended traffic lane part (when adjoining a deep-water route)
+	
+| traffic separation scheme	| Inshore traffic zone +
+	Precautionary area +
+	Traffic separation scheme lane part +
+	Traffic separation zone +
+	Traffic separation line (only if not covered by an area track/route feature) +
+    Traffic separation scheme boundary (only if not covered by an area track/route feature) +
+    Traffic separation scheme crossing +
+    Traffic separation scheme roundabout
+    
+| archipelagic sea lane	| Archipelagic sea lane area +
+	Archipelagic sea lane axis (only if not covered by an area track/route feature)
+
+|===
+
+==== Remarks
+
+* If different information must be associated to different parts of the track/route, create different *RouteingMeasure* features.
+* If it is required to define the IMO status of a *RouteingMeasure* with _categoryOfRouteingMeasure_ set to 5: traffic separation, this must be done
+using the attribute _categoryOfTrafficSeparationScheme_.
+* If it is required to define a clearing line or a transit line (such as a measured distance) this must be done using the attribute _categoryOfNavigationLine_. 
+

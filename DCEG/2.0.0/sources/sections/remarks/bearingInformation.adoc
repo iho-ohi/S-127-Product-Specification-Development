@@ -1,0 +1,2 @@
+
+* At least one of the sub-attributes must be populated.

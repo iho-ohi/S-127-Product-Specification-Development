@@ -1,0 +1,43 @@
+==== General
+
+The *SpatialQuality* information type allows indication of the spatial quality for individual spatial primitives.
+Quality information in *SpatialQuality* overrides quality information in covering quality meta-feature(s).
+
+The association to *SpatialQuality* is from the spatial primitive. It is not encoded directly as an information association in the feature instance, but in the spatial primitive . 
+
+[cols="a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+6+h| *Information associations to *SpatialQuality* from spatial primitives*
+
+h| Source h|Role	h|Association Name h| Associated to h| Type	h| Mult.
+
+|(point or curve spatial primitive)|theQualityInformation|SpatialAssociation|SpatialQuality|association|0,1
+
+|===
+
+The GML structures for point and curve primiitives are depicted in <<Fig_SQEncoding_Point>> and <<Fig_SQEncoding_Curve>>. 
+
+[[Fig_SQEncoding_Point]]
+.Spatial quality for point spatial primitives
+image::../images/127_2_0_0_Point.png[]
+
+[[Fig_SQEncoding_Curve]]
+.Spatial quality for curve spatial primitives
+image::../images/127_2_0_0_Curve.png[]
+
+The association must be encoded using the _informationAssociation_ tag with:
+
+* xlink:title =  SpatialAssociation
+* xlink:href = gml:id of the SpatialQuality instance (using the same prefix convention as for other information associations, for example #SQ00001)
+* xlink:arcrole = data:theQualityInformation
+
+The _xlink:show_, _xlink:type_ and _xlink:actuate_ attributes are not populated. S-100 permits the _xlink:role_ attribute to be populated with the "[o]ptional description of the nature of the target resource,
+given as a URI". However, since the rules for URIs describing target resources are still to be formulated at the time of writing, population of this optional
+attribute is not recommended.
+
+==== Remarks
+
+* *SpatialQuality* can only be associated to point and curve types. To indicate the quality of an area boundary, associate *SpatialQuality* to the curve feature for the area boundary.
+* *SpatialQuality* associated to Curve or Composite Curve spatial objects cannot have vertical uncertainty attributes.
+
+

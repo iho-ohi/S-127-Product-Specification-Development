@@ -1,0 +1,116 @@
+[[ftable_RadioCallingInPoint]]
+=== Radio Calling-In Point
+
+[cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+8+| [underline]#IHO Definition:# A designated position at which vessels are required to report to a traffic control centre. Also called reporting point or radio reporting point. +
+Remarks: Radio calling-in points are established in certain busy waterways and port approaches to assist traffic control.
+8+h| [underline]#S-127 Geo Feature:# RadioCallingInPoint
+8+h| [underline]#Super Type:# FeatureType
+8+h| [underline]#Primitives:# point curve
+3+| _Real World_ 2+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
+3+h|S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| Call Sign |
+2+| |TE | 0,1
+
+3+| Communication Channel |
+2+| |TE | 0,*
+
+3+| Category of Cargo |
+2+|1: Bulk +
+2: Container +
+3: General +
+4: Liquid +
+5: Passenger +
+6: Livestock +
+7: Dangerous or Hazardous +
+8: Heavy Lift +
+9: Ballast +
+ |EN | 0,*
+
+3+| Category of Vessel |
+2+|1: General Cargo Vessel +
+2: Container Carrier +
+3: Tanker +
+4: Bulk Carrier +
+5: Passenger Vessel +
+6: Roll-On Roll-Off +
+7: Refrigerated Cargo Vessel +
+8: Fishing Vessel +
+9: Service +
+10: Warship +
+11: Towed or Pushed Composite Unit +
+12: Tug and Tow +
+13: Light Recreational +
+14: Semi-Submersible Offshore Installation +
+15: Jack-Up Exploration or Project Installation +
+16: Livestock Carrier +
+17: Sport Fishing +
+ |CL | 0,*
+
+3+| Orientation Value |
+2+| |RE | 0,2
+
+3+| Status |
+2+|1: Permanent +
+3: Recommended +
+4: Not in Use +
+5: Periodic/Intermittent +
+6: Reserved +
+7: Temporary +
+9: Mandatory +
+ |EN | 0,*
+
+3+| Traffic Flow |
+2+|1: Inbound +
+2: Outbound +
+3: One-Way +
+4: Two-Way +
+ |EN | 1,1
+
+8+h| Inherited Attributes
+
+3+h|S-127Attribute 3+h| Inherited From h| Type h| Multiplicity
+
+3+| Interoperability Identifier 3+| FeatureType | URN | 0,*
+3+| Feature Name 3+| FeatureType | C | 0,*
+3+| Fixed Date Range 3+| FeatureType | C | 0,1
+3+| Periodic Date Range 3+| FeatureType | C | 0,*
+3+| Scale Minimum 3+| FeatureType | IN | 0,1
+3+| Graphic 3+| FeatureType | C | 0,*
+3+| Source Indication 3+| FeatureType | C | 0,*
+3+| Text Content 3+| FeatureType | C | 0,*
+|===
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Information associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+
+|permission|PermissionType + 
+(inherited from FeatureType) |Applicability|association|0,*
+|theRxN|AssociatedRxN + 
+(inherited from FeatureType) |AbstractRxN|association|0,*
+|theInformation|AdditionalInformation + 
+(inherited from FeatureType) |NauticalInformation|association|0,*
+|===
+
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Feature associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+|componentOf|TrafficControlServiceAggregation|VesselTrafficServiceArea LocalPortBroadcastServiceArea ShipReportingService|aggregation|0,1
+|theCartographicText|TextAssociation + 
+(inherited from FeatureType) |TextPlacement|association|0,1
+|===
+
+
+include::../instructions/RadioCallingInPoint.adoc[]
+* If the complex attribute _fixedDateRange_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _sourceIndication_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _textContent_ is present at least one of its sub-attributes must be populated.
+** If the _textContent_ sub-attribute _information_ is present at least one of its sub-attributes must be populated.
+

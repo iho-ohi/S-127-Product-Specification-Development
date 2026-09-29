@@ -1,0 +1,48 @@
+<<<
+[[sec_services_orgs_schedules]]
+== Services, Organisations and Schedules
+
+=== Work schedules and holidays
+
+Operating schedules and business hours of organizations are encoded by associating a *ServiceHours* instance to an *Authority*.
+Partial work schedules on holidays or other special days are encoded by associating a *NonstandardWorkingDay* instance to the *ServiceHours* instance.
+
+Similarly, operating schedules for a facility are encoded by associating a *ServiceHours* to the geo feature representing the facility, and
+associating a *NonstandardWorkingDay* to the *ServiceHours* to encode partial working days. The types and associations are depicted in <<fig_working_times>>
+(note that this figure does not show inherited attributes, which are also available to the encoder).
+
+[[fig_working_times]]
+.Operating schedules
+image::../images/S127-WorkingTimes.png[]
+
+For further guidance and examples, see clause <<sec_2.4.10.4,droploc%>>.
+
+===	Contact information
+
+[data2text,PROD=config/product.json]
+----
+Contact information for service operators, controllers or facilities should be encoded in instances of the *ContactDetails* information type,
+which may be linked from multiple instances of geographic features or information types. Any {{PROD.id}} geographic feature except meta and cartographic
+features can be associated to an instance of ContactDetails. {{PROD.id}} geographic features inherit the association to *ContactDetails* from the abstract
+feature type *OrganizationContactArea*, as shown in <<fig_ContactDetailsAssociations>> (note that this figure does not show inherited attributes, which are
+also available to the encoder).
+
+[[fig_ContactDetailsAssociations]]
+.Associations to contact information
+image::../images/ContactDetails&#32;Associations.png[]
+
+Contact information must not be encoded directly in the feature or information type instance using a _textContent_ or _information_ complex attribute
+bound directly to the feature or information type. An instance of *ContactDetails* must be created instead. The exception to this rule is when
+contact-related attributes such as _communicationChannel_ are bound to the feature or information type, in which case a *ContactDetails* instance
+should be created only if it is necessary to provide contact information which cannot be coded in the contact-specific attributes bound to the feature.
+----
+
+include::features/Authority.adoc[]
+
+include::features/ContactDetails.adoc[]
+
+include::features/ServiceHours.adoc[]
+
+include::features/NonStandardWorkingDay.adoc[]
+
+

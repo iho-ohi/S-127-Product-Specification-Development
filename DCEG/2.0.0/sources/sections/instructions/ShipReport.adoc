@@ -1,0 +1,8 @@
+==== General
+
+The *ShipReport* information type is used for describing reports.
+
+==== Remarks
+* _textContent_ is used to describe non-standard ship reports. The associated information object *Applicability* indicates characteristics of vessels which use this report.
+* Association *TrafficServiceReport* is with a geographic feature. While an association from geographic feature to information type can be encoded in the geographic feature instance, the reverse association from the information type to the geographic feature is omitted from the information type instance.
+* If it is required to encode one or more pre-arrival reporting times, it must be done using the complex attribute _noticeTime_, and the required time in hours before arrival in the attribute _noticeTimeHours_. Further explanations for the reporting time can be added in the _noticeTimeText_ attribute.

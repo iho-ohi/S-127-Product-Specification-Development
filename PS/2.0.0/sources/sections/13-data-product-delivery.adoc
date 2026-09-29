@@ -1,0 +1,461 @@
+[data2text,PROD=config/product.json]
+----
+[[sec_13]]
+== Data Product Delivery
+
+Data which conforms to this Product Specification must be delivered by means of an Exchange Set.
+
+[[sec_ExchangeSetComponents]]
+=== Exchange set components
+
+{{PROD.id}} uses the same exchange set components and metadata as S-100.
+<<fig_13.1>> depicts the exchange set components (datasets and feature/portrayal
+catalogues) and exchange set metadata. This figure is derived from
+Figure 17-2 in S-100. Note also that the link between
+S100_Dataset and S100_CatalogueMetadata is implicit by means of the
+{{PROD.id}} version to which the feature catalogue, portrayal catalogue,
+and dataset conform, which must have the same edition and revision components.
+
+[[fig_13.1]]
+.Components and associated metadata for the {{PROD.id}} exchange set (S-100 Figure 17-2)
+image::ExchangeSet.png[]
+
+The rules governing the presence and roles of the exchange set components depicted in <<fig_13.1>> are given below.
+
+. Every exchange set must contain an Exchange Catalogue, represented by *S100_ExchangeCatalogue* in <<fig_13.1>>.
+. Dataset discovery metadata (*S100_DatasetDiscoveryMetadata*) must be provided in the exchange catalogue for each {{PROD.id}} dataset in the exchange set.
+. Support file discovery metadata (*S100_SupportFileDiscoveryMetadata*) must be provided in the exchange catalogue for each {{PROD.id}} support file in the exchange set.
+. Catalogue metadata (*S100_CatalogueDiscoveryMetadata*) must be provided in the exchange catalogue for any feature and portrayal catalogues included in the exchange set.
+. {{PROD.id}} allows exchange sets to include the following types of support files:
+
+.. Text and picture support files referenced by datasets (*S100_SupportFile*).
+.. Language packs (*S100_SupportFile*).
+. Text and picture support files referenced in a dataset must be included in the exchange set.
+. The inclusion of language packs in exchange sets is optional.
+. Language packs are described in S-100 Part 18 and provide translations of feature catalogues.
+. A signature file for the exchange catalogue must also be included in the exchange set (*S100_CatalogueSignature*).
+
+The tangible representations of the structure classes in <<fig_13.1>> within actual exchange sets are the digital files or folders containing
+the exchange set, dataset(s), catalogue(s), and support files. The tangible representations of their roles as depicted in <<fig_13.1>>
+are the inclusion of the respective components within the exchange set. Documentation tables for the structure classes are not provided
+since the exchange set structure is described in this clause.
+
+The metadata classes in <<fig_13.1>> are represented by XML files
+or XML blocks and are documented in clause <<sec_14.2,droploc%>>.
+
+Each Exchange Set consists of one or more {{PROD.abbrev}} datasets and a single Exchange Catalogue XML file containing metadata. It may also include
+one or more support files (or no support files). The Exchange Set structure is the same as that described in S-100 Clause 17-4.2.
+
+[[sec_Encapsulation]]
+=== Encapsulation
+
+Each dataset must be contained in a physically separate, uniquely identified file on the transfer medium.
+
+An Exchange Set is encapsulated into a form suitable for transmission
+as packages (such as ZIP archives or files organised within a file
+system folder/directory structure), containing both the exchange catalogue
+and one or more data products (of possibly different S-100 types),
+with each product covering a specific geographic region and specific
+period of time.
+
+The contents of an Exchange Set are :
+
+* Mandatory elements
+** Exchange Catalogue -- the XML encoded description of the content
+of the Exchange Set (discovery metadata).
+
+* Optional elements
+** {{PROD.id}} datasets -- Since it is possible for an exchange set to contain
+only a feature or portrayal catalogue, or only a support file which
+is being updated or delivered as a new file, datasets are an optional
+component of {{PROD.id}} exchange sets.
+** Supplementary files -- These are contained within the Exchange
+Set as files. If the exchange set contains a dataset, the support
+files referenced in the dataset must be included.
+** {{PROD.id}} Feature Catalogue -- If it is necessary to deliver the latest
+Feature Catalogue to the end user it may be done using the {{PROD.id}} Exchange
+Set mechanism.
+** {{PROD.id}} Portrayal Catalogue -- If it is necessary to deliver the
+latest Portrayal Catalogue to the end user it may be done using the
+{{PROD.id}} Exchange Set mechanism.
+
+[[sec_PackagingCatalogues]]
+==== Packaging of catalogues and language packs
+
+Since feature and portrayal catalogues apply to all datasets for a single version of a Product Specification, a common practice is for the IHO Secretariat to
+create special exchange sets containing feature and portrayal catalogues (and no datasets). These special exchange sets are generally made available by the
+IHO Secretariat in the IHO Geospatial Information Registry. It is recommended that this practice be followed for {{PROD.id}} Edition 2.0.0 too.  It is therefore
+not necessary to include feature and portrayal catalogues in each exchange {{PROD.id}} set.
+
+Similar practice is recommended for language packs, allowing for the possibility that language packs may be developed and distributed by national
+hydrographic offices or equivalent agencies instead. Data producers desirous of developing language packs should contact the NIPWG Chair
+and IHO Secretariat to discuss arrangements.
+
+[[sec_DatasetInExchangeSet]]
+=== Dataset
+
+[[sec_DatasetDiscoveryMetadataValues]]
+==== Metadata for different types of datasets
+
+<<table_13.1>> describes the encoding format and  required values of dataset
+discovery metadata for the types of datasets and exchange sets permitted by {{PROD.id}}.
+Detailed explanations of each type are provided in clause <<sec_TypesOfDatasets,droploc%>>.
+
+[[table_13.1]]
+.Types of datasets
+[cols="a,2a,a"]
+|===
+h| Dataset Type h| Encoding Format h| Discovery metadata _purpose_ field
+
+| New dataset | Clause <<sec_DataProductFormat,droploc%>> | _newDataset_
+| Re-issue | As for new dataset | _reissue_
+| New Edition of a dataset | As for new dataset | _newEdition_
+| Update dataset | As for new dataset. See clause <<sec_FormatUpdateDatasets,droploc%>>. | _update_
+| Cancellation | Not applicable | _cancellation_
+|===
+
+[[sec_DatasetFileName]]
+==== Dataset file naming
+
+All dataset files will have unique world-wide file identifiers.
+The file identifier of the dataset should not be used to describe
+the physical content of the file. The dataset file metadata that accompanies
+the file will inform the user of the name and purpose of the file
+(clause <<sec_DatasetDiscoveryMetadataValues,droploc%>>).
+
+{{PROD.id}} dataset files for new, reissue, new editions, and cancellation
+datasets are named according to the specifications given below:
+
+{{PROD.productnumber}}CCCCXXXXXXXXXX.GML
+
+The main part forms an identifier where:
+
+* The first three characters are always "{{PROD.productnumber}}" and identify the dataset as an {{PROD.id}} dataset.
+
+* The next four characters identify the issuing agency by its four-character alphanumeric
+agency code in the IHO producer code register in the IHO GI Registry.
+
+Suffixing zeros is a temporary expedient pending conversion of the
+IHO producer code registry to 4-character codes. When 4-character
+IHO producer codes are published, they must be used.
+
+* The subsequent characters can be used in any way by the producer
+to provide a unique file name for the dataset. The following characters
+are allowed in the dataset name, A to Z, 0 to 9 and the special character
+++_++ (underscore).
+
+* The ninth and subsequent characters are optional (i.e., at least
+one character must be used after the producer code).
+
+* The maximum length of the file name must be 64 characters including
+the extension and its preceding '." character. Note that since update
+datasets must follow the same rule, allowing for updates lowers this
+limit (e.g., allowing for 999 updates reduces the limit for base datasets
+by 4 characters).
+
+[[sec_UpdateDatasetFileName]]
+==== Update dataset naming convention
+
+All update dataset files will have an identical name to the base dataset,
+aside from the separator and update number sequence.
+
+{{PROD.id}} update dataset files are named according to the specifications
+given below:
+
+{{PROD.productnumber}}CCCCXXXXXXXXXX_XXX.GML
+
+The main part forms an identifier where:
+
+* The first character up to the final underscore characters are the
+same as the dataset being updated and therefore conform to the rules
+described in clause <<sec_DatasetFileName,droploc%>>.
+* The next character must be an underscore "++_++".
+* The next three characters must be numerical (0-9) characters to
+indicate the place of the update dataset in the update sequence.
+* The maximum length of the name must be 64 characters including the
+extension and its preceding "." character.
+
+[[sec_DatasetUpdateSequencing]]
+==== New Editions, re-issues, updates and cancellations
+
+This section defines the sequencing of {{PROD.id}} datasets for New Editions,
+updates and re-issues. In order to ensure that feature type updates
+are incorporated into an end user system in the correct sequence without
+any omission, a number of parameters encoded in the data are used
+in the following way:
+
+*Edition number*:: When a dataset is initially created (Base dataset),
+the Edition number 1 is assigned to it. The Edition number is increased
+by 1 at each New Edition.
+
+*Update number*:: Update number 0 is assigned to a new dataset and
+a New Edition. The first update dataset file associated with this
+new dataset must have update number 1. The update number must be increased
+by one for each subsequent update, until a New Edition is released. +
+A re-issue of a dataset must have the update number of the last update
+applied to the dataset, and use the same Edition number.
+
+*Update comment*:: Comment for describing the change introduced by
+an update.
+
+*Issue date*:: Date up to which the Data Producer has incorporated
+all applicable changes. The issue date must be greater than the previous
+issue date of the dataset.
+
+In order to cancel a dataset, a dataset discovery metadata record must
+be created in an exchange catalogue with _purpose = cancellation_ and the filename and original digital signature specifying 
+the dataset to be cancelled, and with all other mandatory metadata fields also set to the same values 
+as the original base dataset, with the exception of the issueDate, which must be set to the issue date of the fileless 
+cancellation itself (S-100 Edition 5.2.0 Part 17 clause 17-4.4.1). Where a dataset is cancelled and its name is
+reused at a later date, the issue date must be greater than the issue date of the cancelled dataset. When the dataset is cancelled
+it must be removed from the system.
+
+An Exchange Set may contain Base dataset files and update dataset
+files for the same datasets. Under these circumstances the update
+dataset files must follow on in the correct sequential order from
+the last update applied to the Base dataset file.
+
+[[sec_ExchangeSetStructure]]
+=== Exchange set structure
+
+The structure of an {{PROD.id}} exchange set must be according to the structure
+described below, which is based on S-100 Clause 17-4.2.
+The {{PROD.id}} exchange set structure is depicted in <<fig_ExchangeSetStructure>>.
+
+. All content must be placed inside a top root folder named S100_ROOT.
+This is the only top level root folder in an exchange set containing
+only S-100 products.
+
+. The S100_ROOT folder must contain a subfolder for {{PROD.id}} which holds
+content specific to {{PROD.id}}.
+
+. An {{PROD.id}} exchange set must contain an exchange set catalogue, CATALOG.XML,
+its digital signature CATALOG.SIGN and may contain any number of {{PROD.id}}
+conformant dataset files and catalogue files.
+
+. The {{PROD.id}} subfolder must contain subfolders for the component dataset
+files (DATASET_FILES), support files (SUPPORT_FILES), and catalogues
+(CATALOGUES) as required:
+.. The DATASET_FILES subfolder is required if and only if the exchange
+set contains an {{PROD.id}} dataset.
+.. The CATALOGUES subfolder is required if and only if the exchange
+set contains a feature, interoperability, or portrayal catalogue.
+.. The SUPPORT_FILES folder is required if and only if the exchange
+set contains at least one {{PROD.id}} support file.
+
+. The DATASET_FILES folder must contain a subfolder named according
+to the producer code.
+. Individual data files must be placed under the producer subfolder,
+either directly in the producer folder, or within a lower-level subfolder
+hierarchy. Individual data files may be optionally placed in their
+own subfolders or grouped with other data files.
+
+. An exchange set may carry feature and portrayal catalogues in different
+versions, which should also be grouped together in the CATALOGUES
+folder.
+
+. If a portrayal catalogue is included in the exchange set, it may
+be packaged as either a ZIP archive containing all portrayal catalogue
+files, or a filesystem structure of folders and files. The structure
+of portrayal catalogues is described in S-100 Part 9 Clause 9-13.2.
+
+. Except for the signature of the exchange catalogue file (CATALOG.XML),
+which is in the CATALOG.SIGN file, all digital signatures are included
+within their corresponding resource metadata records in CATALOG.XML.
+
+. Dataset and catalogue file and/or folder names should be such as
+to avoid inadvertent overwriting of files.
+
+. Digital signatures for exchange sets conforming to Edition 1.0.0
+of {{PROD.id}} may be dummy values (values that conform to the format requirements
+but are not actual signatures). Proper digital signatures will be
+mandatory when {{PROD.id}} reaches Readiness Level 3 (cf. S-97 1.1.0 Clause A-5).
+
+[[fig_ExchangeSetStructure]]
+.Typical Exchange Set structure
+image::TypicalExchangeSetStructure.png[]
+
+[[sec_SupportFiles]]
+=== Support files
+
+Dataset support files offer supplementary information that can be
+included in an {{PROD.abbrev}} Exchange Set.
+
+* Plain text files must contain only general text as defined by this
+standard (text consisting only of printable characters and without
+HTML, XML, or other markup). The extension must be TXT.
+* HTML files must contain only text and markup as defined
+in the relevant W3C standards. Files must use the UTF-8 character
+set encoding. References in datasets to HTML or text support files
+must treat them as text files (i.e., they should not be referenced
+using attributes intended for picture files). The extension must be
+HTM for HTML files and TXT for text files.
+* Picture files must be in TIFF (6.0 specification) and use the extension
+TIF.
+* XML files are allowed only for language packs and dictionaries such as the languages list included in the S-100 schema distribution
+footnote:[The languages list, other dictionaries, language packs, and portrayal catalogue files are expected to be distributed separately in special exchange sets and should not be included in ordinary {{PROD.abbrev}} exchange sets.]
+
+[[table_SupportFileFormats]]
+.Support file formats and extensions
+[cols="3"]
+|===
+h| File Types h| Extensions h| Comment
+
+.2+| *Text* | TXT | Plain-text files
+
+| HTM | HTML files must only include inline or embedded Cascading Style
+Sheet (CSS) information and must not contain embedded Javascript or
+other dynamic content, for example DHTML, Flash etc.
+
+| *Picture* | TIF | Baseline TIFF 6.0.
+|===
+
+[[sec_SupportFileNaming]]
+==== Support File Naming
+
+All support files must have unique file identifiers. The support file
+metadata that accompanies the file will inform the user of the name
+and purpose of the file (that is new, replacement and deletion).
+
+In this encoding the support files are named according to the specifications
+given below:
+
+{{PROD.productnumber}}CCCCØØØØØØØØØØ.EEE
+
+The main part forms an identifier where:
+
+* {{PROD.productnumber}} -- the first 3 characters identify the support file as applicable
+to an S-101 dataset (mandatory).
+
+* CCCC -- the fourth to seventh characters identify the Producer Code
+of the issuing agency (mandatory). Where the Producer Code is derived
+from a 2 or 3 character format (for instance when converting S-57
+ENCs), the missing characters of the Producer Code must be populated
+with zeros ("00" or "0" respectively) for the sixth and seventh characters
+of the support file name, as required.
+
+* ØØØØØØØØØØ -- the eighth and following characters are optional and
+can be used in any way by the Producer to provide the unique support
+file name. The following characters are allowed in the support file
+name: A to Z, 0 to 9 and the special character ++_++ (underscore).
+
+* .EEE -- support file extension. (TXT, HTM, TIF).
+
+* The maximum length of the file name (including the extension and
+preceding ".") is 64 characters.
+
+[[sec_SupportFileManagement]]
+==== Support file management
+
+When a support file is created or a subsequent version is issued it
+must carry its own issue date and be supported with a digital signature
+which authenticates it against the Producer's public key included
+in the Exchange Set metadata.
+
+The type of support file is indicated in the "purpose" field of the
+discovery metadata. Three types: new, replacement and deletion are
+defined. Support files carrying the "deletion" flag must be removed
+from the system. When a feature pointing to a text, picture or application
+file is deleted or updated so that it no longer references the file,
+the system software must check to see whether any other feature references
+the same file, before that file is deleted.
+
+Each support file required must be included only once in the Exchange
+Set.
+
+Support files must be stored in a separate folder within the Exchange
+Set, refer to <<fig_ExchangeSetStructure>> -- Typical Exchange Set structure.
+
+Re-use of a support file name after a deletion period is possible
+only if the support file edition number is higher than the previous
+edition number before deletion.
+
+Only the latest edition of a support file can be used. As soon as
+a New Edition is created and installed, the older version is retired
+and can no longer be used by any feature.
+
+If a support file is associated with multiple features in one or several
+datasets, a New Edition of the file will immediately be used by all
+associated features.
+
+Picture and text files are treated differently with respect to changes
+not applicable to all features or information types referencing the
+support file.
+
+. *Picture files*: If a New Edition of a picture support file contains
+changes not applicable to all features or information type instances
+that reference the original picture, a completely new picture file
+must be created. Updates changing the file reference in the feature
+or information type instances that use the new picture must be generated
+and distributed as updates to the appropriate datasets.
+
+. *Text files*: The possibility that different feature or information
+type instances reference different portions of the file (by means
+of _fileLocator_ attributes) must be taken into account.
+.. For plain-text files (TXT), since users may see additional portions
+of the file as well as the specific section referenced, the same criteria
+as picture files must be applied and a new TXT file created if there
+are objects that still need the old information.
+.. For HTML files, instances may have _fileLocator_ attributes
+that point to either HTML "anchors" (i.e., bookmarks) or specific
+sections identified by an "id" attribute. If some instances still
+need to reference the old information, there are two possible solutions:
+... An updated support file can be created with the new information
+added in a new section of the file, identified by a new "HTML anchor"
+or "id" attribute. Feature and information type instances that need
+to reference the changed information must have their _fileLocator_
+values updated to reference the new section or bookmark.
+... A new support file can be created and feature and information
+type instances that need to reference the new information must have
+their _fileReference_ and _fileLocator_ attributes updated.
+.. If there are no _fileLocator_ attributes in referencing instances,
+a new support file may be created or the existing support file may
+be updated to add the new information and facilitate locator attributes
+by adding HTML anchors or _id_ attributes. The affected feature
+or information type instances must be updated accordingly.
+
+. In all cases, the file content must be reviewed and updated to ensure
+that there is no possibility of reader confusion. For example, if
+a regulation changes only for some regions, a sentence to the effect
+that "Revised for regions X, Y, and Z effective from (date)" may be
+added.
+
+The potential necessity of appropriate changes in referencing instances
+should also be considered, for example to picture caption or _headline_
+attributes.
+
+In deciding between options, producers should consider the expected
+lifetime of support files and the effects on update frequency for
+both datasets and support files, especially in connection with removal
+of obsolete information from the system as a whole as well as the
+removal of obsolete sections within support files.
+
+[[sec_ExchangeCatalog]]
+=== Exchange Catalogue
+
+The Exchange Catalogue acts as the table of contents for the Exchange
+Set. The Catalogue file of the Exchange Set must be named CATALOG.XML.
+No other file in the Exchange Set may be named CATALOG.XML. The contents
+of the {{PROD.id}} Exchange Catalogue are described in clause <<sec_14,droploc%>>.
+
+[[sec_DatasetLoading]]
+=== Dataset loading
+
+Datasets must always be loaded in the order of base dataset first,
+then update datasets in the corrected sequential order. Systems are
+not to load updates out of order, for example if update 1-5 is present,
+then 6 is missing, update 7 must not be loaded.
+
+[[sec_NewEditionDisposition]]
+==== New editions
+
+When a new edition of a dataset is received, the system must replace
+the previous edition, along with any updates with the new edition
+of the dataset. Loading of subsequent updates follows the same rule
+as above.
+
+[[sec_DatasetIntegrity]]
+=== Data integrity and encryption
+
+Signatures are required for datasets and exchange sets intended for use on ECDIS, as described in S-100 Parts 15 and 17. Datasets may be encrypted or unencrypted as determined by producer policy.
+----

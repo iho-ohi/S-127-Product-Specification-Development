@@ -1,0 +1,75 @@
+
+[[sec_6]]
+== Coordinate Reference Systems (CRS)
+
+[[sec_6.1]]
+=== Introduction
+
+An MTM dataset must define one geodetic CRS. Definition of a vertical CRS for depths and elevations is not necessary since MTM datasets do not encode depths and elevations.
+
+The location of an object in the S-100 standard is defined by means
+of coordinates which relate a feature to a position. The coordinate
+reference system used for this product specification is World Geodetic
+System 1984 (WGS 84) which is defined by the European Petroleum Survey
+Group (EPSG) code 4326, (or similar - North American Datum 1983 /
+Canadian Spatial Reference System).
+
+Spatial data are expressed as latitude (stem:[varphi]) and longitude
+(stem:[lambda]) geographic
+coordinates. Latitude values are stored as a negative number to represent
+a position south of the Equator. Longitude values are stored as a
+negative number to represent a position west of the Prime Meridian.
+Coordinates are expressed as real value, degree / degree decimal format.
+Datasets conforming to this product specification are not projected.
+
+
+[[sec_6.2]]
+=== Horizontal Coordinate Reference System
+
+The horizontal CRS must be EPSG 4326 (WGS84). The full reference to
+EPSG 4326 can be found at https://epsg.org/home.html.
+
+*Horizontal Coordinate Reference System:*:: EPSG:4326 (WGS84)
+
+*Projection:*:: None
+
+*Temporal reference system:*:: Gregorian calendar
+
+*Coordinate Reference System registry:*:: EPSG Geodetic Parameter Registry
+
+*Date type (according to <<ISO_19115_1>>):*:: 002 - publication
+
+*Responsible party:*:: International Organisation of Oil and Gas Producers (IOGP)
+
+*URL:*:: https://epsg.org/home.html
+
+[[sec_6.3]]
+=== Vertical Coordinate Reference System
+
+Marine Traffic Management data products do not provide detailed vertical information. A vertical CRS is  not defined for MTM datasets.
+
+[[sec_6.4]]
+=== Projections
+
+MTM datasets are un-projected.
+
+[[sec_6.5]]
+=== Temporal reference system
+
+Time is measured by reference to Calendar dates and Clock time in
+accordance with <<ISO_19108_2002,clause=5.4.4>>, Temporal Schema.
+
+[[sec_6.6]]
+=== Marine Traffic Management data and scale
+
+MTM data must be compiled in the best applicable scale. The use of
+the data itself is "scale independent". That means that the data can
+be used at any scale. S-100 allows the association of multiple spatial
+attributes to a single feature instance. In principle, each of these
+spatial attributes can be qualified by maximum and minimum scales.
+
+For example, it is possible, within one dataset, to have a single
+instance of a feature that has more than one area geometry. Each of
+these geometries has different scale max/min attributes. Moreover,
+due to cluttering in smaller scales, the scale minimum attribute may
+be used to turn off portrayal of some features at smaller scales.

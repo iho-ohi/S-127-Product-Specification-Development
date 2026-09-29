@@ -1,0 +1,19 @@
+==== General
+
+Military practice (or exercise) areas at sea are of various types and may be classified as follows with regard to their significance for the mariner:
+
+* Firing danger areas, sometimes called firing practice areas, i.e. permanent or temporary ranges, including bombing, torpedo, and missile ranges.
+* Mine-laying practice (and counter-measures) areas.
+* Submarine exercise areas.
+* Other exercise areas.
+
+Some degree of restriction on navigation and other rights may be implied by the encoding of military practice areas. There may be varying interpretations of the validity of the restrictions and possible infringement of the rights of innocent passage through territorial waters and elsewhere. Where it is thought desirable to depict such areas, even though clear range procedure may be observed, or the areas appear to be a derogation of the freedom of the seas, mariners should be informed (not necessarily on ENCs) that publication of the details of a law or regulation is solely for the safety and convenience of shipping and implies no recognition of the international validity of the law or regulation. By this means infringements are not condoned but the mariner receives a warning which may be necessary for their safety.
+
+If it is required to encode a military practice area, it must be done using the feature *MilitaryPracticeArea*.
+
+==== Remarks
+
+* Submarine exercise areas should generally not be encoded where submarines exercise over wide areas which it would not be practicable to depict, and over which cautions (to keep a good look out for them) are unlikely to be effective. They may, however, be encoded where they occur in or near major shipping lanes or port approaches.
+* Firing danger areas at sea are frequently marked by IALA special buoys sometimes laid around the perimeter of the area and/or by specially erected lights, beacons, and targets. If required, all such features which could assist the navigator in identifying their position, or could be a hazard, must be encoded in the normal way.
+* The existence of mine-laying (and counter-measures/clearance) practice areas implies the possibility of unexploded mines or depth charges on the sea floor, and also the presence of harmless practice mines. 
+

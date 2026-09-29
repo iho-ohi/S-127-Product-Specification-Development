@@ -1,0 +1,7 @@
+==== General
+
+In many waterways the amount of regular occurring ship traffic, fishing activities and similar frequent or in-frequent concentrations of vessels of various size can impose a hazard to safe navigation. If it is required to encode such an area of concentrations of shipping, it must be done using the feature *ConcentrationOfShippingHazardArea*.
+
+==== Remarks
+
+* To encode the relevant regulations or notes, an instance of the information class *Regulations*, *Recommendations*, *Restrictions*, or *NauticalInformation* (see clause <<ftable_NauticalInformation,droploc%>>) must be associated to the feature. The *NauticalInformation* type should be used only if none of the other three are suitable.
