@@ -1,0 +1,19 @@
+
+[[sec_shipreport]]
+[type=clause]
+== Ship Reports
+
+=== Introduction
+
+Descriptions of ship reports are encoded using the *ShipReport* information type. The types and relationships are depicted in <<fig_reporting>>. Any subtype of *ReportableServiceArea*
+may be associated to a report description encoded in *ShipReport*. The organisation receiving the report is identified by an associated *Authority* and details
+about which vessels must file using the format described by *ShipReport* are encoded in an associated *Applicability*. If the report requirement and format apply
+to all vessels an associated *Applicability* is not needed.
+
+[[fig_reporting]]
+.*ShipReport* and related types.
+image::../images/ShipReport&#32;assocs.png[]
+
+include::features/ShipReport.adoc[]
+
+

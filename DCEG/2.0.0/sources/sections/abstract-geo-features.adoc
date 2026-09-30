@@ -1,0 +1,39 @@
+<<<
+[[sec_abs_geo_features]]
+== Abstract Geo Features
+
+=== Introduction
+
+[data2text,PROD=config/product.json]
+----
+This clause describes abstract feature types. The abstract types cannot be used directly, but define attributes and associations inherited by their sub-types.
+The encoding remarks in the description of each abstract feature apply to its sub-types but may be overridden by remarks in the sub-type.
+
+The abstract feature types are depicted in <<fig_abstract_features>>. At the root is the type named *FeatureType*, from which all feature types except
+cartographic and meta-features inherit several attributes. This means that any Geo feature in {{PROD.id}} can have any of the several attributes in
+the *FeatureType* box. This type also has information associations to three information types, and a feature association to *TextPlacement*  which, as for
+attributes, allows any {{PROD.id}} Geo feature to have the same associations. The feature types *OrganizationContactArea*, *SupervisedArea*, and *ReportableServiceArea* define
+no local attributes but inherit the attributes of *FeatureType*, however each adds an additional information association which is inherited by their respective
+sub-types.
+
+[[fig_abstract_features]]
+.Abstract feature hierarchy
+image::../images/Abstract&#32;Feature&#32;Types.png[]
+
+The abstract feature hierarchy in {{PROD.id}} is intentionally harmonised with the abstract hierarchy in other nautical publications Product Specifications,
+specifically S-131 (Marine Harbour Infrastructure), which has a similar structure to {{PROD.id}} but does not use the abstract type
+*ReportableServiceArea* and adds specializations of abstract types required in the S-131 model.
+
+This top-level hierarchy of types in {{PROD.id}} means than any {{PROD.id}} Geo feature can have any or all of the five information associations
+in <<fig_abstract_features>>, and also an associated *TextPlacement* cartographic feature to position text. Cartographic and meta-features are not derived from this abstract hierarchy and do not inherit these attributes and associations.
+ 
+----
+
+include::features/FeatureType.adoc[]
+
+include::features/OrganizationContactArea.adoc[]
+
+include::features/SupervisedArea.adoc[]
+
+include::features/ReportableServiceArea.adoc[]
+

@@ -1,0 +1,43 @@
+[[ftable_Regulations]]
+=== Regulations
+
+[cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+8+| [underline]#IHO Definition:# Regulations for a related area or facility.
+8+h| [underline]#S-127 Information Type:# Regulations
+8+h| [underline]#Super Type:# AbstractRxN
+3+h| S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+            
+8+h| Inherited Attributes
+
+3+h| S-127 Attribute 3+h| Inherited From h| Type h| Multiplicity
+            
+3+| Category of Authority 3+| AbstractRxN | EN | 0,1
+3+| RxN Code 3+| AbstractRxN | C | 0,*
+3+| Text Content 3+| AbstractRxN | C | 0,*
+3+| Feature Name 3+| InformationType | C | 0,*
+3+| Fixed Date Range 3+| InformationType | C | 0,1
+3+| Periodic Date Range 3+| InformationType | C | 0,*
+3+| Graphic 3+| InformationType | C | 0,*
+3+| Source Indication 3+| InformationType | C | 0,*
+|===
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Information associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+|isApplicableTo|InclusionType + 
+(inherited from AbstractRxN) |Applicability|association|0,*
+|theOrganisation|RelatedOrganisation + 
+(inherited from AbstractRxN) |Authority|association|0,*
+|===
+
+
+include::../instructions/Regulations.adoc[]
+* If the complex attribute _rxNCode_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _textContent_ is present at least one of its sub-attributes must be populated.
+** If the _textContent_ sub-attribute _information_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _fixedDateRange_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _sourceIndication_ is present at least one of its sub-attributes must be populated.
+

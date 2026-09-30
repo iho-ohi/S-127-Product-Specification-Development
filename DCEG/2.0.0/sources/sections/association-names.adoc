@@ -1,0 +1,11 @@
+
+[[sec_feature_associations]]
+== Feature Associations
+
+include::associations/featureassociationslist.adoc[]
+
+[[sec_info_associations]]
+== Information Associations
+
+include::associations/infoassociationslist.adoc[]
+

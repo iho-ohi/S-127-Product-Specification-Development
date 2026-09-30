@@ -1,0 +1,6 @@
+
+[[sec_association_roles]]
+== Association Roles
+
+include::associations/roleslist.adoc[]
+

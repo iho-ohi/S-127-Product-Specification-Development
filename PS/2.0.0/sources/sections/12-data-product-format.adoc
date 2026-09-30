@@ -1,0 +1,206 @@
+[data2text,PROD=config/product.json]
+----
+[[sec_DataProductFormat]]
+== Data Product format (encoding)
+
+[[sec_FormatSpec]]
+=== Format specification
+
+The format for datasets must conform to the {{PROD.id}} GML schema specified
+below. See S-100 Part 10b and the {{PROD.id}} GML schema documentation for
+a complete description of the data records, fields and subfields defined
+in the encoding.
+
+[[table_FormatSpecInfo]]
+.Format specification information
+[cols="25,45,30"]
+|===
+h| Name h| ISO 19131 Elements h| Value
+
+| Format name | DPS_DeliveryInformation.deliveryFormat > +
+DPS_DeliveryFormat.formatName | GML
+| Version     | DPS_DeliveryInformation.deliveryFormat > +
+DPS_DeliveryFormat.version    | {{PROD.id}} Edition {{PROD.edition}}
+| Specification description | DPS_DeliveryInformation.deliveryFormat > +
+DPS_DeliveryFormat.specification
+| S-100 profile of GML (S-100 Part 10b) and GML Schema for {{PROD.id}} {{PROD.edition}}
+| Language | DPS_DeliveryInformation.deliveryFormat > +
+DPS_DeliveryFormat.language | English
+| Character set | DPS_DeliveryInformation.deliveryFormat > +
+DPS_DeliveryFormat.characterSet > +
+MD_CharacterSetCode | 004 -- utf8
+| Additional Information | DPS_DeliveryInformation.additionalInformation > +
+DPS.AdditionalInformation.additionalInformation
+| GML schema for {{PROD.id}} Edition 2.0.0 (https://schemas.s100dev.net)
+
+|===
+
+[[sec_schemaLocation]]
+==== Specification of schema location
+
+It is strongly recommended that all {{PROD.abbrev}} datasets include the XML Schema _schemaLocation_ attribute on the root element giving
+the physical location of the {{PROD.id}} GML schema XSD file. This file will be placed on the schema server \https://schemas.s100dev.net after
+approval of {{PROD.id}} edition 2.0.0.
+
+The nominal URL of the GML schema is expected to be +
+`https://schemas.s100dev.net/schemas/S127/2.0.0/_<YYYYMMDD>_/127_2.0.0.xsd` +
+where _<YYYYMMDD>_ represents the build date. The precise URL can be obtained via the schema server or GI Registry after publication of {{PROD.id}} edition 2.0.0.
+
+Implementations should provide for local redirections of the nominal location of the GML schema using an implementation capable of using
+OASIS XML catalogs or another means of resolving the schema server URL to reference a different physical file location.
+
+Note that the physical location specified in _schemaLocation_ provides "*hints* as to the physical location of schema documents" according
+to the XML Schema specification. The location(s) provided in _schemaLocation_ may therefore be overridden by schema-aware validators or applications.
+
+[[sec_LatLonEncoding]]
+=== Encoding of latitude and longitude
+
+Values of latitude and longitude must be accurate to 7 decimal places. Coordinates must be encoded as decimals in the format described below.
+
+* Values should be coded as decimal numbers with 7 or fewer digits after the decimal. The normative encoding is in degrees, with an accuracy of stem:[10^{-7}] degrees, i.e., 7 digits after the decimal point.
+* The decimal point must be indicated by the "." character.
+* Trailing zeroes after the decimal point (and the decimal point itself if appropriate) may be omitted at producer discretion, but the accuracy must still be as indicated (e.g., stem:[10^{-7}] degrees for coordinates of default accuracy).
+
+[[sec_DepthsEncoding]]
+=== Encoding of depths
+
+Depths are encoded in the format and precision specified in the feature catalogue for the corresponding attribute. Positive values indicate distances
+below the applicable datum reference.
+
+[[sec_NumericAttrEncoding]]
+=== Numeric attribute encoding
+
+Integer attribute values must not contain leading zeros.
+
+Floating point attributes must not contain leading zeros. Values in the interval (-1, 1) may use a single zero before the decimal point.
+
+Floating point attribute values must not contain non-significant trailing zeros exceeding the attribute's precision as specified in the feature catalogue.
+
+[[sec_TextAttrValues]]
+=== Text attribute values
+
+Character strings must be encoded using the character set defined in <<ISO_10646>>, in Unicode Transformation Format-8 (UTF-8).
+
+[[sec_MandatoryAttrValues]]
+=== Mandatory attribute values
+
+There are four reasons why attribute values may be considered mandatory:
+
+* They determine whether a feature is in the display base,
+* Certain features make no logical sense without specific attributes,
+* Some attributes are necessary to determine which symbol is to be displayed,
+* Some attributes are required for safety of navigation.
+
+All mandatory attributes are identified in the Feature Catalogue and summarised in the Data Classification and Encoding Guide.
+
+[[sec_UnknownAttrValues]]
+=== Unknown attribute values
+
+When an attribute code is present but the attribute value is missing, it means that the producer wishes to indicate that this attribute value is unknown.
+
+[[sec_ObjectIdentifiers]]
+=== Object identifiers
+
+Feature records must have a unique world-wide identifier. When an
+MRN naming scheme is finalised by IHO, the identifier must be derived
+from the MRN of the feature by a reversible 1/1 mapping (i.e., each
+identifier must map to a corresponding unique MRN and each MRN must
+map to a corresponding unique feature identifier).
+
+MRN identifiers are not included in this version due to ongoing development
+of the IHO guidelines in the use of MRN for product specifications.
+
+Features, information types, collection objects, meta features, and
+geometries (inline or external) are all required by the schema to
+have a gml:id attribute with a value that is unique within the dataset.
+The gml:id values must be used as the reference for the object from
+another object in the same dataset or another dataset.
+
+[[sec_DataQualityMetaFeatures]]
+=== Data quality meta-features
+
+One or more *QualityOfNonBathymetricData* features must cover the
+dataset.
+
+[[sec_SequenceObjects]]
+=== Sequence of objects
+
+The following sequence of objects is recommended:
+
+[pseudocode%unnumbered]
+====
+Spatial records for by-reference geometries
+    Point
+    Multi point
+    Curve
+    Composite Curve
+    Surface
+Information objects
+Feature objects
+    Meta features
+    Cartographic Features
+    Geo features
+====
+
+[[sec_FormatUpdateDatasets]]
+=== Data format for update datasets
+
+The data format for update datasets is the same as that for base datasets (clause <<sec_FormatSpec,droploc%>>).
+
+==== Attributes
+
+Instances of feature or information types in update datasets must contain all the attributes of the old instance, including any
+inline spatial attributes (i.e., inline geometry), except those attributes that are being removed.
+
+==== Associations
+
+An association to an instance of a feature or information type is
+treated as an attribute of the referring instance, and therefore adding
+or deleting an association means the original referring instance must
+be replaced with a new version. The instance at the other end of the
+association needs to be replaced if and only if it contains a reference
+to the first instance.
+
+==== Spatial primitives
+
+Spatial primitives that are not inline (that is, geometry that is encoded
+as an independent spatial object in the dataset) are treated like any
+other object, that is, it needs to be updated if and only if the primitive
+has changed (for example, a coordinate is updated).
+
+Spatial primitives are also updated (for example, to update coordinates) as whole objects.
+
+* For inline spatial primitives, this entails updating the entire feature instances.
+* Non-inline spatial primitives are updated by encoding the replacement in its entirety in the update dataset. The replacment
+must have the same _gml:id_ as the object it replaces.
+
+==== Deletion
+
+Feature and information type instances are deleted without replacement by setting the _fixedDateRange.dateEnd_ attribute of the instance
+to the date of deletion, which will usually be the issue date of the update.
+
+Spatial objects that are not inline can be deleted without replacement only by releasing a new edition of the dataset omitting the spatial
+object to be removed.
+
+[[sec_DatumCoverage]]
+=== Datum coverage
+
+All features in a dataset with depth or elevation attributes must
+be covered by *SoundingDatum* and *VerticalDatumOfData* meta-features
+respectively.
+
+[[sec_AttributeMultiplicity]]
+=== Attribute multiplicity
+
+In general, if all the sub-attributes of a complex attribute are optional,
+at least one of them must be present and have a value that is not
+empty (or white space, for attributes of type "text" or types derived
+from "text").
+
+Similarly, if all the attributes of an information type are optional,
+at least one of them must be present and have a non-empty value.
+
+Note that there is no such general rule for features, though the DCEG
+may require it for specific features.
+
+----

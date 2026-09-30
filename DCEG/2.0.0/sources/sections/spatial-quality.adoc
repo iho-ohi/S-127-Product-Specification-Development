@@ -1,0 +1,12 @@
+<<<
+[[sec_spatial_quality]]
+[type=clause]
+== Spatial Quality
+
+=== Introduction
+
+The spatial quality for individual spatial primitives may be reported using the SpatialQuality information type.
+The conceptual model is depicted in <<Fig_2.1>>.
+
+include::features/SpatialQuality.adoc[]
+

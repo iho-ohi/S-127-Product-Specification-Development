@@ -1,0 +1,21 @@
+==== General
+
+If it is required to encode an area with underkeel allowance requirements, it must be done using the feature *UnderkeelClearanceAllowanceArea*. This feature
+class has the options to encode a fixed allowance value or a variable allowance value as a percentage of either the draught or the beam of the vessel.
+
+This feature should not be used as a substitute for potentially more accurate information available in S-129 data, where that is available.
+
+==== Remarks
+
+* If it is required to encode a fixed underkeel allowance, this must be done using the attribute _underkeelAllowanceFixed_. The fixed underkeel allowance
+value must be encoded as metres, in a resolution of 0.1m.
+* If it is required to encode a variable underkeel allowance as a factor of the ship’s draught, this must be done using the attributes
+_underkeelAllowanceVariableDraughtBased_ and _operation_. The percentage of the draught is encoded in the _underkeelAllowanceVariableDraughtBased_, and the
+_operation_ attribute is used to indicate is it is the largest value of the draught that is used. 
+* If it is required to encode a variable underkeel allowance as a factor of the ship’s beam, this must be done using the attributes
+_underkeelAllowanceVariableBeamBased_ and _operation_. The percentage of the beam is encoded in the _underkeelAllowanceVariableBeamBased_, and the _operation_ attribute
+is used to indicate is it is the largest width of the beam that is used.
+* If the complex attribute _underKeelAllowance_ is present at least one of its sub-attributes must be populated.
+* If it is required to encode a water level trend that is a condition of the underkeel allowance, this must be done using the attribute _waterLevelTrend_.
+* If there are different underkeel allowance conditions depending on the water level trend, several overlapping instances
+of *UnderkeelClearanceAllowanceArea* must be encoded to capture all conditions.

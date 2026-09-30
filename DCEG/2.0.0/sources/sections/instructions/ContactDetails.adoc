@@ -1,0 +1,27 @@
+==== General
+
+The *ContactDetails* information type provides several attributes for encoding different types of contact details.
+
+*ContactDetails* may be associated to:
+
+* An *Authority* information type via an information association (*AuthorityContact*), in which case it encodes the contact information for the organization in general.
+* A geo feature via a feature association *ServiceContact*, inherited by geo features from *OrganizationContactArea* (<<ftable_OrganizationContactArea,droploc%>>),
+in which case it encodes contact information particular to the specific feature, either because further information about the controlling authority is not
+available or because the contact is specific to the feature.
+
+A single instance of *ContactDetails* may be referenced from multiple feature or information type instances.
+
+At least one of the attributes of *ContactDetails* must be populated.
+
+==== Remarks
+
+* If it is required to encode different call name, call sign, communication preference or contact instructions in different languages, this must be done
+by creating and associating a different instance of ContactDetails per language. The _language_ attribute must be used to designate the language(s) of each
+instance. If there is no difference in these attributes for different languages, a singe instance of *ContactDetails* should be created and all the languages
+indicated using _language_ attributes.
+* For attributes which allow multiplicity &gt; 1 (_contactAddress_, _frequencyPair_, _information_, _onlineResource_, and _telecommunications_), information that is
+different for different languages may be encoded using different attribute instances taking care to indicate the language in each attribute instance. Where there is no
+language sub-attribute, use another appropriate sub-attribute (for example, _contactInstructions_ or _onlineResourceDescription_) to indicate the language.
+* The name of the contact (for example, the name of the agency, pilot service, office, etc.) should be encoded in the _featureName_ attribute, which is
+inherited from *InformationType*.
+* Reverse links from *ContactDetails* to a geo feature referencing it are not encoded, since S-100 feature catalogues does not provide information-to-feature bindings.

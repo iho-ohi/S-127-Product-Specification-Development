@@ -1,0 +1,54 @@
+[[ftable_TextPlacement]]
+=== Text Placement
+
+[cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+8+| [underline]#IHO Definition:# The Text Placement feature is used in association with the Feature Name attribute or a light description to optimize text positioning in ECDIS.
+8+h| [underline]#S-127 Geo Feature:# TextPlacement
+8+h| [underline]#Super Type:# 
+8+h| [underline]#Primitives:# point
+3+| _Real World_ 2+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
+3+h|S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| Text Offset Bearing |
+2+| |IN | 1,1
+
+3+| Text Offset Distance |
+2+| |IN | 1,1
+
+3+| Text Rotation |
+2+| |BO | 0,1
+
+3+| Text Type |
+2+|1: Name +
+ |EN | 1,1
+
+3+| Scale Minimum |
+2+| |IN | 0,1
+
+8+h| Inherited Attributes
+
+3+h|S-127Attribute 3+h| Inherited From h| Type h| Multiplicity
+
+8+h| No inherited attributes
+|===
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Information associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+
+|===
+
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Feature associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+|thePositionProvider|TextAssociation|FeatureType|composition|1,1
+|===
+
+
+include::../instructions/TextPlacement.adoc[]
+

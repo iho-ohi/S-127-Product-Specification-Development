@@ -1,0 +1,233 @@
+[data2text,PROD=config/product.json]
+----
+[[sec_11]]
+== Portrayal
+
+[[sec_11.1]]
+=== Introduction
+
+{{PROD.id}} portrayal is intended to provide a way to visualize the contents
+of {{PROD.id}} information either in isolation or in combination with an
+S-101 ENC.
+
+{{PROD.id}} portrayal is covered by the portrayal model as defined in S-100.
+The Portrayal Catalogue defines symbology and the portrayal rules
+for each feature/attribute combination contained in the Feature Catalogue.
+
+{{PROD.id}} uses the portrayal process defined in S-100 Part 9.
+
+[[sec_11.2]]
+=== Portrayal Catalogue
+
+Citation information for the Portrayal Catalogue is provided in <<table_11-1>>
+below.
+
+[[table_11-1]]
+.{{PROD.id}} Portrayal Catalogue
+[cols="4"]
+|===
+h| No. h| ISO class or attribute h| Type h| Value
+
+| --    | CI_Citation           | Class                          | --
+| 1     | title                 | CharacterString                | {{PROD.id}} Portrayal Catalogue
+| 2     | date                  | CI_Date (class)                | --
+| 2.1   | date                  | DateTime                       | 2025-12-31 (or later - see note)
+| 2.2   | dateType              | CI_DateTypeCode (ISO codelist) | publication
+| 3     | edition               | CharacterString                | 2.0.0
+| 4     | editionDate           | DateTime                       | 2025-12-31 (or later - see note)
+| 5     | citedResponsibleParty | CI_Responsibility (class)      | --
+| 5.1   | role                  | CI_RoleCode (ISO codelist)     | publisher
+| 5.2   | party                 | CI_Organisation (class)        | --
+| 5.2.1 | name                  | CharacterString                | International Hydrographic Organization
+| 6     | otherCitationDetails  | CharacterString                | (reserved)
+| 7     | onlineResource        | CI_OnlineResource (class)      | --
+| 7.1   | linkage               | CharacterString (URL)          | https://registry.iho.int/
+| 7.2   | name                  | CharacterString                | {{PROD.id}} Portrayal Catalogue
+| 7.3 | description | CharacterString
+| XML Portrayal Catalogue accompanied by related files for symbols, colour profiles, rules, etc
+
+|===
+
+NOTE&#58; As of the preparation of this document, development tools and
+viewers for S-100 GML datasets using S-100-conformant portrayal catalogues
+are not available. The portrayal catalogue may therefore need to be
+updated and later builds with later dates may become available as
+development tools and viewers are updated.
+
+[[sec_11.3]]
+=== General rules and guidelines
+
+[[sec_11.3.1]]
+==== The attribute _language_
+
+The attribute _language_ is intended to allow the portrayal implementation
+to select instances of information types or complex attributes according
+to the user's preferred language. Implementers should use _language_
+values to structure the display according to the language settings,
+for example to display feature names (from the _featureName_ complex
+attribute) in the preferred language or link to support files in the
+preferred language (as indicated by the _language_ attribute of complex
+attribute _information_).
+
+If there is no preferred language set by the display or there is no
+instance in the preferred language, the default instance (designated
+by the absence of a _language_ attribute or with _language_ attribute
+indicating English) should be displayed.
+
+The specification of the _language_ attribute in the IHO GI registry
+states "The language is encoded by a 3 character code following
+ISO 639-2/T." These codes and the corresponding language names for
+display purposes may be obtained from the codelist _S100_MD_LanguageCode_
+in the S-100 codelists file, which is part of the S-100 schemas distribution
+footnote:[Available from https://schemas.s100dev.net. The XML and
+human-readable versions of the codelists file for S-100 Edition 5.2.0
+are located at
+https://schemas.s100dev.net/schemas/S100/5.2.0/resources/Codelists/cat/codelists.xml
+and
+https://schemas.s100dev.net/schemas/S100/5.2.0/resources/Codelists/cat/codelists.html
+respectively.].
+
+[[sec_11.3.2]]
+==== Structured text in displays
+
+Sailing directions may provide information in structured form
+(tables, bulleted or numbered lists, etc.), which may be taken as
+guidance for online display of the {{PROD.id}} equivalents, since mariners
+may be familiar with the structure of similar information in printed
+or digital publications.
+
+[[sec_11.4]]
+=== Schedules
+
+Schedule information is encoded in the *ServiceHours* and *NonStandardWorkingDay*
+information types. Schedules should be displayed as tabulations according
+to the day of the week. A template for the tabulation is shown in
+<<table_11.2>>. The objects and attributes from which the displayed
+information is derived are shown in italics. Implementers may deviate
+from the layout shown provided the resulting display shows at least
+the information specified in the table (for example, exceptions from
+*NonStandardWorkingDay* may be placed in an additional column instead
+of a separate row, or merged into the _Notes_ column).
+
+[[table_11.2]]
+.General layout of schedules display
+[cols="a,a,a,a"]
+|===
+h| Operations h| Days h| Times h| Notes
+
+4+| (Table sub-header, from _featureName_ if present - omit this row
+if _featureName_ is not present)Links to other unusual attributes
+like source and graphic can be included here.
+
+| Normal, Closed, Unmanned OR other: abcde 
+
+Attribute _categoryOfSchedule_ 
+
+From _ServiceHours_ Date ranges _fixedDataRange, periodicDateRange_
+
+| (Day(s) of week) 
+
+DoW (single day) +
+OR +
+DoW - DoW (if _dayOfWeekIsRange_ = _true_) +
+OR +
+DoW, DoW (if _dayOfWeekIsRange_ = false)
+
+| (Times of day) +
+hh:mm–hh:mm +
+hh:mm–hh:mm …
+
+_timeOfdayStart_, _timeOfDayEnd_
+
+| (Additional information) +
+_complex attribute information_
+
+4+| (repeat _according to multiplicity of scheduleByDayOfWeek)_
+
+| Exceptions 
+
+_NonStandardWorkingDay_ associated to the above _ServiceHours_ 
+| (fixed and variable date(s) from _dateFixed_ or _dateVariable_) |
+| (Additional information)_complex attribute information_
+
+4+| _(repeat both rows above, according to multiplicity of ServiceHours
+associated to the feature or information type)_
+
+|===
+
+[NOTE]
+====
+. The "Normal, Closed, …" row represents information from *ServiceHours*,
+the "Exceptions" row from *NonStandardWorkingDay* associated to that
+*ServiceHours*.
+. If there is more than one *ServiceHours* instance associated to
+the same feature or information type, the rows are repeated.
+This might be the case if there are different schedules for different
+types of operations (normal, unmanned, etc.).
+. DoW represents _scheduleByDayOfWeek.timeIntervalsByDayOfWeek.dayOfWeek_.
+. Times must be ordered according to the sequence of _timeOfDaystart_
+and _timeOfDayEnd_ attributes in the dataset (this allows for encoding
+multiple periods in the day if needed, for example 08:00 - 12:00 and
+13:00 - 17:00).
+. The "Notes" column contains the content of the information attribute
+of *ServiceHours* or *NonStandardWorkingDay* (either the content of
+the text sub-attribute or a link to the text, as appropriate).
+. Inclusion of the header row(s) is left to implementer discretion.
+. Other attributes (for example, _graphic_) are not expected to be
+used for encoding schedule information, but if populated should be
+accessible via the "Notes" column or in header or trailer rows.
+====
+
+Since S-100 Edition 5.2.0 portrayal does not provide for specifying
+templates for text formatting, the implementation of tabular forms
+must be left to implementers for this edition. As a provisional alternative,
+information may be displayed in text form, with rows of <<table_11.2>>
+converted to phrases:
+
+Normal operation: (date range) DoW-DoW, hh:mm-hh:mm, (additional information/link)
+
+Exceptions: (fixed/variable dates), (additional information/link)
+
+[[sec_11.5]]
+=== Limitations based on vessel dimensions and other characteristics
+
+The information type *Applicability* may be displayed in either text
+or tabular form. Of the attributes of Applicability, all but
+_logicalConnectives_ express a conditional phrase, while _logicalConnectives_
+encodes how the separate conditional phrases are linked.
+
+Multiple values of attributes which allow more than one value (_categoryOfCargo_
+and _categoryOfDangerousOrHazardousCargo_) should be treated as
+"inclusive OR" (i.e., if _categoryOfCargo_=1 and 2, then it means
+vessels with either bulk or container cargo, or both).
+
+Text form means natural language phrases generated from the attributes
+and their values. The suggested method is to generate a text phrase
+from each attribute (except _logicalConnectives_) and its value, and
+use _logicalConnectives_ to add connectives. For example, a single
+*Applicability* object encoding all the three conditions in <<table_dimensions_example>>
+and _logicalConnectives_=AND can be converted as the condition:
+
+"length overall greater than 50 metres AND less than 90 metres, AND
+breadth greater than 20 metres"
+
+or into a bulleted list:
+
+* length overall greater than 50 metres, and
+* length overall less than 90 metres, and
+* breadth greater than 20 metres.
+
+The text so generated should be linked or otherwise related to the
+feature or information type to which it applies depending on the nature
+(and attributes, if any) of the association between *Applicability*
+and the feature or information type to which it is associated.
+For example, the text generated might be preceded by the text of the
+linked *Regulation* (for *InclusionType* associations), or the text
+generated from *Applicability* appear in a hover box linked to a geographic
+feature (for *PermissionType* associations).
+
+Tabular display or mixed tabular/text display of conditions is also
+allowable. The design of tabular forms is left to implementers in
+this edition since S-100 portrayal in Edition 5.2.0 does not provide
+for the specification of table templates.
+----

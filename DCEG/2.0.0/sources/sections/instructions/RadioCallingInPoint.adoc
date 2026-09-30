@@ -1,0 +1,25 @@
+==== General
+
+Radio reporting points, also called radio calling-in points, have been established in certain busy waterways and port approaches to assist traffic control. On
+passing these points or crossing a defined line, vessels are required to report on VHF to a Traffic Control Centre.
+If it is required to encode a radio reporting point or line, it must be done using the feature *RadioCallingInPoint*.
+
+==== Remarks
+
+* Each *RadioCallingInPoint* feature of type point must carry at least one orientation. If it is required to encode the reciprocal orientation, to indicate
+that a bearing and its opposite apply to a *RadioCallingInPoint* feature, it must be done using attribute trafficFlow = 4 (two-way). If the same position is
+used for another orientation (not opposite) of traffic flow, a second _orientationValue_ attribute must be encoded.
+* The complex attribute _featureName_, sub-attribute _name_ is used to encode the name and/or alphanumeric designator of the *RadioCallingInPoint*.
+* Regulations, restrictions, and recommendations are encoded using one or more instances of the information classes *Regulations*, *Restrictions*, or
+*Recommendations*. For example, if the requirement to report by radio relates to certain classes of vessels only.
+* An associated instance of the information class *NauticalInformation* (see clause <<ftable_NauticalInformation,droploc%>>), complex attribute _information_
+is used to provide additional information, when *Regulations*, *Restrictions*, or *Recommendations* are not appropriate. 
+* *RadioCallingInPoint* features of type curve must be encoded such that resultant direction of the line (accounting for the direction of digitising and
+any subsequent reversal of the curve) is such that the direction of traffic that is required to report is to the right. For curve features, it is not
+required to populate _orientation_.
+* If it is required to encode the area of a Vessel Traffic Service (VTS) containing radio reporting points or requiring periodic position reporting, this
+should be done using the feature *VesselTrafficServiceArea* (see clause <<ftable_VesselTrafficServiceArea,droploc%>>).
+* Each VHF-channel should be indicated, using the attribute _communicationChannel_ (clause <<attr_communicationChannel,droploc%>>).
+* If it is required to encode the cargo of a vessel required to report when passing the radio calling-in point, this must be done using the _categoryOfCargo_ attribute.
+* If it is required to encode a specific type of vessel that is required to report when passing the radio calling-in point, this must be done using
+the _categoryOfVessel_ attribute.

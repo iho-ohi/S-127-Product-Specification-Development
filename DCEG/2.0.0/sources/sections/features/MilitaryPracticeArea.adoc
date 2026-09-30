@@ -1,0 +1,112 @@
+[[ftable_MilitaryPracticeArea]]
+=== Military Practice Area
+
+[cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+8+| [underline]#IHO Definition:# An area within which naval, military or aerial exercises are carried out.
+8+h| [underline]#S-127 Geo Feature:# MilitaryPracticeArea
+8+h| [underline]#Super Type:# SupervisedArea
+8+h| [underline]#Primitives:# point surface
+3+| _Real World_ 2+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
+3+h|S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| Category of Military Practice Area |
+2+|2: Torpedo Exercise Area +
+3: Submarine Exercise Area +
+4: Firing Danger Area +
+5: Mine-Laying Practice Area +
+6: Small Arms Firing Range +
+ |EN | 0,*
+
+3+| Nationality |
+2+| |TE | 0,1
+
+3+| Restriction |
+2+|1: Anchoring Prohibited +
+2: Anchoring Restricted +
+3: Fishing Prohibited +
+4: Fishing Restricted +
+5: Trawling Prohibited +
+6: Trawling Restricted +
+7: Entry Prohibited +
+8: Entry Restricted +
+9: Dredging Prohibited +
+10: Dredging Restricted +
+11: Diving Prohibited +
+12: Diving Restricted +
+13: No Wake +
+15: Construction Prohibited +
+16: Discharging Prohibited +
+17: Discharging Restricted +
+18: Industrial or Mineral Exploration/Development Prohibited +
+19: Industrial or Mineral Exploration/Development Restricted +
+20: Drilling Prohibited +
+21: Drilling Restricted +
+22: Removal of Historical Artefacts Prohibited +
+23: Cargo Transhipment (Lightening) Prohibited +
+24: Dragging Prohibited +
+25: Stopping Prohibited +
+26: Landing Prohibited +
+27: Speed Restricted +
+39: Swimming Prohibited +
+ |EN | 0,*
+
+3+| Status |
+2+|1: Permanent +
+2: Occasional +
+5: Periodic/Intermittent +
+6: Reserved +
+7: Temporary +
+16: Watched +
+17: Unwatched +
+ |EN | 0,*
+
+8+h| Inherited Attributes
+
+3+h|S-127Attribute 3+h| Inherited From h| Type h| Multiplicity
+
+3+| Interoperability Identifier 3+| FeatureType | URN | 0,*
+3+| Feature Name 3+| FeatureType | C | 0,*
+3+| Fixed Date Range 3+| FeatureType | C | 0,1
+3+| Periodic Date Range 3+| FeatureType | C | 0,*
+3+| Scale Minimum 3+| FeatureType | IN | 0,1
+3+| Graphic 3+| FeatureType | C | 0,*
+3+| Source Indication 3+| FeatureType | C | 0,*
+3+| Text Content 3+| FeatureType | C | 0,*
+|===
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Information associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+
+|theServiceHours|LocationHours|ServiceHours|association|0,1
+|controlAuthority|ServiceControl + 
+(inherited from SupervisedArea) |Authority|association|0,1
+|theContactDetails|ServiceContact + 
+(inherited from OrganizationContactArea) |ContactDetails|association|0,*
+|permission|PermissionType + 
+(inherited from FeatureType) |Applicability|association|0,*
+|theRxN|AssociatedRxN + 
+(inherited from FeatureType) |AbstractRxN|association|0,*
+|theInformation|AdditionalInformation + 
+(inherited from FeatureType) |NauticalInformation|association|0,*
+|===
+
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Feature associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+|theCartographicText|TextAssociation + 
+(inherited from FeatureType) |TextPlacement|association|0,1
+|===
+
+
+include::../instructions/MilitaryPracticeArea.adoc[]
+* If the complex attribute _fixedDateRange_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _sourceIndication_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _textContent_ is present at least one of its sub-attributes must be populated.
+** If the _textContent_ sub-attribute _information_ is present at least one of its sub-attributes must be populated.
+

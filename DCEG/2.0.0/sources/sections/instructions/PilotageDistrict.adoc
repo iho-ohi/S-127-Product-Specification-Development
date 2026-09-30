@@ -1,0 +1,10 @@
+==== General
+
+If it is required to encode the area within which regulations regarding pilotage apply it should be done using the feature *PilotageDistrict*.
+
+==== Remarks
+
+* To encode the relevant regulations, an instance of the information class *Regulations*, *Recommendations*, *Restrictions*, or *NauticalInformation* (see clauses <<ftable_Regulations,droploc%>>, <<ftable_Recommendations,droploc%>>, <<ftable_Restrictions,droploc%>>, and <<ftable_NauticalInformation,droploc%>>) must be associated to the *PilotageDistrict*. The *NauticalInformation* class should be used only if none of the other three are suitable.
+* Where the limit of pilotage regulations are coincident with harbour or port limits (*HarbourAreaAdministrative*)it is not required to encode a *PilotageDistrict* feature.
+* The relationship between the pilotage district and any associated pilot boarding places should be encoded using the feature association *PilotageDistrictAssociation* (see clause <<fa_PilotageDistrictAssociation,droploc%>>).
+

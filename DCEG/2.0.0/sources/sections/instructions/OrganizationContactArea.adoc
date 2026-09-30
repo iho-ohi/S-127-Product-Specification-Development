@@ -1,0 +1,17 @@
+==== General
+
+This type adds the *ServiceContact* association to *ContactDetails* for any sub feature class.
+
+If it is necessary to encode contact information related to a particular feature, without encoding information about a supervising or controlling authority,
+it should be done using an associated *ContactDetails* information type. This can be used when:-
+
+* information about the supervising authority is unavailable, or,
+* when the contact information pertains to a particular feature, but not to all features supervised by the authority. For example, if contact details for
+different terminals are different though they are operated by the same operator, the *ServiceContact* association can be used to link particular contact
+information to particular terminal features.
+
+As an abstract type, instances of *OrganizationContactArea* cannot be directly encoded in datasets. However, the encoding instructions for this type
+apply to all its sub-types unless explicitly overriden in the encoding instructions for any particular sub-type.
+
+==== Remarks
+

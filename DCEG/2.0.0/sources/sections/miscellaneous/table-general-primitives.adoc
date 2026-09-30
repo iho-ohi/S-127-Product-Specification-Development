@@ -1,0 +1,32 @@
+[[table_general_primitives]]
+[cols="6a,a,a,a,a",options="headers",width="75%"]
+.Features and their spatial primitives
+|===
+h|Feature	h|P	h|C	h|S	h|N
+
+|CautionArea|P||S|
+|ConcentrationOfShippingHazardArea|||S|
+|ISPSCodeSecurityLevel||C|S|
+|LocalPortBroadcastServiceArea|||S|
+|MilitaryPracticeArea|P||S|
+|PilotBoardingPlace|P||S|
+|PilotService|||S|
+|PilotageDistrict|||S|
+|PiracyRiskArea|P||S|
+|PlaceOfRefuge|P||S|
+|RadarRange|||S|
+|RadioCallingInPoint|P|C||
+|RestrictedArea|||S|
+|RouteingMeasure||C|S|
+|ShipReportingServiceArea|||S|
+|SignalStationWarning|P||S|
+|SignalStationTraffic|P||S|
+|UnderKeelClearanceAllowanceArea|||S|
+|UnderKeelClearanceManagementArea|||S|
+|VesselTrafficServiceArea|||S|
+|WaterwayArea|||S|
+|DataCoverage|||S|
+|QualityOfNonBathymetricData|||S|
+|TextPlacement|P|||
+
+|===

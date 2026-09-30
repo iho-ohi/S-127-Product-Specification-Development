@@ -1,0 +1,23 @@
+==== General
+
+*Restrictions* is intended for restrictions that constrain the activities of vessels temporarily with or without the legal force, or for longer
+terms without the force of law; they may be issued by a local authority such as a port captain or US Coast Guard district.
+
+A single instance of *Restrictions* can be referenced by multiple feature instances.
+
+Modelling of restrictions where the default is all activities are prohibited and only exceptions are listed
+should be done as follows:
+
+* Create *Restrictions*._textContent.information.text_ = "All activities except those specifically permitted" (*Regulations* instead of *Restrictions* also works)
+* Assign *Restrictions*._textContent.information.headline_ = "Prohibited Activities"
+* Associate it to the feature via an *AssociatedRxN*
+* If it applies only to some kinds of vessels, also create an *Applicability* and associate it to the *Restrictions*.
+* Create a *Regulations* object with _rxnCode.actionOrActivity_ listing the permitted activities and _rxnCode.headline_ = "Permitted Activities" and link it
+to the feature with an *AssociatedRxN* (and link it to the same *Applicability* if defined)
+
+==== Remarks
+
+* Instances of Restrictions do not encode a reverse link to the geographic features which reference them. While an association from geographic feature to information type can be encoded in
+the geographic feature instance, the reverse association from the information type to the geographic feature is omitted from the
+information type instance.
+

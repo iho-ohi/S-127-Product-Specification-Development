@@ -1,0 +1,14 @@
+==== General
+
+This type adds the *ServiceControl* association to *Authority* for any sub feature class.
+
+If it is necessary to encode information a controlling authority or organization for a particular location, it should be done using an
+associated *Authority* information type. Contact details for the organization should be encoded in a *ContactDetails* associated to the *Authority*.
+
+For example, information about military authorities associated with military practice areas may be encoded in an *Authority* information type associated to the feature via a *ServiceControl* association.
+
+As an abstract type, instances of *SupervisedArea* cannot be directly encoded in datasets. However, the encoding instructions for this type
+apply to all its sub-types unless explicitly overriden in the encoding instructions for any particular sub-type.
+
+==== Remarks
+

@@ -1,0 +1,14 @@
+[%portrait]
+<<<
+== LIST OF ANNEXES
+
+These Annexes are separate files and can be found either in the S-127 Product Specification distribution package or at the locations indicated.
+
+Annex A:: Data Classification and Encoding Guide. Separate document. IHO Geospatial Information Registry, https://registry.iho.int
+
+Annex B:: Encoding Format. GML schema, Schematron rule files, and schema documentation. S-100 schema server, https://schemas.s100dev.net
+
+Annex C:: Feature catalogue. XML file. IHO Geospatial Information Registry, https://registry.iho.int
+
+Annex D:: Portrayal Catalogue. Zip archive of portrayal catalogue. IHO Geospatial Information Registry, https://registry.iho.int
+

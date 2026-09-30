@@ -1,0 +1,17 @@
+==== General
+
+If it is required to encode a place refuge for a ship or mariners, it must be done using the feature type *PlaceOfRefuge*.  If the place of refuge is equipped with communication equipment, the VHF communication channel can be described in the attribute _communicationChannel_. Communication information for authorities located at other places (or whose location is irrelevant or unknown) may be encoded in an associated *ContactDetails* object.
+
+Where possible the full extent of the place of refuge area should be encoded using surface geometry. When it is not possible to define the area, point geometry can be placed in a central place of the area.
+
+Authorities may designate any other location (port, harbour, a sheltered place along the coastline, etc.) as a place of refuge for a specific occurrence without designating it as a permanent or general place of refuge. Such places should not normally be encoded as *PlaceOfRefuge* features without consulting the responsible authority.
+
+The relevant IMO circular and policies issued by maritime authorities on places of refuge make it abundantly clear that designated places are not the only possibilities for refuge, however, data producers may, as a precaution, include general information about places of refuge with their datasets. Such general information may be encoded as a note advising mariners that other places of refuge may be arranged for a particular incident with the consent of the appropriate authorities. Such a note might be encoded as a *NauticalInformation* object associated to appropriate geographic features.
+
+Places of refuge may be indicated on source material such as charts by the addition of appropriate text. For example, see <<figure_PoR_example>> below.
+
+[[figure_PoR_example]]
+.Place of Refuge indicated on raster chart
+image::../images/PlaceOfRefuge.png[]
+
+==== Remarks

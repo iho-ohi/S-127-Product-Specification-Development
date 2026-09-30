@@ -1,0 +1,16 @@
+==== General
+
+*NauticalInformation* is intended for material that is largely informative in nature, of which does not fit into the category of regulation, recommendation,
+or restriction.
+
+A single instance of *NauticalInformation* can be referenced by multiple feature instances.
+
+
+==== Remarks
+
+* Instances of *NauticalInformation* do not encode a reverse link to the geographic features which reference them.
+While an association from geographic feature to information type can be encoded in the geographic feature instance, the reverse association from the
+information type to the geographic feature is omitted from the information type instance.
+* In theory, *NauticalInformation* can be associated with any geographic feature through either an *AdditionalInformation* or *AssociatedRxN* association.
+*AdditionalInformation* should be used only when the information encoded in *NauticalInformation* is general in nature and does not supplement information
+encoded in a *Regulations*, Restrictions*, or *Recommendations* object associated to the same feature.

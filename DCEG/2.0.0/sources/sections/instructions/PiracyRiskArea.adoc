@@ -1,0 +1,22 @@
+==== General
+
+When it is required to encode an area with risk of piracy or armed robbery, it must be done using a *PiracyRiskArea*.
+
+A *PiracyRiskArea* is an area where there is a raised risk of piracy or armed robbery. Piracy consists of any of the following acts:
+
+. any illegal acts of violence or detention, or any act of depredation, committed for private ends by the crew or the passengers of a private ship or a private aircraft, and directed:
+.. on the high seas, against another ship or aircraft, or against persons or property on board such ship or air-craft;
+.. against a ship, aircraft, persons or property in a place outside the jurisdiction of any State;
+. any act of voluntary participation in the operation of a ship or of an aircraft with knowledge of facts making it a pirate ship or aircraft;
+. any act of inciting or of intentionally facilitating an act described in subparagraph (a) or (b).
+
+(United Nations Convention on the Law of the Sea – Article 101)
+
+Armed robbery takes place within the jurisdiction of a State.
+
+Regular bulletins come from the IMB Piracy Reporting Centre – Kuala Lumpur.
+
+
+==== Remarks
+
+* If it required to encode any ship reporting requirements within the *PiracyRiskArea*, this must be done using an associated *ShipReport* information type. 

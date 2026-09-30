@@ -1,0 +1,102 @@
+[data2text,PROD=config/product.json]
+----
+==== General
+
+The meta feature *DataCoverage* encodes the area covered by the dataset. This feature is also used to provide the ECDIS with the scale information necessary for the determination of dataset loading and unloading in relation to the user selected viewing scale in the ECDIS.
+
+*DataCoverage* features must cover at least the total extent of all geographic features in the dataset, and must not overlap.
+
+==== Scale attributes
+
+The use of {{PROD.id}} data is scale-independent and minimum display scale will normally be (null) and maximum display scale 1000
+(the extreme values in the table of scales in the S-101 ENC, see <<table_scale_minimum_values>>). Should a producer need to
+encode different maximum and minimum display scales from the extreme (i.e., create scale-dependent datasets), the values of maximum
+and minimum display scales should be harmonized with base layer S-101 datasets (see the S-101 DCEG).
+
+The attribute _optimumDisplayScale_ is used to indicate the intended viewing scale for the data. The 
+value populated for _optimumDisplayScale_, therefore, provides a reference for the user selected viewing scale 
+in the ECDIS at which the overscale warning will be displayed as the Mariner continues to zoom in if there is no 
+larger optimum display scale {{PROD.abbrev}} dataset available.
+ 
+The mandatory attribute _maximumDisplayScale_ is used to indicate the largest intended viewing scale for the data.
+
+The mandatory attribute _minimumDisplayScale_ is used to indicate the smallest intended viewing scale for the 
+data. Where an empty (null) value is populated for 
+_minimumDisplayScale_, the ECDIS will continue to display the data regardless of how small the user selected 
+viewing scale becomes. The value populated for _minimumDisplayScale_, therefore, is intended to be used in 
+a series of datasets covering a geographic area to determine the dataset rendering (display) priority as the 
+user selected viewing scale becomes larger. 
+
+The values of maximum and minimum display scales should be harmonized with comparable base layer S-101 datasets (<<table_max_opt_min_scales_s101>>footnote:[The current S-101 DCEG
+should be consulted to take into account any revisions to S-101 since the preparation of this Product Specification.]).
+This serves to harmonize the loading strategy of {{PROD.abbrev}} information with that for the underlying ENCs.
+However, use of the same values as S-101 datasets is not mandatory in {{PROD.id}}.
+
+[[table_max_opt_min_scales_s101]]
+[cols="a,a,a",options="headers",width="75%"]
+.Maximum, optimum and minimum display scale values (from S-101 Ed. 2.0.0 DCEG)
+|===
+h| maximum display scale h|optimum display scale h|minimum display scale 
+.15+|Any value  | 10,000,000 | empty (null) 
+|3,500,000      |10,000,000 
+|1,500,000      |3,500,000 
+|700,000        |1,500,000 
+|350,000        |700,000 
+|180,000        |350,000 
+|90,000         |180,000 
+|45,000         |90,000 
+|22,000         |45,000 
+|12,000         |22,000 
+|8,000          |12,000 
+|4,000          |8,000 
+|3,000          |4,000 
+|2,000          |3,000 
+|1,000          |2,000
+|===
+
+NOTE&#58; The selection of values for _maximumDisplayScale_ and _minimumDisplayScale_ for any selected _optimumDisplayScale_ are at the discretion of
+the Data Producer. That is, any value listed for _maximumDisplayScale_ and _minimumDisplayScale_ above may be selected from any of the listed values,
+with the only restriction being that _maximumDisplayScale_ must be a smaller value than/equal to _optimumDisplayScale_ which must be a smaller value
+than _minimumDisplayScale_ (or any value if _minimumDisplayScale_ is  populated with an empty (null) value).
+
+Given that {{PROD.id}} data will overlay ENC and possibly other datasets, the conditions described in the S-101 DCEG “Data Coverage” clause for displaying overscale warnings and setting the viewing scale may be overridden by interoperability constraints or the presence of higher-priority datasets. The specification of such behaviour is out of scope for this document (the S-100 interoperability specification should address it for ECDIS).
+
+==== Number of feature instances
+
+There must be a minimum of one *DataCoverage* feature in a dataset.
+
+Typically, only a single *DataCoverage* feature should be used in a dataset. However, if the _optimumDisplayScale_ is different for discrete
+areas within a single dataset, this must be indicated by encoding separate, non-overlapping *DataCoverage* features, each having a different
+value populated for _optimumDisplayScale_. Producing Authorities are to note, however, that excessive use of multiple *DataCoverage* features having 
+different values of _optimumDisplayScale_ within a single dataset should be avoided. Where different values of _optimumDisplayScale_ are used, this
+should be restricted only to data compiled in order to achieve the intended navigational usage for the entire dataset.
+
+==== Compatibility of scale values
+
+Datasets must have the same value for _minimumDisplayScale_ for all *DataCoverage* features in the dataset. Datasets may have different values
+populated for _maximumDisplayScale_ for the *DataCoverage* features in the dataset; these values are typically populated as the value 
+corresponding to 2 x the scale (or half the denominator) value populated for _optimumDisplayScale_, but are at the discretion of the data producer.
+For example, the value for _maximumDisplayScale_ may be set to the same value as _optimumDisplayScale_ to have the “grossly overscaled” warning
+appear at any larger user selected viewing scale than _optimumDisplayScale_; or populated as the value corresponding to the _minimumDisplayScale_ 
+value for the next largest scale dataset(s) in the ENC portfolio.
+
+Where a series of differing _optimumDisplayScale_ datasets are compiled covering the same geographic area, the smallest scale value populated
+for _optimumDisplayScale_ for *DataCoverage* feature(s) in the dataset should correspond to the _minimumDisplayScale_, where populated, for the next
+largest _optimumDisplayScale_ dataset. The largest scale value populated for _optimumDisplayScale_ for *DataCoverage* feature(s) in 
+the dataset must not be a larger scale value than the _optimumDisplayScale_ for the next largest _optimumDisplayScale_ dataset, where such a dataset exists.
+
+
+==== Remarks
+
+* This meta feature is intended to support an indication of coverage and facilitate the loading and rendering (display) of datasets in the end-user system.
+* {{PROD.id}} being intended as an overlay for S-101 data, an {{PROD.id}} dataset, when initially loaded, will be  displayed in the ECDIS at the current setting for display scale.
+* If the dataset is not loaded an an overlay, and more than one *DataCoverage* feature exists for a dataset, the dataset, when initially loaded, will be 
+displayed in the ECDIS at a display scale corresponding to the largest scale value populated for _optimumDisplayScale_. 
+* Where a dataset consists of only one *DataCoverage* feature, the value for the _maximumDisplayScale_ populated in the dataset discovery metadata must be the
+same as the value populated for _maximumDisplayScale_ on the *DataCoverage*.
+* For any *DataCoverage* feature, _maximumDisplayScale_ < _minimumDisplayScale_.
+* Except for the largest scale dataset coverage, datasets with multiple *DataCoverage* features must not have excessive differences in the values populated
+for _optimumDisplayScale_ between the *DataCoverage* features. Typically, this should be interpreted as there being no more than one scale step value as defined
+in  <<table_max_opt_min_scales_s101>> above between the optimum display scale values in a single dataset.
+
+----

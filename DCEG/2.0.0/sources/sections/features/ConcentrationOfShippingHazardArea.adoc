@@ -1,0 +1,72 @@
+[[ftable_ConcentrationOfShippingHazardArea]]
+=== Concentration of Shipping Hazard Area
+
+[cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+8+| [underline]#IHO Definition:# An area where hazards, caused by concentrations of shipping, may occur. Hazards are risks to shipping, which stem from sources other than shoal water or obstructions.
+8+h| [underline]#S-127 Geo Feature:# ConcentrationOfShippingHazardArea
+8+h| [underline]#Super Type:# FeatureType
+8+h| [underline]#Primitives:# surface
+3+| _Real World_ 2+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
+3+h|S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| Category of Concentration of Shipping Hazard Area |
+2+|1: Concentration of Merchant Shipping +
+2: Concentration of Recreational Vessels +
+3: Concentration of Fishing Vessels +
+4: Concentration of Military Vessels +
+ |EN | 0,*
+
+3+| Status |
+2+|1: Permanent +
+2: Occasional +
+5: Periodic/Intermittent +
+7: Temporary +
+16: Watched +
+17: Unwatched +
+ |EN | 0,*
+
+8+h| Inherited Attributes
+
+3+h|S-127Attribute 3+h| Inherited From h| Type h| Multiplicity
+
+3+| Interoperability Identifier 3+| FeatureType | URN | 0,*
+3+| Feature Name 3+| FeatureType | C | 0,*
+3+| Fixed Date Range 3+| FeatureType | C | 0,1
+3+| Periodic Date Range 3+| FeatureType | C | 0,*
+3+| Scale Minimum 3+| FeatureType | IN | 0,1
+3+| Graphic 3+| FeatureType | C | 0,*
+3+| Source Indication 3+| FeatureType | C | 0,*
+3+| Text Content 3+| FeatureType | C | 0,*
+|===
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Information associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+
+|permission|PermissionType + 
+(inherited from FeatureType) |Applicability|association|0,*
+|theRxN|AssociatedRxN + 
+(inherited from FeatureType) |AbstractRxN|association|0,*
+|theInformation|AdditionalInformation + 
+(inherited from FeatureType) |NauticalInformation|association|0,*
+|===
+
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Feature associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+|theCartographicText|TextAssociation + 
+(inherited from FeatureType) |TextPlacement|association|0,1
+|===
+
+
+include::../instructions/ConcentrationOfShippingHazardArea.adoc[]
+* If the complex attribute _fixedDateRange_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _sourceIndication_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _textContent_ is present at least one of its sub-attributes must be populated.
+** If the _textContent_ sub-attribute _information_ is present at least one of its sub-attributes must be populated.
+

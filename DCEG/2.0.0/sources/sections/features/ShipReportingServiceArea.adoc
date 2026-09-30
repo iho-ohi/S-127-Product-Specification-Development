@@ -1,0 +1,68 @@
+[[ftable_ShipReportingServiceArea]]
+=== Ship Reporting Service Area
+
+[cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+8+| [underline]#IHO Definition:# A service established by a relevant authority consisting of one or more reporting points or lines at which ships are required to report their identity, course, speed and other data to the monitoring authority.
+8+h| [underline]#S-127 Geo Feature:# ShipReportingServiceArea
+8+h| [underline]#Super Type:# ReportableServiceArea
+8+h| [underline]#Primitives:# surface
+3+| _Real World_ 2+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
+3+h|S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| Service Access Procedure |
+2+| |TE | 0,1
+
+3+| Requirements for Maintenance of Listening Watch |
+2+| |TE | 1,1
+
+8+h| Inherited Attributes
+
+3+h|S-127Attribute 3+h| Inherited From h| Type h| Multiplicity
+
+3+| Interoperability Identifier 3+| FeatureType | URN | 0,*
+3+| Feature Name 3+| FeatureType | C | 0,*
+3+| Fixed Date Range 3+| FeatureType | C | 0,1
+3+| Periodic Date Range 3+| FeatureType | C | 0,*
+3+| Graphic 3+| FeatureType | C | 0,*
+3+| Source Indication 3+| FeatureType | C | 0,*
+3+| Text Content 3+| FeatureType | C | 0,*
+|===
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Information associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+
+|reptForTrafficServ|TrafficServiceReport + 
+(inherited from ReportableServiceArea) |ShipReport|association|0,*
+|controlAuthority|ServiceControl + 
+(inherited from SupervisedArea) |Authority|association|0,1
+|theContactDetails|ServiceContact + 
+(inherited from OrganizationContactArea) |ContactDetails|association|0,*
+|permission|PermissionType + 
+(inherited from FeatureType) |Applicability|association|0,*
+|theRxN|AssociatedRxN + 
+(inherited from FeatureType) |AbstractRxN|association|0,*
+|theInformation|AdditionalInformation + 
+(inherited from FeatureType) |NauticalInformation|association|0,*
+|===
+
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Feature associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+|consistsOf|TrafficControlServiceAggregation|RadioCallingInPoint RadarRange SignalStationWarning SignalStationTraffic|association|0,*
+|theCartographicText|TextAssociation + 
+(inherited from FeatureType) |TextPlacement|association|0,1
+|===
+
+
+include::../instructions/ShipReportingServiceArea.adoc[]
+* If the complex attribute _fixedDateRange_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _sourceIndication_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _textContent_ is present at least one of its sub-attributes must be populated.
+** If the _textContent_ sub-attribute _information_ is present at least one of its sub-attributes must be populated.
+

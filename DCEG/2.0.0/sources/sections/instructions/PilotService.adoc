@@ -1,0 +1,9 @@
+==== General
+
+When it is required to encode individual pilot services within a pilot district, this must be done using the feature *PilotService*.
+
+Contact information for the pilot service must be encoded in a *ContactDetails* information type associated to the pilot service by a *ServiceContact* association.
+
+==== Remarks
+
+* If it is required to encode the ship to shore or shore to ship contact information as distinct from that for the pilot service itself, it must be done using an instance of *ContactDetails* (see clause <<ftable_ContactDetails,droploc%>>). This *ContactDetails* must be associated to the *PilotService* feature using the association *AdditionalInformation* and must indicate that is is for ship-to-shore communications in a _contactInstructions_ or _information.headline_ attribute.

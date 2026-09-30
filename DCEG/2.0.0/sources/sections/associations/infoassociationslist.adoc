@@ -1,0 +1,194 @@
+
+[[fa_AdditionalInformation]]
+=== Additional Information
+
+*Definition* : A feature association for the binding between at least one instance of a geo feature and an instance of an information type.
+
+*CamelCase* : AdditionalInformation
+
+*Remarks* : 
+
+*Roles* : theInformation
+
+[[fa_AuthorityContact]]
+=== Authority Contact
+
+*Definition* : Contact information for an authority
+
+*CamelCase* : AuthorityContact
+
+*Remarks* : 
+
+*Roles* : theAuthority theContactDetails
+
+[[fa_AuthorityHours]]
+=== Authority Hours
+
+*Definition* : Service hours for an authority
+
+*CamelCase* : AuthorityHours
+
+*Remarks* : 
+
+*Roles* : theAuthority_srvHrs theServiceHours
+
+[[fa_AssociatedRxN]]
+=== Associated RxN
+
+*Definition* : Association between a geographic location and a regulation, restriction, recommendation, or nautical information
+
+*CamelCase* : AssociatedRxN
+
+*Remarks* : 
+
+*Roles* : theRxN
+
+[[fa_ExceptionalWorkday]]
+=== Exceptional Workday
+
+*Definition* : Exception to the usual working day
+
+*CamelCase* : ExceptionalWorkday
+
+*Remarks* : 
+
+*Roles* : theServiceHours_nsdy partialWorkingDay
+
+[[fa_InclusionType]]
+=== Inclusion Type
+
+*Definition* : Association class specifying the relationship between the subset of vessels described by an APPLIC data object and a regulation (restriction, recommendation, or nautical information).
+
+*CamelCase* : InclusionType
+
+*Attributes* :
+
+[cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+3+h| Attribute h| Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| Membership |
+2+|1: Included +
+2: Excluded +
+ |EN | 1,1
+
+|===
+
+*Remarks* : 
+
+*Roles* : theApplicableRxN isApplicableTo
+
+[[fa_PermissionType]]
+=== Permission Type
+
+*Definition* : Association class for associations describing whether the subsets of vessels determined by the ship characteristics specified in APPLIC may (or must, etc.) transit,  enter, or use  a feature.
+
+*CamelCase* : PermissionType
+
+*Attributes* :
+
+[cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+3+h| Attribute h| Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| Category of Relationship |
+2+|1: Prohibited +
+2: Not Recommended +
+3: Permitted +
+4: Recommended +
+5: Required +
+6: Not Required +
+7: Exclusively Permitted +
+ |EN | 1,1
+
+|===
+
+*Remarks* : 
+
+*Roles* : permission
+
+[[fa_RelatedOrganisation]]
+=== Related organisation
+
+*Definition* : Related Organisation
+
+*CamelCase* : RelatedOrganisation
+
+*Remarks* : 
+
+*Roles* : organisationRelatedRxN theOrganisation
+
+[[fa_ReportingAuthority]]
+=== Reporting Authority
+
+*Definition* : The authority with which a report must be filed
+
+*CamelCase* : ReportingAuthority
+
+*Remarks* : 
+
+*Roles* : reportTo theShipReport
+
+[[fa_ReportingRequirement]]
+=== Reporting Requirement
+
+*Definition* : Association between types of reports and classes of vessels which must file report of the type described
+
+*CamelCase* : ReportingRequirement
+
+*Remarks* : 
+
+*Roles* : mustBeFiledBy theShipReport
+
+[[fa_ServiceContact]]
+=== Service Contact
+
+*Definition* : Contact details for a service or facility
+
+*CamelCase* : ServiceContact
+
+*Remarks* : 
+
+*Roles* : theContactDetails
+
+[[fa_ServiceControl]]
+=== Service Control
+
+*Definition* : The controlling authority for a service area
+
+*CamelCase* : ServiceControl
+
+*Remarks* : This is an information association linking a location where a service is provided with an information type describing the provider. Contrast to serviceProvisionArea, which is a feature association linking the area served with another feature describing the provider. Role controlledService encodable only as a generic inverse association in 3.0.0 datasets as it is an information->feature link
+
+*Roles* : controlAuthority
+
+[[fa_SpatialAssociation]]
+=== Spatial Association
+
+*Definition* : An association for the binding between a spatial type and its spatial quality information.
+
+*CamelCase* : SpatialAssociation
+
+*Remarks* : 
+
+*Roles* : theQualityInformation
+
+[[fa_LocationHours]]
+=== Location Hours
+
+*Definition* : Working hours for a service or facility described by a geographic location
+
+*CamelCase* : LocationHours
+
+*Remarks* : 
+
+*Roles* : theServiceHours
+
+[[fa_TrafficServiceReport]]
+=== Traffic Service Report
+
+*Definition* : Association between traffic control service and reports required of vessels pertaining to that area
+
+*CamelCase* : TrafficServiceReport
+
+*Remarks* : 
+
+*Roles* : reptForTrafficServ

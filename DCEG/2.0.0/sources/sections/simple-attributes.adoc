@@ -1,0 +1,5 @@
+[[sec_simple_attributes]]
+== Simple Attributes
+
+include::attributes/simplelist.adoc[]
+

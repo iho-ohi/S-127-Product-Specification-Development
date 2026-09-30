@@ -1,0 +1,17 @@
+==== General
+
+*AbstractRxN* is the supertype of the four types intended primarily for encoding information from regulatory or other text sources. The attributes _categoryOfRxN_
+and _actionOrActivity_ should be encoded wherever possible in order to allow software to classify the content according to the type of regulation (_categoryOfRxN_)
+and its effects on common maritime activities by both commercial and recreational vessels.
+
+The complex attribute _rxNCode_ can be used to classify regulations (or recommendations, etc.) according to their principal subject (sub-attribute _categoryOfRxN_)
+and the type of vessel activity affected (sub-attribute _actionOrActivity_), as well as provide a sequence of brief topic headings (sub-attribute _headline_).
+The _rxNCode_ attribute is intended to be used to allow mariners to obtain information relevant to particular subjects or to particular kinds of vessel operations.
+
+* As an abstract type, instances of *AbstractRxN* cannot be directly encoded in datasets. However, the encoding instructions for this type
+apply to all its sub-types unless explicitly overriden in the encoding instructions for any particular sub-type.
+
+==== Remarks
+
+* At least one of the attributes _textContent_ and _graphic_ must be populated. Populating both is permitted.
+

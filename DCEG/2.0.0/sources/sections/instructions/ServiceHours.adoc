@@ -1,0 +1,13 @@
+==== General
+
+See clause <<sec_2.4.10.4,droploc%>> for more information on how to use *ServiceHours* to encode schedules.
+
+Seasonal variations in service hours can be encoded using multiple *ServiceHours* instances with appropriate _periodicDateRange_ values.
+
+Ovelapping or null work periods in the same schedule are generally an error and should be avoided.
+
+==== Remarks
+
+* If none of the listed values of _categoryOfSchedule_ applies, _categoryOfSchedule_ must be omitted and its co-sub-attribute _text_ used to
+describe the nature of the schedule. 
+

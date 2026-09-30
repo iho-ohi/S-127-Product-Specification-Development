@@ -1,0 +1,49 @@
+[[ftable_DataCoverage]]
+=== Data Coverage
+
+[cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+8+| [underline]#IHO Definition:# A geographical area that describes the coverage and extent of spatial objects.
+8+h| [underline]#S-127 Geo Feature:# DataCoverage
+8+h| [underline]#Super Type:# 
+8+h| [underline]#Primitives:# surface
+3+| _Real World_ 2+| _Paper Chart Symbol_ 3+| _ECDIS Symbol_
+3+h|S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+3+| Interoperability Identifier |
+2+| |URN | 0,*
+
+3+| Maximum Display Scale |
+2+| |IN | 1,1
+
+3+| Minimum Display Scale |
+2+| |IN | 1,1
+
+3+| Optimum Display Scale |
+2+| |IN | 0,1
+
+8+h| Inherited Attributes
+
+3+h|S-127Attribute 3+h| Inherited From h| Type h| Multiplicity
+
+8+h| No inherited attributes
+|===
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Information associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+
+|===
+
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Feature associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+|===
+
+
+include::../instructions/DataCoverage.adoc[]
+

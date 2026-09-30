@@ -1,0 +1,10 @@
+==== General
+
+Adds the *TrafficServiceReport* association to *ShipReport* for any sub feature class. This type is used as a super-type for non-abstract areas where
+reporting by a vessel is required or recommended. As a sub-type of *SupervisedArea* it inherits the attributes and associations of *SupervisedArea* and
+its super-types.
+
+As an abstract type, instances of *ReportableServiceArea* cannot be directly encoded in datasets. However, the encoding instructions for this type
+apply to all its sub-types unless explicitly overriden in the encoding instructions for any particular sub-type.
+
+==== Remarks

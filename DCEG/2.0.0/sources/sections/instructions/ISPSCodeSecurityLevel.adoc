@@ -1,0 +1,8 @@
+==== General
+
+When it is required to encode the security level of an area, such as a port or area of a port, this must be done using the feature *ISPSCodeSecurityLevel*. The specific ISPS level is encoded in the attribute ispsLevel.
+
+==== Remarks
+
+* When it is required to encode an *ISPSCodeSecurityLevel* feature but the exact level is unknown, a null value for attribute *iSPSLevel* can be given and any clarifying remarks added to an associated *NauticalInformation*. 
+* The International Ship and Port Facility Security (ISPS) Code is an amendment to the Safety of Life at Sea (SOLAS) Convention (1974/1988) on minimum security arrangements for ships, ports and government agencies. Having come into force in 2004, it prescribes responsibilities to governments, shipping companies, shipboard personnel, and port/facility personnel to "detect security threats and take preventative measures against security incidents affecting ships or port facilities used in international trade

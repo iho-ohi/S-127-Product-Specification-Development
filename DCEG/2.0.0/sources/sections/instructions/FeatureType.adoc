@@ -1,0 +1,33 @@
+==== General
+
+Where a complex attribute has all its sub-attributes optional (e.g., multiplicity 0..1 or 0..*), at least one of the sub-attributes must be populated if the
+complex attribute is present. 
+
+The _featureName_ attribute in complex attribute _sourceIndication_ is intended for the name of the source.
+
+The *AdditionalInformation* association to a *NauticalInformation* object can be used to attach an additional chunk of information to an information type, and
+there is no applicable specific information type or association. This should be used sparingly if at all.
+
+The *PermissionType* association is used to encode permission information (e.g., whether use or entry is prohibited, etc) for vessels with different
+characteristics, if such permissions or requirements exist for a feature.
+
+The *AssociatedRxN* association allows (mostly) textual information pertaining to regulations, etc., to be associated to features.
+
+As an abstract type, instances of *FeatureType* cannot be directly encoded in datasets. However, the encoding instructions for this type
+apply to all its sub-types unless explicitly overriden in the encoding instructions for any particular sub-type.
+
+==== Remarks
+
+// S-122 and S-127 only
+* Regulations, recommendations, restrictions, or general nautical information must be encoded in the appropriate associated information type (see clauses <<ftable_AbstractRxN,droploc%>> and <<sec_text_regs,droploc%>>).
+The ability to encode _textContent_ as an attribute of features must not be used to avoid encoding instances of *Regulations*, *Restrictions*, *Recommendations*, or *NauticalInformation*, because
+encoding the same type of information using different methods or different structures in the same dataset or data product makes it more difficult for the mariner to find information.
+* When encoding text information in the complex attribute _textContent_, it is not necessary to encode the entire content in a single instance of the information
+sub-attribute. Instead, the information should be organized so that each instance of information deals with a distinct topic or sub-topic, each with an appropriate
+heading in the _headline_ attribute. This will make it easier for readers to find a topic. Part, chapter, section and sub-section headings in the source material may
+be used in either verbatim or condensed form, ordered according to the hierarchy in the source.
+* Multiple instances of _textContent_ should be used when the encoded material bears different relationships to the source (abstract/extract vs. summary vs. full text).
+* Multiple instances of _textContent_ may be used to distinguish information available purely as an external reference (in the _onlineResource_ sub-attribute) from
+information encoded within the dataset (in the _information.text_ sub-attribute or in a support file).
+* In general, encoders may use the multiplicities of _textContent_ and its sub-attributes to organize textual information so as to facilitate structuring text
+by topic, avoid flooding end-user screens with large blocks of unorganized text, and improve its accessibility to the mariner.

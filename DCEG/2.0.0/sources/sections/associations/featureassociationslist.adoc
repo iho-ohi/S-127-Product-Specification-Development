@@ -1,0 +1,44 @@
+
+[[fa_ServiceProvisionArea]]
+=== Service Povision Area
+
+*Definition* : Association linking the location from which a service is provided and the area(s) served.
+
+*CamelCase* : ServiceProvisionArea
+
+*Remarks* : 
+
+*Roles* : serviceArea serviceProvider
+
+[[fa_PilotageDistrictAssociation]]
+=== Pilotage District Association
+
+*Definition* : A feature association for the binding between a pilotage district and its component pilot boarding places.
+
+*CamelCase* : PilotageDistrictAssociation
+
+*Remarks* : 
+
+*Roles* : theCollection theComponent
+
+[[fa_TextAssociation]]
+=== Text Association
+
+*Definition* : A feature association for the binding between a geo feature and the cartographically positioned location for text.
+
+*CamelCase* : TextAssociation
+
+*Remarks* : 
+
+*Roles* : thePositionProvider theCartographicText
+
+[[fa_TrafficControlServiceAggregation]]
+=== Traffic Control Service Aggregation
+
+*Definition* : A feature association for the binding between a traffic control service and auxiliary features.
+
+*CamelCase* : TrafficControlServiceAggregation
+
+*Remarks* : 
+
+*Roles* : componentOf consistsOf

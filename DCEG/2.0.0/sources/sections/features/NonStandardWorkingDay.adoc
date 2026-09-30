@@ -1,0 +1,56 @@
+[[ftable_NonStandardWorkingDay]]
+=== Non-Standard Working Day
+
+[cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
+|===
+8+| [underline]#IHO Definition:# Days when many services are not available. Often days of festivity or recreation or public holidays when normal working hours are limited, especially a national or religious festival, etc.
+8+h| [underline]#S-127 Information Type:# NonStandardWorkingDay
+8+h| [underline]#Super Type:# InformationType
+3+h| S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
+            
+3+| Date Fixed |
+2+| |TD | 0,*
+
+3+| Date Variable |
+2+| |TE | 0,*
+
+3+| Information | 2+| |  C | 0,*
+3+| &nbsp;&nbsp;&nbsp;&nbsp;File Locator |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;File Reference |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Headline |
+2+| |(S) TE | 0,* (ordered)
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Language |
+2+| |(S) TE | 0,1
+
+3+| &nbsp;&nbsp;&nbsp;&nbsp;Text |
+2+| |(S) TE | 0,1
+
+8+h| Inherited Attributes
+
+3+h| S-127 Attribute 3+h| Inherited From h| Type h| Multiplicity
+            
+3+| Feature Name 3+| InformationType | C | 0,*
+3+| Fixed Date Range 3+| InformationType | C | 0,1
+3+| Periodic Date Range 3+| InformationType | C | 0,*
+3+| Graphic 3+| InformationType | C | 0,*
+3+| Source Indication 3+| InformationType | C | 0,*
+|===
+
+[cols="a,a,a,a,a",options="headers,unnumbered"]
+|===
+5+h| *Information associations*
+
+h|S-127 Role	h|S-127 Association Name h| Associated to h| Type	h| Mult.
+|===
+
+
+include::../instructions/NonStandardWorkingDay.adoc[]
+* If the complex attribute _information_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _fixedDateRange_ is present at least one of its sub-attributes must be populated.
+* If the complex attribute _sourceIndication_ is present at least one of its sub-attributes must be populated.
+

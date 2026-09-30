@@ -1,0 +1,58 @@
+==== General
+
+If it is required to place text to improve clarity and readability of display, it must be done using the 
+cartographic feature *TextPlacement*. In navigationally relevant areas such as shipping channels and dredged 
+areas, where default ECDIS text positioning may cover other features, Data Producers should consider using 
+*TextPlacement*. The *TextPlacement* feature must be associated with the relevant geo feature using the 
+composition *TextAssociation* (see clause <<fa_TextAssociation,droploc%>>).
+
+While the feature associations table above indicates the abstract type *FeatureType* as the target of feature associations from
+*TextPlacement*, the actual association in any *TextPlacement* instance should be a reverse link to the non-abstract feature type
+(sub-type of *FeatureType* at any level) which links to the particular *TextPlacement* instance.
+
+NOTE&#58; Where an associated instance of *TextPlacement* has not been related to a feature having the attribute 
+name and/or the attributes associated with the characteristics of a feature populated, the text will be positioned 
+in the ECDIS display in accordance with the default position for text strings defined in the Portrayal Catalogue. 
+
+==== Remarks
+
+* The *TextPlacement* cartographic feature is used by the ECDIS to optionally position text in ECDIS, which 
+has been populated using an attribute(s) for the associated feature. The attribute(s) is identified by populating 
+the mandatory attribute _textType_.
+* Where two instances of text type are populated for a *TextPlacement* instancefootnote:[Retained for compatibility and
+potential future use, but not a practical possibility in this edition of the Product Specification because only the only
+re-positioned text in this edition of the Product Specification is the name.], the feature name and 
+characteristics as derived from the target feature attribution will be vertically aligned in the ECDIS display in 
+accordance with the defined text offset bearing and distance. If it is required to position the feature name and 
+the feature characteristics independently, this must be done by associating two instances of *TextPlacement*, 
+one having _textType_ = 1 (name) and the other having _textType_ = 2 (feature characteristic), to the target 
+feature. Note, however, that independent vertical or horizontal alignment of both the name and the 
+characteristic of a feature is not recommended, as the text will overlap as the Mariner zooms to smaller scales 
+than the optimum display scale for the data.
+* The attributes _textOffsetBearing_ and _textOffsetDistance_ define the bearing (related to true north) and 
+distance of the anchor point of the text, in millimetres in the ECDIS display, to be displayed from the associated 
+feature. The values populated for these attributes must be determined based on the desired position of the 
+text at the optimum display scale of the ENC data. Note that the attribute _textOffsetBearing_ does not rotate 
+the text itself, but determines the alignment of the anchor point (or justification) for the text location (horizontal 
+(left, centred or right) and vertical (bottom, centre or top)) based on the encoded bearing. Displayed text will 
+always appear horizontal regardless of the display mode set by the mariner (north-up or course-up), unless 
+the Boolean attribute _textRotation_ is set to True.
+* The Boolean attribute _textRotation_, when populated as True, will rotate the text on the ECDIS display to align 
+along the bearing populated for the attribute _textOffsetBearing_.
+* Data Producers are advised to determine the best positioning for text at the optimum display scale for the 
+data; and based on “north-up” ECDIS display.
+** While _textOffsetBearing_, _textOffsetDistance_ and _textRotation_ will
+position the text at the same location relative to the associated feature at all Mariner’s Selected 
+Viewing Scales (MSVS), Data Producers are advised that, as the Mariner zooms out to smaller viewing scales, text 
+may unintentionally cover other charted detail. Therefore, as an alternative, Data Producers may experiment 
+with positioning the text so that it clears the majority of other charted features at the smallest scale at which 
+the text is intended to be displayed, and populating the attribute _scaleMinimum_ accordingly (see bullet 
+below).
+** Data Producers are also advised that optimum results may not be achieved when the Mariner has set 
+the display setting for the ECDIS to screen rotations other than “north-up”. Encoders should also consider the 
+positioning of the name of a feature where the name is encoded in multiple languages, as the name displayed 
+may be of varying character length based on the Mariner’s language settings (see clause <<sec_2.7.1,droploc%>>). 
+* The attribute _scaleMinimum_ (if permitted by the data format) may be used to determine a scale at which the text string is no longer visible 
+in the ECDIS when _scaleMinimum_ functionality is enabled. Where populated, the value for _scaleMinimum_ 
+on *TextPlacement* must not be set to a smaller scale value than the value populated for the associated feature. 
+* *TextPlacement* should normally be associated with features of type point, but may be used for features of type curve and surface.

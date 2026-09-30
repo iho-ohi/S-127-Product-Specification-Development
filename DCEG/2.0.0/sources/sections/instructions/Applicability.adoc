@@ -1,0 +1,24 @@
+==== General
+
+The *Applicability* information type is intended for defining sets of vessels according to their dimensions, capabilities, and cargo. Its attributes are intended
+for defining different limitation conditions, as described by their definitions in clauses <<sec_simple_attributes,droploc%>> and <<sec_complex_attributes,droploc%>>.
+
+Multiple instances of *Applicability* associated to the same feature or regulation are treated as “inclusive OR”, that is, each *Applicability* defines an
+independent set of vessels to which the regulation, permission or requirement applies (or which is specifically exempted, depending on the attribute encoded
+in the association class).
+
+<<sec_limitations_1;to!sec_limitations_3,droploc%>> contain a comprehensive discussion of the use of *Applicability* to describe subsets of
+vessels according to dimensions, types, cargo, and other characteristics. The remarks below provide additional guidance.
+
+At least one of the attributes of *Applicability* must be populated.
+
+==== Remarks
+
+* Multiple values of _categoryOfCargo_ and of _categoryOfDangerousOrHazardousCargo_ should be treated as “inclusive OR” (i.e., if _categoryOfCargo = 1_ and _2_, then it means vessels with either bulk or container cargo or both).
+* Limitations which cannot be expressed using more specific attributes should be encoded in text form in the _information_ attribute.
+* It is acceptable for an *Applicability* to have only the _information_ attribute populated.
+* Vessel types which do not conform to any of the listed categoryOfVessel values should be encoded as “other: <text>” where <text> is a producer-supplied type name.
+* The attribute _logicalConnectives_ has multiplicity lower bound 0 for the case where there is only a single limiting condition (for example, if the only condition is “length overall > 100m”) and must be omitted in such a situation. If there is more than one condition, _logicalConnectives_ must be encoded. If _logicalConnectives_ is omitted and there is more than one condition, the default value assumed is logical conjunction.
+* Mutually inconsistent measurements (e.g., draught &gt; 10m and draught &lt; 5m) are an error.
+* The inherited attributes _featureName_ and _graphic_ may be used to provide supplementary information in the form of a title for the defined set of vessels and sketch or other graphic pertaining to the set, but there being no widely acknowledged use cases for them, their use in *Applicability* is discouraged.
+* Encoding the inherited _fixedDateRange_ and _periodicDateRange_ attributes for *Applicability* is discouraged. The _fixedDateRange_ and _periodicDateRange_ attributes may theoretically be used to qualify the set defined by the *Applicability* instance, but must not be used to define the commencement, termination, season, etc., of the regulation or feature to which *Applicability* is associated (fixed and periodic date ranges should be encoded in the regulation or feature instance instead).  
