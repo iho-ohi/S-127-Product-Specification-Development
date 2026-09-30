@@ -4,7 +4,7 @@
 [cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
 |===
 8+| [underline]#IHO Definition:# Describes the relationship between vessel characteristics and: (i) the applicability of an associated information object or feature to the vessel; or, (ii) the use of a facility, place, or service by the vessel; or, (iii) passage of the vessel through an area.
-8+h| [underline]#S-127 Information Type:# Applicability (Abstract type)
+8+h| [underline]#S-127 Information Type:# Applicability
 8+h| [underline]#Super Type:# InformationType
 3+h| S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
             

@@ -4,7 +4,7 @@
 [cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
 |===
 8+| [underline]#IHO Definition:# Description of how a ship should report to a maritime authority, including when to report, what to report and whether the format conforms to the IMO standard.
-8+h| [underline]#S-127 Information Type:# ShipReport (Abstract type)
+8+h| [underline]#S-127 Information Type:# ShipReport
 8+h| [underline]#Super Type:# InformationType
 3+h| S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
             

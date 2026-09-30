@@ -18,7 +18,7 @@ h| Version Number h| Date h| Approved By h| Purpose
 | 2.0.0 | 2025-12-07 | RM | Draft Edition 2.0.0; apply amendmenta accepted by task group; align with S-100 5.2.0.
 |2.0.0 | 2026-01-15 |  |Draft Edition 2.0.0; align more closely with S-131 and S-122 including nilling; miscellaneous requirements for validation. 
 | 2.0.0 | 2026-03-23 | NIPWG | Applied NIPWG review comments
-| | | |
+| 2.0.0 | 2026-09-01 | NIPWG | Finalization; Applied Member State comments; align discovery metadata remarks with other specifications
 |===
 
 ////

@@ -4,7 +4,7 @@
 [cols="a,a,a,a,a,a,a,a",options="headers,unnumbered"]
 |===
 8+| [underline]#IHO Definition:# The time when a service is available and known exceptions.
-8+h| [underline]#S-127 Information Type:# ServiceHours (Abstract type)
+8+h| [underline]#S-127 Information Type:# ServiceHours
 8+h| [underline]#Super Type:# InformationType
 3+h| S-127 Attribute h| S-57 Acronym 2+h| Allowable Encoding Value h| Type h| Multiplicity
             

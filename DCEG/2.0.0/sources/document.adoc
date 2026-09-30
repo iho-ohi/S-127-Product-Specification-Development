@@ -4,7 +4,7 @@ series: S
 :doctype: standard
 :edition: 2.0.0
 :language: en
-:published-date: 2026-03-23
+:published-date: 2026-09-01
 :copyright-year: 2026
 :committee: hssc
 :workgroup: nipwg

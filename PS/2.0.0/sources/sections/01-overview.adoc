@@ -477,7 +477,7 @@ metadata is described in a separate clause.
 
 *S-127 Version:*:: 2.0.0
 
-*Date:*:: 23 March 2026
+*Date:*:: 1 September 2026
 
 *Language:*:: English
 

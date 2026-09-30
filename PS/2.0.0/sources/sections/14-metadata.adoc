@@ -318,7 +318,7 @@ h| Name h| Description h| Multiplicity h| Type h| Remarks
 1500000 +
 3500000 +
 10000000 +
-*Mandatory for datasets intended for ECDIS*
+*Mandatory for datasets intended for ECDIS (omit if unavailable in dataset)*
 |===
 
 NOTE&#58; _boundingPolygon_ is restricted to a single GML Polygon with one exterior and 0 or more interiors expressed as Linear Rings using SRS EPSG code 4326
