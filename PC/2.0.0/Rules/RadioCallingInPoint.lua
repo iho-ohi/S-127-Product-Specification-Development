@@ -7,7 +7,7 @@ function RadioCallingInPoint(feature, featurePortrayal, contextParameters)
     elseif feature.PrimitiveType == PrimitiveType.Curve then
         viewingGroup = 31020
         featurePortrayal:AddInstructions('ViewingGroup:31020;DrawingPriority:14;DisplayPlane:OverRADAR')
-        featurePortrayal:AddInstructions('LineInstruction:RDOCAL_1')
+        featurePortrayal:AddInstructions('LineInstruction:RDOCALL1')
     end
 
     return viewingGroup
