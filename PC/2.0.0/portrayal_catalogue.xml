@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pc:portrayalCatalog xmlns:pc="http://www.iho.int/S100PortrayalCatalog/5.2" xmlns:xsl="http://www.w3.org/2001/XMLSchema" productId="S-127" version="2.0">
+<pc:portrayalCatalog xmlns:pc="http://www.iho.int/S100PortrayalCatalog/5.2" xmlns:xsl="http://www.w3.org/2001/XMLSchema" productId="S-127" version="2.0.0">
 	<pixmaps/>
 	<colorProfiles>
 		<colorProfile id="colorProfile">
